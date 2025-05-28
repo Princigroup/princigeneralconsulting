@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Princi General Consulting - Liderazgo y Consultoría Integral</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f7f3;
+            color: #2c1d13;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #9e704f;
+            color: #fff;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        header img {
+            max-height: 60px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d2b48c;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section.hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: url('hero-background.jpg') center/cover no-repeat;
+            color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        section.hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 6px #3a2a18;
+        }
+
+        section.hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            text-shadow: 1px 1px 4px #3a2a18;
+        }
+
+        .btn-primary {
+            background-color: #996e4c;
+            color: white;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: #7d5840;
+        }
+
+        section.services {
+            margin-top: 60px;
+        }
+
+        section.services h2 {
+            text-align: center;
+            color: #2c1d13;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+        }
+
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+            gap: 30px;
+        }
+
+        .service-item {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .service-item h3 {
+            color: #996e4c;
+            margin-bottom: 15px;
+        }
+
+        .service-item p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #2c1d13;
+            color: #d2b48c;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #d2b48c;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                gap: 20px;
+            }
+
+            nav {
+                justify-content: center;
+                width: 100%;
+            }
+
+            section.hero h1 {
+                font-size: 2rem;
+            }
+
+            section.hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo-princi.svg" alt="Princi General Consulting Logo" />
+    <nav>
+        <a href="index-es.html">Inicio</a>
+        <a href="about-us.html">Quiénes Somos</a>
+        <a href="services.html">Servicios</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contacto</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" aria-label="Presentación principal">
+        <h1>Princi General Consulting</h1>
+        <p>Transformamos vidas y organizaciones con liderazgo consciente, coaching ejecutivo y consultoría integral.</p>
+        <a href="contact.html" class="btn-primary" aria-label="Contacta con nosotros">Contáctanos</a>
+    </section>
+
+    <section class="services" aria-label="Nuestros servicios">
+        <h2>Servicios Destacados</h2>
+        <div class="service-list">
+            <article class="service-item">
+                <h3>Coaching Ejecutivo</h3>
+                <p>Potenciamos el liderazgo y desempeño de profesionales y equipos para alcanzar metas estratégicas.</p>
+            </article>
+            <article class="service-item">
+                <h3>Formación y Desarrollo</h3>
+                <p>Cursos y talleres en habilidades blandas, PNL, mindfulness y gestión emocional.</p>
+            </article>
+            <article class="service-item">
+                <h3>Consultoría Empresarial</h3>
+                <p>Asesoría en planificación estratégica, gestión de proyectos y optimización organizacional.</p>
+            </article>
+            <article class="service-item">
+                <h3>Asesoría Personalizada</h3>
+                <p>Planes a medida para apoyar el crecimiento personal y profesional con enfoque integral.</p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Princi General Consulting. Todos los derechos reservados.</p>
+    <div>
+        <a href="#" aria-label="Facebook">Facebook</a> |
+        <a href="#" aria-label="Instagram">Instagram</a> |
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+    </div>
+    <p><a href="privacy-policy.html">Política de Privacidad</a></p>
+</footer>
+
+</body>
+</html>
