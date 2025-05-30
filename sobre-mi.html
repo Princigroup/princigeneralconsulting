@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre mí | Princi General Consulting</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfaf7;
+      color: #4b3a30;
+    }
+ header {
+      position: relative;
+      height: 380px;
+      background-image: url(ian-schneider-TamMbr4okv4-unsplash.jpg);
+      background-size: cover;
+      background-position: center;
+      color: #333;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(245, 245, 245, 0.4);
+      z-index: 0;
+    }
+
+    /* Logo en esquina superior izquierda */
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      max-height: 140px; /* más grande */
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    /* Menú en esquina inferior derecha */
+    nav {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;  /* aquí está el cambio */
+      z-index: 2;
+      max-width: 90%;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #4b3a30;
+      background-color: #e8d5d2;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background-color: #d2b48c;
+      color: #fff;
+    }
+
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto 4rem auto;
+      padding: 0 2rem;
+    }
+
+    main h1 {
+      font-size: 2.8rem;
+      color: #6b4c3b;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    main p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #4b3a30;
+      text-align: justify;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      main h1 {
+        font-size: 2rem;
+      }
+      main p {
+        font-size: 1.1rem;
+      }
+    }
+    .timeline {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  border-left: 3px solid #d2b48c;
+  position: relative;
+}
+
+.timeline h2 {
+  text-align: center;
+  color: #6b4c3b;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+
+.timeline-item {
+  margin-bottom: 3rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-year {
+  position: absolute;
+  left: -60px;
+  top: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #b1916f;
+  background: #fdfaf7;
+  padding: 0.3rem 0.8rem;
+  border: 2px solid #d2b48c;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #4b3a30;
+}
+
+.timeline-content p {
+  margin: 0.5rem 0 0;
+  color: #6b4c3b;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    border-left: none;
+  }
+  .timeline-year {
+    left: -10px;
+  }
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Princi General Consulting Logo" class="logo" />
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="sobre-mi.html" aria-current="page">Sobre mí</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="programas.html">Programas</a></li>
+      <li><a href="testimonios.html">Testimonios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+<section style="text-align: center; margin-top: 2rem;">
+  <img src="yo.jpg" alt="Tamara Pinillos Blanco" style="max-width: 250px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+</section>
+<main>
+  <h1>Sobre mí / Nuestra historia</h1>
+
+  <p>
+    Mi nombre es <strong>Tamara Pinillos Blanco</strong>, y desde hace más de una década he acompañado a líderes, equipos, emprendedores y organizaciones a descubrir su verdadera esencia y proyectar su propósito al mundo. Soy fundadora de <strong>Princi General Consulting</strong>, un espacio nacido desde la convicción profunda de que el liderazgo consciente puede transformar vidas, empresas y comunidades.
+  </p>
+
+  <p>
+    Con una formación diversa que incluye un MBA en Alta Dirección en Europa, coaching ejecutivo, PNL, mindfulness, psicología positiva y negociación ética, he fusionado el conocimiento empresarial con herramientas de desarrollo humano y espiritual. Mi enfoque integra lo racional con lo emocional, lo estratégico con lo esencial, lo visible con lo invisible.
+  </p>
+
+  <p>
+    <strong>Princi General Consulting</strong> nació como un llamado: unir experiencia profesional, misión de vida y ayuda real a personas y proyectos con alma. Nos especializamos en crear procesos personalizados que impulsan el liderazgo consciente, la gestión con propósito y la transformación interior en líderes y organizaciones. También colaboramos con ONG, misioneros y entidades solidarias, brindando formación y recursos para impactar positivamente en el mundo.
+  </p>
+
+  <p>
+    Nuestra historia es también la de muchas personas que han confiado en su intuición, en su fe, en su propósito, y que han decidido liderar desde el corazón. A través de mentorías, programas formativos, asesorías y acompañamiento profundo, ayudamos a integrar lo profesional con lo espiritual, lo empresarial con lo humano.
+  </p>
+
+  <p style="text-align: center; font-style: italic; font-size: 1.1rem;">
+    "Liderar desde el alma es recordar quién eres, para guiar con verdad, paz y visión."
+  </p>
+</main>
+<section class="timeline">
+  <h2>Mi trayectoria en hitos</h2>
+
+  <div class="timeline-item">
+    <div class="timeline-year">2010</div>
+    <div class="timeline-content">
+      <h3>Inicio internacional en seguros</h3>
+      <p>Viajo a Italia y continúo mi carrera profesional en el sector de los seguros, consolidando mi experiencia en el ámbito financiero.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-year">2011</div>
+    <div class="timeline-content">
+      <h3>Emprendimiento en Suiza</h3>
+      <p>Me traslado a Suiza, donde fundo una empresa de consultoría para particulares y empresas, liderando gestiones burocráticas y manteniéndome activa en finanzas y seguros.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-year">2018</div>
+    <div class="timeline-content">
+      <h3>Inicio del camino espiritual</h3>
+      <p>Comienza una etapa de profunda transformación personal. Me formo en coaching, PNL, liderazgo consciente, y desarrollo humano con una visión enfocada en crear una ONG y proyectos con propósito.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-year">2023</div>
+    <div class="timeline-content">
+      <h3>Nace Princi & Co Group</h3>
+      <p>Emprendo la creación de Princi & Co Group, unificando mi experiencia empresarial y visión espiritual. Asumo la gestión de AaCc Psicòlegs.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-year">2025</div>
+    <div class="timeline-content">
+      <h3>Lanzamiento de Princi General Consulting</h3>
+      <p>Consolido la marca como consultoría internacional de liderazgo consciente, expandiendo programas formativos en alta dirección, mindfulness y propósito divino.</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

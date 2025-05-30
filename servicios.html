@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios | Princi General Consulting</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfaf7; /* crema muy clara */
+      color: #4b3a30; /* marrón oscuro */
+    }
+
+     header {
+      position: relative;
+      height: 380px;
+      background-image: url(cytonn-photography-n95VMLxqM2I-unsplash.jpg);
+      background-size: cover;
+      background-position: center;
+      color: #333;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(245, 245, 245, 0.4);
+      z-index: 0;
+    }
+
+    /* Logo en esquina superior izquierda */
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      max-height: 140px; /* más grande */
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    /* Menú en esquina inferior derecha */
+    nav {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;  /* aquí está el cambio */
+      z-index: 2;
+      max-width: 90%;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #4b3a30;
+      background-color: #e8d5d2;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background-color: #d2b48c;
+      color: #fff;
+    }
+
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto 4rem auto;
+      padding: 0 2rem;
+    }
+
+    main h1 {
+      font-size: 2.8rem;
+      color: #6b4c3b; /* marrón medio */
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .services {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .service-item {
+      background-color: #fff8f6; /* rosa empolvado muy claro */
+      padding: 1.5rem;
+      border-left: 6px solid #d2b48c; /* dorado */
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .service-item h3 {
+      color: #6b4c3b;
+      margin-top: 0;
+    }
+
+    .service-item p {
+      margin: 0.5rem 0 0 0;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      main h1 {
+        font-size: 2rem;
+      }
+
+      .service-item {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Princi General Consulting Logo" class="logo" />
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="sobre-mi.html">Sobre mí</a></li>
+      <li><a href="servicios.html" aria-current="page">Servicios</a></li>
+      <li><a href="programas.html">Programas</a></li>
+      <li><a href="testimonios.html">Testimonios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Servicios</h1>
+
+  <section class="services">
+    <div class="service-item">
+      <h3>Consultoría Estratégica con Propósito</h3>
+      <p>Acompaño a líderes, emprendedores y organizaciones en el diseño de planes estratégicos alineados con sus valores, visión espiritual y objetivos sostenibles. Desde la dirección empresarial hasta la toma de decisiones conscientes.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>Coaching Ejecutivo y Liderazgo Consciente</h3>
+      <p>Proceso personalizado para líderes que desean crecer desde la autenticidad, mejorar su comunicación, influir positivamente y liderar con alma. Incluye herramientas de PNL, gestión emocional y mindfulness.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>Formación para Equipos y Organizaciones</h3>
+      <p>Diseño e imparto programas formativos en liderazgo ético, bienestar corporativo, gestión del cambio y dirección con sentido. Modalidad presencial, online o híbrida. Adaptados a empresas éticas, ONG y proyectos sociales.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>Mentoría para Emprendedoras del Bien</h3>
+      <p>Espacio de guía y acompañamiento para mujeres líderes, terapeutas y emprendedoras que desean crear o escalar proyectos conscientes, sostenibles y con impacto real. Desde la visión hasta el modelo de negocio.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>Asesoramiento en Seguros y Finanzas Éticas</h3>
+      <p>Más de una década de experiencia asesorando en seguros personales, profesionales y soluciones financieras para quienes buscan coherencia entre protección, inversión y valores.</p>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>

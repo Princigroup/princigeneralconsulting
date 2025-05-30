@@ -1,125 +1,174 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Princi General Consulting</title>
+  <title>Princi General Consulting | Liderazgo Consciente Internacional</title>
   <style>
-    * {
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfaf7;
+      color: #4b3a30;
+    }
+
+    header {
+      position: relative;
+      height: 380px;
+      background-image: url(dane-deaner-_-KLkj7on_c-unsplash.jpg);
+      background-size: cover;
+      background-position: center;
+      color: #333;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(245, 245, 245, 0.4);
+      z-index: 0;
+    }
+
+    /* Logo en esquina superior izquierda */
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      max-height: 140px; /* más grande */
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    /* Menú en esquina inferior derecha */
+    nav {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;  /* aquí está el cambio */
+      z-index: 2;
+      max-width: 90%;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      flex-wrap: wrap;
+      justify-content: flex-start;
     }
-    body {
-      font-family: 'Arial', sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #2b1e15;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2em;
-    }
-    nav {
-      background: #7b4f36;
-      text-align: center;
-    }
-    nav a {
+
+    nav ul li a {
+      text-decoration: none;
+      color: #4b3a30;
+      background-color: #e8d5d2;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      white-space: nowrap;
       display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background-color: #d2b48c;
+      color: #fff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      background-color: #fdf7f4;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #4b3a30;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      color: #6b4c3b;
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero .cta {
+      background-color: #d2b48c;
       color: white;
-      padding: 15px 20px;
+      padding: 1rem 2rem;
+      border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s;
     }
-    nav a:hover {
-      background-color: #a37a5c;
+
+    .hero .cta:hover {
+      background-color: #b1916f;
     }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h2 {
-      color: #3b2618;
-      margin-bottom: 15px;
-    }
-    footer {
-      background-color: #2b1e15;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    @media screen and (max-width: 768px) {
-      nav a {
-        display: block;
-        padding: 10px;
+
+    @media (max-width: 768px) {
+      nav {
+        position: static;
+        max-width: 100%;
+        margin-top: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+
+      nav ul li a {
+        width: 100%;
+        text-align: left;
+      }
+
+      .logo {
+        position: static;
+        max-height: 120px;
+        margin-bottom: 10px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Princi General Consulting</h1>
-    <p>Liderazgo con propósito divino</p>
-  </header>
+ <header>
+   <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Princi General Consulting Logo" class="logo" />
+   <nav>
+     <ul>
+       <li><a href="index.html">Inicio</a></li>
+       <li><a href="sobre-mi.html">Sobre mí</a></li>
+       <li><a href="servicios.html">Servicios</a></li>
+       <li><a href="programas.html">Programas</a></li>
+       <li><a href="testimonios.html">Testimonios</a></li>
+       <li><a href="contacto.html">Contacto</a></li>
+     </ul>
+   </nav>
+ </header>
 
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#programas">Programas</a>
-    <a href="#testimonios">Testimonios</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <section id="inicio">
-    <h2>Inicio</h2>
-    <p>Bienvenida a Princi General Consulting, un espacio donde el liderazgo consciente y el propósito espiritual se unen para transformar vidas y organizaciones.</p>
-  </section>
-
-  <section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>Soy Tamara Pinillos Blanco, experta en coaching, PNL y dirección empresarial. Mi misión es ayudarte a liderar desde el alma, combinando herramientas de desarrollo personal con principios éticos y espirituales.</p>
-  </section>
-
-  <section id="servicios">
-    <h2>Servicios</h2>
-    <ul>
-      <li>Coaching Ejecutivo</li>
-      <li>Formación en Liderazgo</li>
-      <li>PNL y Psicología Positiva</li>
-      <li>Mindfulness y Gestión Emocional</li>
-    </ul>
-  </section>
-
-  <section id="programas">
-    <h2>Programas</h2>
-    <p>Descubre nuestros programas educativos en niveles básico, intermedio y avanzado, disponibles tanto online como presencial. Incluyen certificaciones en coaching, PNL y mindfulness.</p>
-  </section>
-
-  <section id="testimonios">
-    <h2>Testimonios</h2>
-    <p>“Gracias a Tamara, logré alinear mi negocio con mis valores. Hoy lidero con confianza y claridad.” – Cliente satisfecho</p>
-    <p>“Su programa de coaching me transformó como persona y profesional.” – Testimonio anónimo</p>
-  </section>
-
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Email: tamarapinillos@princigeneralconsulting.com</p>
-    <p>Teléfono: 631 607 490</p>
-    <p>Sitio web: <a href="https://princigeneralconsulting.com" target="_blank">princigeneralconsulting.com</a></p>
-  </section>
-
-  <footer>
-    <p>© 2025 Princi General Consulting | Todos los derechos reservados</p>
-  </footer>
+ <section class="hero">
+   <h1>Consultoría internacional en liderazgo consciente</h1>
+   <p>
+     En <strong>Princi General Consulting</strong>, formamos y acompañamos a líderes, ONG y empresas con alma. Integramos dirección estratégica, coaching transformacional y propósito divino para impactar el mundo desde una visión consciente.
+   </p>
+   <a href="sobre-mi.html" class="cta">Conoce a la fundadora</a>
+ </section>
 
 </body>
 </html>
