@@ -2,20 +2,42 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sobre mí | Princi General Consulting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Conoce la historia de Tamara Pinillos Blanco, fundadora de Princi General Consulting: una consultoría internacional de liderazgo consciente, desarrollo espiritual y transformación empresarial." />
+  <meta name="keywords" content="Tamara Pinillos Blanco, liderazgo consciente, coaching ejecutivo, PNL, mindfulness, consultoría, desarrollo personal, transformación organizacional, Princi General Consulting" />
+  <meta name="author" content="Tamara Pinillos Blanco" />
+  <meta property="og:title" content="Sobre mí | Tamara Pinillos Blanco - Princi General Consulting" />
+  <meta property="og:description" content="Descubre la trayectoria profesional y espiritual de Tamara Pinillos Blanco, fundadora de Princi General Consulting." />
+  <meta property="og:image" content="yo.jpg" />
+  <meta property="og:type" content="website" />
+  <title>Sobre mí | Tamara Pinillos Blanco - Princi General Consulting</title>
+
   <style>
+    :root {
+      --color-text: #4b3a30;
+      --color-bg: #fdfaf7;
+      --color-primary: #d2b48c;
+      --color-primary-dark: #6b4c3b;
+      --color-secondary: #e8d5d2;
+      --color-overlay: rgba(245, 245, 245, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fdfaf7;
-      color: #4b3a30;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.5;
     }
 
     header {
       position: relative;
       height: 380px;
-      background-image: url('sobre mi.png');
+      background-image: url('fondo-sobre-mi-consultoria.png');
       background-size: cover;
       background-position: center;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -24,9 +46,8 @@
     header::before {
       content: "";
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(245, 245, 245, 0.4);
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--color-overlay);
       z-index: 0;
     }
 
@@ -43,33 +64,36 @@
       position: absolute;
       bottom: 20px;
       right: 20px;
-      z-index: 2;
       max-width: 90%;
+      z-index: 2;
     }
 
     nav ul {
       list-style: none;
-      display: flex;
-      gap: 1.5rem;
       margin: 0;
       padding: 0;
+      display: flex;
+      gap: 1.5rem;
       flex-wrap: wrap;
     }
 
     nav ul li a {
+      display: inline-block;
       text-decoration: none;
-      color: #4b3a30;
-      background-color: #e8d5d2;
+      color: var(--color-text);
+      background-color: var(--color-secondary);
       padding: 0.6rem 1.2rem;
       border-radius: 8px;
       font-weight: 600;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s ease, color 0.3s ease;
       white-space: nowrap;
     }
 
-    nav ul li a:hover {
-      background-color: #d2b48c;
+    nav ul li a:hover,
+    nav ul li a:focus {
+      background-color: var(--color-primary);
       color: #fff;
+      outline: none;
     }
 
     .menu-toggle {
@@ -85,7 +109,7 @@
     .menu-toggle span {
       height: 3px;
       width: 25px;
-      background: #4b3a30;
+      background: var(--color-text);
       margin: 4px 0;
       transition: 0.3s;
     }
@@ -96,21 +120,18 @@
         position: absolute;
         top: 80px;
         right: 20px;
-        background: #fdfaf7;
+        background: var(--color-bg);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
         padding: 1rem;
       }
-
       nav.active {
         display: block;
       }
-
       nav ul {
         flex-direction: column;
         gap: 1rem;
       }
-
       .menu-toggle {
         display: flex;
       }
@@ -118,35 +139,35 @@
 
     main {
       max-width: 900px;
-      margin: 2rem auto 4rem auto;
+      margin: 2rem auto 4rem;
       padding: 0 2rem;
     }
 
     main h1 {
       font-size: 2.5rem;
-      color: #6b4c3b;
+      color: var(--color-primary-dark);
       text-align: center;
       margin-bottom: 1rem;
     }
 
     main p {
       font-size: 1.2rem;
-      line-height: 1.6;
       text-align: justify;
       margin-bottom: 1.5rem;
+      color: var(--color-text);
     }
 
     .timeline {
       max-width: 900px;
       margin: 4rem auto;
       padding: 0 2rem;
-      border-left: 3px solid #d2b48c;
+      border-left: 3px solid var(--color-primary);
     }
 
     .timeline h2 {
       text-align: center;
       font-size: 2rem;
-      color: #6b4c3b;
+      color: var(--color-primary-dark);
       margin-bottom: 3rem;
     }
 
@@ -162,9 +183,9 @@
       top: 0;
       font-size: 1.2rem;
       font-weight: bold;
-      background: #fdfaf7;
+      background: var(--color-bg);
       color: #b1916f;
-      border: 2px solid #d2b48c;
+      border: 2px solid var(--color-primary);
       padding: 0.3rem 0.8rem;
       border-radius: 20px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
@@ -173,12 +194,12 @@
     .timeline-content h3 {
       margin: 0;
       font-size: 1.3rem;
-      color: #4b3a30;
+      color: var(--color-text);
     }
 
     .timeline-content p {
       margin: 0.5rem 0 0;
-      color: #6b4c3b;
+      color: var(--color-primary-dark);
       line-height: 1.6;
     }
 
@@ -186,27 +207,67 @@
       .timeline {
         border-left: none;
       }
-
       .timeline-year {
         left: -10px;
       }
     }
+
+    .profile-pic-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .profile-pic-container img {
+      max-width: 250px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      height: auto;
+      display: inline-block;
+      loading: lazy;
+    }
+
+   /* Contenedor traductor Google */
+#google_translate_element {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  background: var(--color-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+/* En pantallas móviles */
+@media (max-width: 768px) {
+  #google_translate_element {
+    position: static;
+    margin: 1rem auto 0 auto;
+    display: block;
+    max-width: 90%;
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
   </style>
 </head>
 <body>
 
-<header>
-  <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Princi General Consulting Logo" class="logo"/>
+<header role="banner">
+  <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Logotipo de Princi General Consulting" class="logo" loading="lazy" />
 
-  <!-- Hamburguesa -->
-  <div class="menu-toggle" onclick="toggleMenu()">
+  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mainMenu">
     <span></span>
     <span></span>
     <span></span>
-  </div>
+  </button>
 
-  <!-- Navegación -->
-  <nav id="mainMenu">
+  <nav id="mainMenu" aria-label="Navegación principal" role="navigation">
     <ul>
       <li><a href="index.html">Inicio</a></li>
       <li><a href="sobre-mi.html" aria-current="page">Sobre mí</a></li>
@@ -217,27 +278,30 @@
   </nav>
 </header>
 
-<section style="text-align: center; margin-top: 2rem;">
-  <img src="yo.jpg" alt="Tamara Pinillos Blanco" style="max-width: 250px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+<!-- Contenedor para el Traductor de Google -->
+<div id="google_translate_element" aria-label="Selector de idioma Google Translate"></div>
+
+<section class="profile-pic-container" aria-label="Retrato de Tamara Pinillos Blanco">
+  <img src="tamara-pinillos-blanco-consultora.jpg" alt="Retrato de Tamara Pinillos Blanco" loading="lazy" />
 </section>
 
 <main>
   <h1>Sobre mí / Nuestra historia</h1>
 
   <p>
-    Mi nombre es <strong>Tamara Pinillos Blanco</strong>, y desde hace más de una década he acompañado a líderes, equipos, emprendedores y organizaciones a descubrir su verdadera esencia y proyectar su propósito al mundo. Soy fundadora de <strong>Princi General Consulting</strong>, un espacio nacido desde la convicción profunda de que el liderazgo consciente puede transformar vidas, empresas y comunidades.
+    Mi nombre es <strong>Tamara Pinillos Blanco</strong>, y desde hace más de una década he acompañado a líderes, equipos, emprendedores y organizaciones a descubrir su verdadera esencia y proyectar su propósito al mundo. Soy fundadora de <strong>Princi General Consulting</strong>, una consultoría internacional de liderazgo consciente nacida desde la convicción profunda de que el liderazgo con propósito transforma vidas, empresas y comunidades.
   </p>
 
   <p>
-    Con una formación diversa que incluye un MBA en Alta Dirección en Europa, coaching ejecutivo, PNL, mindfulness, psicología positiva y negociación ética, he fusionado el conocimiento empresarial con herramientas de desarrollo humano y espiritual. Mi enfoque integra lo racional con lo emocional, lo estratégico con lo esencial, lo visible con lo invisible.
+    Con formación en MBA en Alta Dirección Europea, coaching ejecutivo, PNL, mindfulness, psicología positiva y negociación ética, fusiono conocimiento empresarial con herramientas de desarrollo humano y espiritual. Mi enfoque integra lo racional con lo emocional, lo estratégico con lo esencial, lo visible con lo invisible.
   </p>
 
   <p>
-    <strong>Princi General Consulting</strong> nació como un llamado: unir experiencia profesional, misión de vida y ayuda real a personas y proyectos con alma. Nos especializamos en crear procesos personalizados que impulsan el liderazgo consciente, la gestión con propósito y la transformación interior en líderes y organizaciones. También colaboramos con ONG, misioneros y entidades solidarias, brindando formación y recursos para impactar positivamente en el mundo.
+    <strong>Princi General Consulting</strong> nace como un llamado a unir experiencia profesional, misión de vida y ayuda real a personas y proyectos con alma. Diseñamos procesos personalizados para líderes conscientes, organizaciones con valores y entidades solidarias. También colaboramos con ONG y misioneros para ofrecer formación transformadora y herramientas de impacto positivo.
   </p>
 
   <p>
-    Nuestra historia es también la de muchas personas que han confiado en su intuición, en su fe, en su propósito, y que han decidido liderar desde el corazón. A través de mentorías, programas formativos, asesorías y acompañamiento profundo, ayudamos a integrar lo profesional con lo espiritual, lo empresarial con lo humano.
+    Esta historia es también la de quienes confían en su intuición, su fe y su propósito. Personas que deciden liderar desde el alma. A través de mentorías, programas formativos y acompañamiento profundo, les ayudamos a integrar lo profesional con lo espiritual, lo humano con lo empresarial.
   </p>
 
   <p style="text-align: center; font-style: italic; font-size: 1.1rem;">
@@ -245,68 +309,63 @@
   </p>
 </main>
 
-<section class="timeline">
+<section class="timeline" aria-label="Línea de tiempo profesional de Tamara">
   <h2>Mi trayectoria en hitos</h2>
 
   <div class="timeline-item">
     <div class="timeline-year">2010</div>
     <div class="timeline-content">
-      <h3>Inicio internacional en seguros</h3>
-      <p>Viajo a Italia y continúo mi carrera profesional en el sector de los seguros, consolidando mi experiencia en el ámbito financiero.</p>
+      <h3>Inicio en Italia</h3>
+      <p>En Italia continué mi carrera en el sector de seguros, expandiendo mis habilidades en gestión y asesoría.</p>
     </div>
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-year">2011</div>
+    <div class="timeline-year">2011-2018</div>
     <div class="timeline-content">
-      <h3>Emprendimiento en Suiza</h3>
-      <p>Me traslado a Suiza, donde fundo una empresa de consultoría para particulares y empresas, liderando gestiones burocráticas y manteniéndome activa en finanzas y seguros.</p>
+      <h3>Suiza y primeros emprendimientos</h3>
+      <p>Fundé una empresa de consultoría para empresas y particulares, gestionando trámites y ofreciendo asesoría en finanzas y seguros.</p>
     </div>
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-year">2018</div>
+    <div class="timeline-year">2018-2023</div>
     <div class="timeline-content">
-      <h3>Inicio del camino espiritual</h3>
-      <p>Comienza una etapa de profunda transformación personal. Me formo en coaching, PNL, liderazgo consciente, y desarrollo humano con una visión enfocada en crear una ONG y proyectos con propósito.</p>
+      <h3>Formación y transformación personal</h3>
+      <p>Me formé en coaching ejecutivo, PNL, mindfulness, psicología positiva y negociación ética, integrando mi visión espiritual y profesional.</p>
     </div>
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-year">2023</div>
+    <div class="timeline-year">2023 - Hoy</div>
     <div class="timeline-content">
-      <h3>Nace Princi & Co Group</h3>
-      <p>Emprendo la creación de Princi & Co Group, unificando mi experiencia empresarial y visión espiritual. Asumo la gestión de AaCc Psicòlegs.</p>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-year">2025</div>
-    <div class="timeline-content">
-      <h3>Lanzamiento de Princi General Consulting</h3>
-      <p>Consolido la marca como consultoría internacional de liderazgo consciente, expandiendo programas formativos en alta dirección, mindfulness y propósito divino.</p>
+      <h3>Fundación de Princi & Co Group</h3>
+      <p>Constituí Princi & Co Group y asumí la dirección de AaCc Psicòlegs, enfocándome en liderazgo consciente y proyectos de transformación.</p>
     </div>
   </div>
 </section>
-<!-- Script del menú hamburguesa -->
-<script>
-  function toggleMenu() {
-    document.getElementById("mainMenu").classList.toggle("active");
-  }
-</script>
 
-<!-- Google Translate -->
-<div id="google_translate_element" style="position: fixed; top: 10px; right: 10px; z-index: 9999;"></div>
-<script type="text/javascript">
+<script>
+  // Menú hamburguesa para móvil
+  function toggleMenu() {
+    const nav = document.getElementById('mainMenu');
+    const btn = document.querySelector('.menu-toggle');
+    const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+    btn.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('active');
+  }
+
+  // Traductor Google
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'es',
-      includedLanguages: 'en,it,fr,de,pt',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
     }, 'google_translate_element');
   }
 </script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
 
 </body>
 </html>
