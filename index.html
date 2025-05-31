@@ -159,9 +159,81 @@
         font-size: 1.1rem;
       }
     }
+    .menu-toggle {
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 3;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #4b3a30;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.9);
+        position: absolute;
+        top: 80px;
+        right: 10px;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .language-selector {
+        bottom: 10px;
+        left: 10px;
+        right: auto;
+        top: auto;
+      }
+    }
   </style>
 </head>
-<!-- Google Translate -->
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("mobile-menu");
+    nav.classList.toggle("active");
+  }
+</script>
+<body>
+  <header>
+    <a href="index.html">
+      <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Princi General Consulting Logo" class="logo" />
+    </a>
+
+    <!-- Botón hamburguesa -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="mobile-menu">
+      <ul>
+        <li><a href="index.html" data-key="home">Inicio</a></li>
+        <li><a href="sobre-mi.html" data-key="about">Sobre mí</a></li>
+        <li><a href="servicios.html" data-key="services">Servicios</a></li>
+        <li><a href="formacion-coaching-liderazgo.html" data-key="programs">Programas</a></li>
+        <li><a href="contacto.html" data-key="contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Google Translate -->
 <div id="google_translate_element" style="position: fixed; top: 10px; right: 10px; z-index: 9999;"></div>
 <script type="text/javascript">
   function googleTranslateElementInit() {
@@ -174,22 +246,6 @@
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <body>
-
-  <header>
-    <a href="index.html">
-      <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Princi General Consulting Logo" class="logo" />
-    </a>
-    <nav>
-      <ul>
-        <li><a href="index.html" data-key="home">Inicio</a></li>
-        <li><a href="sobre-mi.html" data-key="about">Sobre mí</a></li>
-        <li><a href="servicios.html" data-key="services">Servicios</a></li>
-        <li><a href="formacion-coaching-liderazgo.html" data-key="programs">Programas</a></li>
-        <li><a href="contacto.html" data-key="contact">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
   <section class="hero">
     <h1 data-key="hero-title">Consultoría internacional en liderazgo consciente</h1>
     <p data-key="hero-text">
