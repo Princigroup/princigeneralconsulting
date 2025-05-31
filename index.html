@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -14,7 +14,7 @@
 
     header {
       position: relative;
-      height: 380px;
+      height: 300px;
       background-image: url(dane-deaner-_-KLkj7on_c-unsplash.jpg);
       background-size: cover;
       background-position: center;
@@ -31,21 +31,19 @@
       z-index: 0;
     }
 
-    /* Logo en esquina superior izquierda */
     .logo {
       position: absolute;
       top: 20px;
       left: 20px;
-      max-height: 140px; /* más grande */
+      max-height: 100px;
       z-index: 2;
       cursor: pointer;
     }
 
-    /* Menú en esquina inferior derecha */
     nav {
       position: absolute;
       bottom: 20px;
-      right: 20px;  /* aquí está el cambio */
+      right: 20px;
       z-index: 2;
       max-width: 90%;
     }
@@ -69,12 +67,27 @@
       font-weight: 600;
       transition: all 0.3s ease;
       white-space: nowrap;
-      display: inline-block;
     }
 
     nav ul li a:hover {
       background-color: #d2b48c;
       color: #fff;
+    }
+
+    .language-selector {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 2;
+    }
+
+    .language-selector select {
+      padding: 0.5rem;
+      border-radius: 5px;
+      background-color: #e8d5d2;
+      color: #4b3a30;
+      font-weight: 600;
+      border: none;
     }
 
     .hero {
@@ -125,15 +138,17 @@
         gap: 0.8rem;
       }
 
-      nav ul li a {
-        width: 100%;
-        text-align: left;
-      }
-
       .logo {
         position: static;
-        max-height: 120px;
-        margin-bottom: 10px;
+        max-height: 80px;
+        margin: 10px;
+      }
+
+      .language-selector {
+        top: auto;
+        right: auto;
+        bottom: 10px;
+        left: 10px;
       }
 
       .hero h1 {
@@ -148,27 +163,82 @@
 </head>
 <body>
 
- <header>
-   <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Princi General Consulting Logo" class="logo" />
-   <nav>
-     <ul>
-       <li><a href="index.html">Inicio</a></li>
-       <li><a href="sobre-mi.html">Sobre mí</a></li>
-       <li><a href="servicios.html">Servicios</a></li>
-       <li><a href="programas.html">Programas</a></li>
-       <li><a href="testimonios.html">Testimonios</a></li>
-       <li><a href="contacto.html">Contacto</a></li>
-     </ul>
-   </nav>
- </header>
+  <header>
+    <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Princi General Consulting Logo" class="logo" />
+    <div class="language-selector">
+      <select onchange="changeLanguage(this.value)">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="it">IT</option>
+      </select>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#" data-key="home">Inicio</a></li>
+        <li><a href="#" data-key="about">Sobre mí</a></li>
+        <li><a href="#" data-key="services">Servicios</a></li>
+        <li><a href="#" data-key="programs">Programas</a></li>
+        <li><a href="#" data-key="testimonials">Testimonios</a></li>
+        <li><a href="#" data-key="contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
- <section class="hero">
-   <h1>Consultoría internacional en liderazgo consciente</h1>
-   <p>
-     En <strong>Princi General Consulting</strong>, formamos y acompañamos a líderes, ONG y empresas con alma. Integramos dirección estratégica, coaching transformacional y propósito divino para impactar el mundo desde una visión consciente.
-   </p>
-   <a href="sobre-mi.html" class="cta">Conoce a la fundadora</a>
- </section>
+  <section class="hero">
+    <h1 data-key="hero-title">Consultoría internacional en liderazgo consciente</h1>
+    <p data-key="hero-text">
+      En <strong>Princi General Consulting</strong>, formamos y acompañamos a líderes, ONG y empresas con alma. Integramos dirección estratégica, coaching transformacional y propósito divino para impactar el mundo desde una visión consciente.
+    </p>
+    <a href="#" class="cta" data-key="cta-button">Conoce a la fundadora</a>
+  </section>
+
+  <script>
+    const translations = {
+      en: {
+        "home": "Home",
+        "about": "About Me",
+        "services": "Services",
+        "programs": "Programs",
+        "testimonials": "Testimonials",
+        "contact": "Contact",
+        "hero-title": "International Consulting in Conscious Leadership",
+        "hero-text": "At <strong>Princi General Consulting</strong>, we train and guide leaders, NGOs, and soul-driven companies. We integrate strategic direction, transformational coaching, and divine purpose to impact the world with a conscious vision.",
+        "cta-button": "Meet the Founder"
+      },
+      fr: {
+        "home": "Accueil",
+        "about": "À propos de moi",
+        "services": "Services",
+        "programs": "Programmes",
+        "testimonials": "Témoignages",
+        "contact": "Contact",
+        "hero-title": "Consulting international en leadership conscient",
+        "hero-text": "Chez <strong>Princi General Consulting</strong>, nous formons et accompagnons les leaders, les ONG et les entreprises avec une âme. Nous intégrons la direction stratégique, le coaching transformationnel et le but divin pour impacter le monde avec une vision consciente.",
+        "cta-button": "Rencontrez la fondatrice"
+      },
+      it: {
+        "home": "Home",
+        "about": "Chi sono",
+        "services": "Servizi",
+        "programs": "Programmi",
+        "testimonials": "Testimonianze",
+        "contact": "Contatto",
+        "hero-title": "Consulenza internazionale nella leadership consapevole",
+        "hero-text": "In <strong>Princi General Consulting</strong>, formiamo e accompagniamo leader, ONG e aziende con anima. Integrando direzione strategica, coaching trasformativo e scopo divino per influenzare il mondo con una visione consapevole.",
+        "cta-button": "Conosci la fondatrice"
+      }
+    };
+
+    function changeLanguage(lang) {
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
