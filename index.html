@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Princi General Consulting | Liderazgo Consciente Internacional</title>
+  <title>Princi General Consulting | Consultoría Internacional en Liderazgo Consciente</title>
+  <meta name="description" content="Consultoría estratégica y formación transformacional para líderes, ONG y empresas con propósito. Liderazgo consciente, coaching ejecutivo y dirección con valores.">
+  <meta name="keywords" content="consultoría, liderazgo consciente, coaching ejecutivo, dirección estratégica, ONG, empresas éticas, transformación, desarrollo personal, Princi General Consulting">
+  <meta name="author" content="Tamara Pinillos Blanco">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
   <style>
     body {
       margin: 0;
@@ -208,22 +213,17 @@
     }
   </style>
 </head>
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById("mobile-menu");
-    nav.classList.toggle("active");
-  }
-</script>
+
 <body>
   <header>
     <a href="index.html">
-      <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Princi General Consulting Logo" class="logo" />
+      <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Logo Princi General Consulting" class="logo" />
     </a>
 
     <!-- Botón hamburguesa -->
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
 
-    <nav id="mobile-menu">
+    <nav id="mobile-menu" aria-label="Menú principal">
       <ul>
         <li><a href="index.html" data-key="home">Inicio</a></li>
         <li><a href="sobre-mi.html" data-key="about">Sobre mí</a></li>
@@ -232,27 +232,36 @@
         <li><a href="contacto.html" data-key="contact">Contacto</a></li>
       </ul>
     </nav>
-  </header>
-  <!-- Google Translate -->
-<div id="google_translate_element" style="position: fixed; top: 10px; right: 10px; z-index: 9999;"></div>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      includedLanguages: 'en,it,fr,de,pt',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<body>
-  <section class="hero">
-    <h1 data-key="hero-title">Consultoría internacional en liderazgo consciente</h1>
-    <p data-key="hero-text">
-      En <strong>Princi General Consulting</strong>, formamos y acompañamos a líderes, ONG y empresas con alma. Integramos dirección estratégica, coaching transformacional y propósito divino para impactar el mundo desde una visión consciente.
-    </p>
-    <a href="about.html" class="cta" data-key="cta-button">Conoce a la fundadora</a>
-  </section>
 
- </body>
+    <div class="language-selector">
+      <div id="google_translate_element"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 data-key="hero-title">Consultoría internacional en liderazgo consciente</h1>
+      <p data-key="hero-text">
+        En <strong>Princi General Consulting</strong>, formamos y acompañamos a líderes, ONG y empresas con alma. Integramos dirección estratégica, coaching transformacional y propósito divino para impactar el mundo desde una visión consciente.
+      </p>
+      <a href="sobre-mi.html" class="cta" data-key="cta-button">Conoce a la fundadora</a>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("mobile-menu");
+      nav.classList.toggle("active");
+    }
+
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'en,it,fr,de,pt',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
 </html>
