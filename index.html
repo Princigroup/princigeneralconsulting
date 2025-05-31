@@ -161,26 +161,31 @@
     }
   </style>
 </head>
+<!-- Google Translate -->
+<div id="google_translate_element" style="position: fixed; top: 10px; right: 10px; z-index: 9999;"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'es',
+      includedLanguages: 'en,it,fr,de,pt',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <body>
 
   <header>
-    <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Princi General Consulting Logo" class="logo" />
-    <div class="language-selector">
-      <select onchange="changeLanguage(this.value)">
-        <option value="es">ES</option>
-        <option value="en">EN</option>
-        <option value="fr">FR</option>
-        <option value="it">IT</option>
-      </select>
-    </div>
+    <a href="index.html">
+      <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Princi General Consulting Logo" class="logo" />
+    </a>
     <nav>
       <ul>
-        <li><a href="#" data-key="home">Inicio</a></li>
-        <li><a href="#" data-key="about">Sobre mí</a></li>
-        <li><a href="#" data-key="services">Servicios</a></li>
-        <li><a href="#" data-key="programs">Programas</a></li>
-        <li><a href="#" data-key="testimonials">Testimonios</a></li>
-        <li><a href="#" data-key="contact">Contacto</a></li>
+        <li><a href="index.html" data-key="home">Inicio</a></li>
+        <li><a href="sobre-mi.html" data-key="about">Sobre mí</a></li>
+        <li><a href="servicios.html" data-key="services">Servicios</a></li>
+        <li><a href="formacion-coaching-liderazgo.html" data-key="programs">Programas</a></li>
+        <li><a href="contacto.html" data-key="contact">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -190,55 +195,8 @@
     <p data-key="hero-text">
       En <strong>Princi General Consulting</strong>, formamos y acompañamos a líderes, ONG y empresas con alma. Integramos dirección estratégica, coaching transformacional y propósito divino para impactar el mundo desde una visión consciente.
     </p>
-    <a href="#" class="cta" data-key="cta-button">Conoce a la fundadora</a>
+    <a href="about.html" class="cta" data-key="cta-button">Conoce a la fundadora</a>
   </section>
 
-  <script>
-    const translations = {
-      en: {
-        "home": "Home",
-        "about": "About Me",
-        "services": "Services",
-        "programs": "Programs",
-        "testimonials": "Testimonials",
-        "contact": "Contact",
-        "hero-title": "International Consulting in Conscious Leadership",
-        "hero-text": "At <strong>Princi General Consulting</strong>, we train and guide leaders, NGOs, and soul-driven companies. We integrate strategic direction, transformational coaching, and divine purpose to impact the world with a conscious vision.",
-        "cta-button": "Meet the Founder"
-      },
-      fr: {
-        "home": "Accueil",
-        "about": "À propos de moi",
-        "services": "Services",
-        "programs": "Programmes",
-        "testimonials": "Témoignages",
-        "contact": "Contact",
-        "hero-title": "Consulting international en leadership conscient",
-        "hero-text": "Chez <strong>Princi General Consulting</strong>, nous formons et accompagnons les leaders, les ONG et les entreprises avec une âme. Nous intégrons la direction stratégique, le coaching transformationnel et le but divin pour impacter le monde avec une vision consciente.",
-        "cta-button": "Rencontrez la fondatrice"
-      },
-      it: {
-        "home": "Home",
-        "about": "Chi sono",
-        "services": "Servizi",
-        "programs": "Programmi",
-        "testimonials": "Testimonianze",
-        "contact": "Contatto",
-        "hero-title": "Consulenza internazionale nella leadership consapevole",
-        "hero-text": "In <strong>Princi General Consulting</strong>, formiamo e accompagniamo leader, ONG e aziende con anima. Integrando direzione strategica, coaching trasformativo e scopo divino per influenzare il mondo con una visione consapevole.",
-        "cta-button": "Conosci la fondatrice"
-      }
-    };
-
-    function changeLanguage(lang) {
-      document.querySelectorAll('[data-key]').forEach(el => {
-        const key = el.getAttribute('data-key');
-        if (translations[lang] && translations[lang][key]) {
-          el.innerHTML = translations[lang][key];
-        }
-      });
-    }
-  </script>
-
-</body>
+ </body>
 </html>
