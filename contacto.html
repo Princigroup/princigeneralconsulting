@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contacto | Princi General Consulting</title>
+
   <style>
     body {
       margin: 0;
@@ -18,10 +19,10 @@
       background-image: url(markus-winkler-q3QPw37J6Xs-unsplash.jpg);
       background-size: cover;
       background-position: center;
-      color: #333;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
-header::before {
+
+    header::before {
       content: "";
       position: absolute;
       top: 0; left: 0;
@@ -29,22 +30,42 @@ header::before {
       background: rgba(245, 245, 245, 0.4);
       z-index: 0;
     }
-    /* Logo en esquina superior izquierda */
+
     .logo {
       position: absolute;
       top: 20px;
       left: 20px;
-      max-height: 140px; /* más grande */
+      max-height: 140px;
       z-index: 2;
       cursor: pointer;
     }
- /* Menú en esquina inferior derecha */
-     nav {
+
+    .menu-toggle {
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 3;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 22px;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      height: 3px;
+      background: #4b3a30;
+      margin-bottom: 5px;
+      border-radius: 2px;
+    }
+
+    nav {
       position: absolute;
       bottom: 20px;
-      right: 20px;  /* aquí está el cambio */
+      right: 20px;
       z-index: 2;
-      max-width: 90%;
     }
 
     nav ul {
@@ -58,8 +79,8 @@ header::before {
 
     nav ul li a {
       text-decoration: none;
-      color: #4b3a30; /* marrón oscuro */
-      background-color: #e8d5d2; /* color pastel rosado/marrón */
+      color: #4b3a30;
+      background-color: #e8d5d2;
       padding: 0.6rem 1.2rem;
       border-radius: 8px;
       font-weight: 600;
@@ -70,8 +91,21 @@ header::before {
 
     nav ul li a:hover,
     nav ul li a[aria-current="page"] {
-      background-color: #d2b48c; /* color tierra más intenso */
-      color: #fff; /* texto blanco para mejor contraste */
+      background-color: #d2b48c;
+      color: #fff;
+    }
+
+    /* Traductor Google escritorio */
+    #google_translate_element {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 9999;
+      background: #fdfaf7;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
 
     main {
@@ -154,30 +188,60 @@ header::before {
       color: #6b4c3b;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       header {
-        flex-direction: column;
         height: auto;
-        padding: 1rem;
-        background-position: center;
+        padding-bottom: 1rem;
         text-align: center;
       }
 
       .logo {
-        margin: 0 0 1rem 0;
-        height: 80px;
+        position: relative;
+        margin: 1rem auto 0 auto;
+        display: inline-block;
+        max-height: 80px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #fdfaf7;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      nav.active {
+        display: block;
       }
 
       nav ul {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      /* Traductor móvil */
+      #google_translate_element {
+        position: static;
+        margin: 1rem auto 0 auto;
+        text-align: center;
+        font-size: 1rem;
+        box-shadow: none;
       }
     }
   </style>
 </head>
-<!-- Google Translate -->
-<div id="google_translate_element" style="position: fixed; top: 10px; right: 10px; z-index: 9999;"></div>
+
+<body>
+
+<!-- Traductor de Google -->
+<div id="google_translate_element"></div>
 <script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
@@ -188,10 +252,18 @@ header::before {
   }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<body>
 
 <header>
-  <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Princi General Consulting Logo" class="logo" />
+  <a href="index.html">
+    <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Princi General Consulting Logo" class="logo" />
+  </a>
+
+  <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
   <nav>
     <ul>
       <li><a href="index.html">Inicio</a></li>
@@ -225,6 +297,9 @@ header::before {
     <p><strong>Email:</strong> tamarapinillos@princigeneralconsulting.com</p>
   </section>
 </main>
+
+</body>
+</html>
 
 </body>
 </html>
