@@ -3,16 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Conoce la historia de Tamara Pinillos Blanco, fundadora de Princi General Consulting: una consultoría internacional de liderazgo consciente, desarrollo espiritual y transformación empresarial." />
-  <meta name="keywords" content="Tamara Pinillos Blanco, liderazgo consciente, coaching ejecutivo, PNL, mindfulness, consultoría, desarrollo personal, transformación organizacional, Princi General Consulting" />
-  <meta name="author" content="Tamara Pinillos Blanco" />
-  <meta property="og:title" content="Sobre mí | Tamara Pinillos Blanco - Princi General Consulting" />
-  <meta property="og:description" content="Descubre la trayectoria profesional y espiritual de Tamara Pinillos Blanco, fundadora de Princi General Consulting." />
-  <meta property="og:image" content="tamara-pinillos-blanco-consultora.jpg" />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="favicon.ico" />
-  <title>Sobre mí | Tamara Pinillos Blanco - Princi General Consulting</title>
 
+  <!-- SEO Básico -->
+  <meta name="description" content="Conoce a Tamara Pinillos Blanco, fundadora de Princi General Consulting: experta en liderazgo consciente, alta dirección ética y desarrollo con propósito. Más de 10 años transformando personas y organizaciones a nivel internacional." />
+  <meta name="keywords" content="Tamara Pinillos Blanco, liderazgo consciente, coaching ejecutivo, dirección ética, consultoría estratégica, desarrollo personal, PNL, mindfulness, transformación empresarial, mentoría, emprendimiento espiritual, Princi General Consulting" />
+  <meta name="author" content="Tamara Pinillos Blanco - Princi General Consulting" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph (para redes sociales) -->
+  <meta property="og:title" content="Sobre mí | Tamara Pinillos Blanco - Princi General Consulting" />
+  <meta property="og:description" content="Descubre la trayectoria profesional, espiritual y empresarial de Tamara Pinillos Blanco, líder en consultoría internacional con propósito y fundadora de Princi General Consulting." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.princigeneralconsulting.com/sobre-mi.html" />
+  <meta property="og:image" content="https://www.princigeneralconsulting.com/img/tamara-pinillos-blanco.jpg" /> <!-- Asegúrate de usar la URL correcta de la imagen -->
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.princigeneralconsulting.com/sobre-mi.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Título del navegador -->
+  <title>Sobre mí | Tamara Pinillos Blanco - Liderazgo con Propósito</title>
   <style>
     :root {
       --color-text: #4b3a30;
@@ -47,8 +59,9 @@
     header::before {
       content: "";
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: var(--color-overlay);
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(245, 245, 245, 0.4);
       z-index: 0;
     }
 
@@ -61,42 +74,6 @@
       cursor: pointer;
     }
 
-    nav {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      max-width: 90%;
-      z-index: 2;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    nav ul li a {
-      display: inline-block;
-      text-decoration: none;
-      color: var(--color-text);
-      background-color: var(--color-secondary);
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      white-space: nowrap;
-    }
-
-    nav ul li a:hover,
-    nav ul li a:focus {
-      background-color: var(--color-primary);
-      color: #fff;
-      outline: none;
-    }
-
     .menu-toggle {
       display: none;
       position: absolute;
@@ -104,17 +81,66 @@
       right: 20px;
       z-index: 3;
       flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 22px;
       cursor: pointer;
     }
 
     .menu-toggle span {
+      display: block;
       height: 3px;
-      width: 25px;
-      background: var(--color-text);
-      margin: 4px 0;
-      transition: 0.3s;
+      background: #4b3a30;
+      margin-bottom: 5px;
+      border-radius: 2px;
     }
 
+    nav {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      z-index: 2;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #4b3a30;
+      background-color: #e8d5d2;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    nav ul li a:hover,
+    nav ul li a[aria-current="page"] {
+      background-color: #d2b48c;
+      color: #fff;
+    }
+
+    /* Traductor Google escritorio */
+    #google_translate_element {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 9999;
+      background: #fdfaf7;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
     @media (max-width: 768px) {
       nav {
         display: none;
@@ -291,11 +317,11 @@
 <header role="banner">
   <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Logotipo de Princi General Consulting" class="logo" loading="lazy" />
 
-  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mainMenu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+  <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')" aria-label="Toggle navigation menu" role="button" tabindex="0" onkeydown="if(event.key==='Enter'){this.click();}">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
   <nav id="mainMenu" aria-label="Navegación principal" role="navigation">
     <ul>
