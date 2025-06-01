@@ -7,19 +7,19 @@
 
   <!-- SEO -->
   <meta name="description" content="Descubre nuestros programas de liderazgo consciente, coaching ejecutivo y bienestar organizacional. Transforma tu propósito en acción.">
-  <meta name="keywords" content="programas, liderazgo, coaching, mentoría, mindfulness, emprendimiento consciente, formación">
+  <meta name="keywords" content="programas, liderazgo consciente, coaching ejecutivo, mentoría, mindfulness, emprendimiento consciente, formación">
   <meta name="author" content="Princi General Consulting">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.tusitio.com/programas.html" />
+  <link rel="canonical" href="https://www.princigeneralconsulting.com/programas.html" />
 
   <!-- Redes sociales -->
   <meta property="og:title" content="Programas | Princi General Consulting">
   <meta property="og:description" content="Explora nuestros programas formativos para líderes y organizaciones con propósito.">
-  <meta property="og:image" content="https://www.tusitio.com/imagen-og.jpg">
-  <meta property="og:url" content="https://www.tusitio.com/programas.html">
+  <meta property="og:image" content="https://www.princigeneralconsulting.com/assets/imagen-og-programas.jpg">
+  <meta property="og:url" content="https://www.princigeneralconsulting.com/programas.html">
   <meta property="og:type" content="website">
 
-  <style>
+    <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -51,9 +51,9 @@
       left: 20px;
       max-height: 140px;
       z-index: 2;
+      cursor: pointer;
     }
 
-    /* Menú visible en escritorio, hamburguesa oculta */
     .menu-toggle {
       display: none;
       position: absolute;
@@ -62,7 +62,7 @@
       z-index: 3;
       flex-direction: column;
       justify-content: space-between;
-      width: 28px;
+      width: 30px;
       height: 22px;
       cursor: pointer;
     }
@@ -80,33 +80,36 @@
       bottom: 20px;
       right: 20px;
       z-index: 2;
-      display: block; /* menú visible en escritorio */
     }
 
     nav ul {
       list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.5rem;
       margin: 0;
       padding: 0;
-      display: flex;
-      gap: 1rem;
     }
 
     nav ul li a {
       text-decoration: none;
       color: #4b3a30;
       background-color: #e8d5d2;
-      padding: 0.6rem 1rem;
+      padding: 0.6rem 1.2rem;
       border-radius: 8px;
-      font-weight: bold;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      display: inline-block;
     }
 
     nav ul li a:hover,
     nav ul li a[aria-current="page"] {
       background-color: #d2b48c;
-      color: white;
+      color: #fff;
     }
 
-    /* Traductor de Google - escritorio */
+    /* Traductor Google escritorio */
     #google_translate_element {
       position: fixed;
       top: 10px;
@@ -119,48 +122,92 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
 
-    /* Móvil */
-    @media (max-width: 768px) {
+    main {
+      max-width: 600px;
+      margin: 2rem auto 4rem auto;
+      padding: 0 2rem;
+      color: #4b3a30;
+    }
+
+    main h1 {
+      font-size: 2.8rem;
+      color: #6b4c3b;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+   @media (max-width: 768px) {
       header {
-        height: 120px; /* altura reducida para móvil */
+        height: 120px;
         padding-bottom: 0;
-        text-align: center;
       }
 
       .logo {
-        max-height: 80px; /* tamaño logo en móvil */
+        max-height: 80px;
         margin: 1rem auto 0 auto;
         display: block;
         position: relative;
       }
 
       .menu-toggle {
-        display: flex; /* mostramos hamburguesa en móvil */
+        display: flex;
       }
 
+      /* Menú desplegado estilo móvil mejorado */
       nav {
-        display: none; /* ocultamos menú por defecto */
-        top: 70px;
+        display: none;
+        position: fixed;
+        top: 60px;
         right: 20px;
-        background: #fdfaf7;
-        padding: 1rem;
-        border-radius: 10px;
-        position: absolute;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        flex-direction: column;
+        background: #fff;
+        padding: 1.5rem 2rem;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        width: 220px;
+        z-index: 9999;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
       }
 
       nav.active {
-        display: block; /* mostramos menú solo cuando hamburguesa activa */
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
       }
 
       nav ul {
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
+        gap: 1.2rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
       }
 
-      /* Traductor de Google - móvil */
+      nav ul li a {
+        display: block;
+        padding: 0.9rem 1.3rem;
+        border-radius: 10px;
+        background-color: #e8d5d2;
+        color: #4b3a30;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0 2px 6px rgba(210, 180, 140, 0.5);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      nav ul li a:hover,
+      nav ul li a[aria-current="page"] {
+        background-color: #c5a16a;
+        box-shadow: 0 4px 12px rgba(197, 161, 106, 0.7);
+        color: #fff;
+      }
+
+      /* Traductor Google móvil */
       #google_translate_element {
         position: static;
         margin: 1rem auto 0 auto;
@@ -169,7 +216,6 @@
         box-shadow: none;
       }
     }
-
     main {
       max-width: 900px;
       margin: 2rem auto;
@@ -224,14 +270,15 @@
 
   <header>
     <a href="index.html">
-      <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Logo de Princi General Consulting" class="logo">
+      <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Logo Princi General Consulting" class="logo">
     </a>
 
-    <div class="menu-toggle" onclick="document.getElementById('mainMenu').classList.toggle('active')">
+    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')" aria-label="Toggle navigation menu" role="button" tabindex="0" onkeydown="if(event.key==='Enter'){this.click();}">
       <span></span>
       <span></span>
       <span></span>
     </div>
+
 
     <nav id="mainMenu">
       <ul>
@@ -248,32 +295,39 @@
     <h1>Programas</h1>
 
     <section class="programs">
-      <div class="program-item">
+      <article class="program-item">
         <h3>Programa de Liderazgo Consciente</h3>
-        <p>Curso integral para líderes que buscan desarrollar un liderazgo auténtico, ético y transformador. Incluye módulos sobre PNL, gestión emocional y mindfulness aplicado a la dirección.</p>
-      </div>
+        <p>Curso integral para líderes que desean desarrollar un liderazgo auténtico, ético y transformador. Incluye módulos de PNL, inteligencia emocional y mindfulness aplicado a la gestión.</p>
+      </article>
 
-      <div class="program-item">
+      <article class="program-item">
         <h3>Formación en Coaching Ejecutivo</h3>
-        <p>Programa especializado para coaches y directivos que desean potenciar sus habilidades de acompañamiento, comunicación efectiva y toma de decisiones conscientes en entornos corporativos.</p>
-      </div>
+        <p>Capacitación para coaches y líderes que buscan potenciar habilidades de comunicación, escucha activa y toma de decisiones conscientes en entornos de alta exigencia.</p>
+      </article>
 
-      <div class="program-item">
+      <article class="program-item">
         <h3>Desarrollo de Equipos de Alto Rendimiento</h3>
-        <p>Metodologías para crear y mantener equipos colaborativos, motivados y alineados con la visión y valores de la organización, fomentando el bienestar y la productividad.</p>
-      </div>
+        <p>Metodologías para fomentar equipos cohesionados, comprometidos y productivos, alineados con los valores organizacionales y enfocados en el bienestar colectivo.</p>
+      </article>
 
-      <div class="program-item">
+      <article class="program-item">
         <h3>Mentoría para Emprendedoras Conscientes</h3>
-        <p>Acompañamiento personalizado para mujeres emprendedoras que desean construir negocios con impacto social y propósito, desde la visión hasta la estrategia y gestión.</p>
-      </div>
+        <p>Acompañamiento estratégico y emocional para mujeres emprendedoras con propósito, desde la ideación hasta la implementación y consolidación de sus proyectos.</p>
+      </article>
 
-      <div class="program-item">
+      <article class="program-item">
         <h3>Gestión Emocional y Mindfulness para Profesionales</h3>
-        <p>Programa práctico para integrar la gestión emocional y técnicas de mindfulness en el día a día laboral, mejorando la resiliencia, concentración y bienestar integral.</p>
-      </div>
+        <p>Herramientas prácticas para incorporar la atención plena y la regulación emocional en el ámbito laboral, mejorando el enfoque, la resiliencia y la calidad de vida.</p>
+      </article>
     </section>
   </main>
 
+  <script>
+    function toggleMenu(button) {
+      const nav = document.getElementById("mainMenu");
+      button.classList.toggle("open");
+      nav.classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
