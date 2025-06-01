@@ -53,6 +53,7 @@
       z-index: 2;
     }
 
+    /* Menú visible en escritorio, hamburguesa oculta */
     .menu-toggle {
       display: none;
       position: absolute;
@@ -79,6 +80,7 @@
       bottom: 20px;
       right: 20px;
       z-index: 2;
+      display: block; /* menú visible en escritorio */
     }
 
     nav ul {
@@ -117,26 +119,27 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
 
+    /* Móvil */
     @media (max-width: 768px) {
       header {
-        height: auto;
-        padding-bottom: 1rem;
+        height: 120px; /* altura reducida para móvil */
+        padding-bottom: 0;
         text-align: center;
       }
 
       .logo {
-        position: relative;
+        max-height: 80px; /* tamaño logo en móvil */
         margin: 1rem auto 0 auto;
-        display: inline-block;
-        max-height: 60px;
+        display: block;
+        position: relative;
       }
 
       .menu-toggle {
-        display: flex;
+        display: flex; /* mostramos hamburguesa en móvil */
       }
 
       nav {
-        display: none;
+        display: none; /* ocultamos menú por defecto */
         top: 70px;
         right: 20px;
         background: #fdfaf7;
@@ -144,15 +147,17 @@
         border-radius: 10px;
         position: absolute;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
       }
 
       nav.active {
-        display: block;
+        display: block; /* mostramos menú solo cuando hamburguesa activa */
       }
 
       nav ul {
         flex-direction: column;
         align-items: flex-start;
+        gap: 0.75rem;
       }
 
       /* Traductor de Google - móvil */
@@ -239,36 +244,36 @@
     </nav>
   </header>
 
-<main>
-  <h1>Programas</h1>
+  <main>
+    <h1>Programas</h1>
 
-  <section class="programs">
-    <div class="program-item">
-      <h3>Programa de Liderazgo Consciente</h3>
-      <p>Curso integral para líderes que buscan desarrollar un liderazgo auténtico, ético y transformador. Incluye módulos sobre PNL, gestión emocional y mindfulness aplicado a la dirección.</p>
-    </div>
+    <section class="programs">
+      <div class="program-item">
+        <h3>Programa de Liderazgo Consciente</h3>
+        <p>Curso integral para líderes que buscan desarrollar un liderazgo auténtico, ético y transformador. Incluye módulos sobre PNL, gestión emocional y mindfulness aplicado a la dirección.</p>
+      </div>
 
-    <div class="program-item">
-      <h3>Formación en Coaching Ejecutivo</h3>
-      <p>Programa especializado para coaches y directivos que desean potenciar sus habilidades de acompañamiento, comunicación efectiva y toma de decisiones conscientes en entornos corporativos.</p>
-    </div>
+      <div class="program-item">
+        <h3>Formación en Coaching Ejecutivo</h3>
+        <p>Programa especializado para coaches y directivos que desean potenciar sus habilidades de acompañamiento, comunicación efectiva y toma de decisiones conscientes en entornos corporativos.</p>
+      </div>
 
-    <div class="program-item">
-      <h3>Desarrollo de Equipos de Alto Rendimiento</h3>
-      <p>Metodologías para crear y mantener equipos colaborativos, motivados y alineados con la visión y valores de la organización, fomentando el bienestar y la productividad.</p>
-    </div>
+      <div class="program-item">
+        <h3>Desarrollo de Equipos de Alto Rendimiento</h3>
+        <p>Metodologías para crear y mantener equipos colaborativos, motivados y alineados con la visión y valores de la organización, fomentando el bienestar y la productividad.</p>
+      </div>
 
-    <div class="program-item">
-      <h3>Mentoría para Emprendedoras Conscientes</h3>
-      <p>Acompañamiento personalizado para mujeres emprendedoras que desean construir negocios con impacto social y propósito, desde la visión hasta la estrategia y gestión.</p>
-    </div>
+      <div class="program-item">
+        <h3>Mentoría para Emprendedoras Conscientes</h3>
+        <p>Acompañamiento personalizado para mujeres emprendedoras que desean construir negocios con impacto social y propósito, desde la visión hasta la estrategia y gestión.</p>
+      </div>
 
-    <div class="program-item">
-      <h3>Gestión Emocional y Mindfulness para Profesionales</h3>
-      <p>Programa práctico para integrar la gestión emocional y técnicas de mindfulness en el día a día laboral, mejorando la resiliencia, concentración y bienestar integral.</p>
-    </div>
-  </section>
-</main>
+      <div class="program-item">
+        <h3>Gestión Emocional y Mindfulness para Profesionales</h3>
+        <p>Programa práctico para integrar la gestión emocional y técnicas de mindfulness en el día a día laboral, mejorando la resiliencia, concentración y bienestar integral.</p>
+      </div>
+    </section>
+  </main>
 
 </body>
 </html>
