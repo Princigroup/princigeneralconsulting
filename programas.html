@@ -4,6 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Programas | Princi General Consulting</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Descubre nuestros programas de liderazgo consciente, coaching ejecutivo y bienestar organizacional. Transforma tu propósito en acción.">
+  <meta name="keywords" content="programas, liderazgo, coaching, mentoría, mindfulness, emprendimiento consciente, formación">
+  <meta name="author" content="Princi General Consulting">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.tusitio.com/programas.html" />
+
+  <!-- Redes sociales -->
+  <meta property="og:title" content="Programas | Princi General Consulting">
+  <meta property="og:description" content="Explora nuestros programas formativos para líderes y organizaciones con propósito.">
+  <meta property="og:image" content="https://www.tusitio.com/imagen-og.jpg">
+  <meta property="og:url" content="https://www.tusitio.com/programas.html">
+  <meta property="og:type" content="website">
+
   <style>
     body {
       margin: 0;
@@ -14,12 +29,11 @@
 
     header {
       position: relative;
-      height: 380px;
-      background-image: url(programas.png);
+      background-image: url('programas.png');
       background-size: cover;
       background-position: center;
-      color: #333;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      height: 380px;
+      text-align: left;
     }
 
     header::before {
@@ -31,63 +45,136 @@
       z-index: 0;
     }
 
-    /* Logo en esquina superior izquierda */
     .logo {
       position: absolute;
       top: 20px;
       left: 20px;
-      max-height: 140px; /* más grande */
+      max-height: 140px;
       z-index: 2;
+    }
+
+    .menu-toggle {
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 3;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28px;
+      height: 22px;
       cursor: pointer;
     }
 
-    /* Menú en esquina inferior derecha */
+    .menu-toggle span {
+      display: block;
+      height: 3px;
+      background: #4b3a30;
+      margin-bottom: 5px;
+      border-radius: 2px;
+    }
+
     nav {
       position: absolute;
       bottom: 20px;
-      right: 20px;  /* aquí está el cambio */
+      right: 20px;
       z-index: 2;
-      max-width: 90%;
     }
 
     nav ul {
       list-style: none;
-      display: flex;
-      gap: 1.5rem;
       margin: 0;
       padding: 0;
-      flex-wrap: wrap;
-      justify-content: flex-start;
+      display: flex;
+      gap: 1rem;
     }
 
     nav ul li a {
       text-decoration: none;
       color: #4b3a30;
       background-color: #e8d5d2;
-      padding: 0.6rem 1.2rem;
+      padding: 0.6rem 1rem;
       border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      white-space: nowrap;
-      display: inline-block;
+      font-weight: bold;
     }
 
-    nav ul li a:hover {
+    nav ul li a:hover,
+    nav ul li a[aria-current="page"] {
       background-color: #d2b48c;
-      color: #fff;
+      color: white;
+    }
+
+    /* Traductor de Google - escritorio */
+    #google_translate_element {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 9999;
+      background: #fdfaf7;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        height: auto;
+        padding-bottom: 1rem;
+        text-align: center;
+      }
+
+      .logo {
+        position: relative;
+        margin: 1rem auto 0 auto;
+        display: inline-block;
+        max-height: 60px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        display: none;
+        top: 70px;
+        right: 20px;
+        background: #fdfaf7;
+        padding: 1rem;
+        border-radius: 10px;
+        position: absolute;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      nav.active {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      /* Traductor de Google - móvil */
+      #google_translate_element {
+        position: static;
+        margin: 1rem auto 0 auto;
+        text-align: center;
+        font-size: 1rem;
+        box-shadow: none;
+      }
     }
 
     main {
       max-width: 900px;
-      margin: 2rem auto 4rem auto;
-      padding: 0 2rem;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
     }
 
     main h1 {
-      font-size: 2.8rem;
-      color: #6b4c3b;
-      margin-bottom: 2rem;
+      font-size: 2.5rem;
       text-align: center;
+      color: #6b4c3b;
     }
 
     .programs {
@@ -105,64 +192,52 @@
     }
 
     .program-item h3 {
-      color: #6b4c3b;
       margin-top: 0;
+      color: #6b4c3b;
     }
 
     .program-item p {
       margin: 0.5rem 0 0 0;
       line-height: 1.6;
     }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        height: auto;
-        padding: 1rem;
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      main h1 {
-        font-size: 2rem;
-      }
-
-      .program-item {
-        padding: 1rem;
-      }
-    }
   </style>
 </head>
-<!-- Google Translate -->
-<div id="google_translate_element" style="position: fixed; top: 10px; right: 10px; z-index: 9999;"></div>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      includedLanguages: 'en,it,fr,de,pt',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<body>
 
-<header>
-  <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Princi General Consulting Logo" class="logo" />
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="sobre-mi.html">Sobre mí</a></li>
-      <li><a href="servicios.html">Servicios</a></li>
-      <li><a href="programas.html" aria-current="page">Programas</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
+<body>
+  <!-- Traductor de Google -->
+  <div id="google_translate_element"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'en,it,fr,de,pt',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <header>
+    <a href="index.html">
+      <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Logo de Princi General Consulting" class="logo">
+    </a>
+
+    <div class="menu-toggle" onclick="document.getElementById('mainMenu').classList.toggle('active')">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="mainMenu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="programas.html" aria-current="page">Programas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
 <main>
   <h1>Programas</h1>
