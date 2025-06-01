@@ -4,213 +4,231 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Título optimizado para buscadores -->
   <title>Princi General Consulting | Consultoría en Liderazgo Consciente y Dirección Estratégica</title>
 
-  <!-- Meta descripción SEO mejorada -->
   <meta name="description" content="Consultoría internacional especializada en liderazgo consciente, dirección estratégica y formación con propósito. Acompañamos a líderes, ONG y empresas éticas a transformar su impacto con valores y visión." />
-
-  <!-- Palabras clave refinadas -->
   <meta name="keywords" content="consultoría internacional, liderazgo consciente, coaching ejecutivo, dirección estratégica con valores, ONG, empresas con propósito, transformación organizacional, desarrollo espiritual, Tamara Pinillos Blanco, Princi General Consulting" />
-
   <meta name="author" content="Tamara Pinillos Blanco - Princi General Consulting" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph para redes sociales -->
   <meta property="og:title" content="Princi General Consulting | Consultoría en Liderazgo Consciente y Dirección Estratégica" />
   <meta property="og:description" content="Transforma tu organización desde el liderazgo con propósito. Consultoría estratégica, coaching y formación de alto nivel para líderes conscientes." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.princigeneralconsulting.com" />
-  <meta property="og:image" content="https://www.princigeneralconsulting.com/img/portada-princi-general.jpg" /> <!-- Asegúrate de tener esta imagen en tu servidor -->
+  <meta property="og:image" content="https://www.princigeneralconsulting.com/img/portada-princi-general.jpg" />
 
-  <!-- Canonical URL -->
   <link rel="canonical" href="https://www.princigeneralconsulting.com" />
-
-  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-</head>
+
   <style>
-   body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fdfaf7;
-  color: #4b3a30;
-}
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfaf7;
+      color: #4b3a30;
+    }
 
-header {
-  position: relative;
-  height: 300px;
-  background-image: url(dane-deaner-_-KLkj7on_c-unsplash.jpg);
-  background-size: cover;
-  background-position: center;
-  color: #333;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
+    header {
+      position: relative;
+      height: 300px;
+      background-image: url(dane-deaner-_-KLkj7on_c-unsplash.jpg);
+      background-size: cover;
+      background-position: center;
+      color: #333;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
 
-header::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(245, 245, 245, 0.4);
-  z-index: 0;
-}
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(245, 245, 245, 0.4);
+      z-index: 0;
+    }
 
-.logo {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  max-height: 100px;
-  z-index: 2;
-  cursor: pointer;
-}
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      max-height: 100px;
+      z-index: 2;
+      cursor: pointer;
+    }
 
-.menu-toggle {
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 3;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #4b3a30;
-  cursor: pointer;
-}
+    .menu-toggle {
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 3;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #4b3a30;
+      cursor: pointer;
+    }
 
-nav {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  z-index: 2;
-  max-width: 90%;
-}
+    nav {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      z-index: 2;
+      max-width: 90%;
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
 
-nav ul li a {
-  text-decoration: none;
-  color: #4b3a30;
-  background-color: #e8d5d2;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
+    nav ul li a {
+      text-decoration: none;
+      color: #4b3a30;
+      background-color: #e8d5d2;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
 
-nav ul li a:hover {
-  background-color: #d2b48c;
-  color: #fff;
-}
+    nav ul li a:hover {
+      background-color: #d2b48c;
+      color: #fff;
+    }
 
-.language-selector {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 9999;
-  background: #fdf7f4;
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  font-size: 0.9rem;
-}
+    .language-selector {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      background: #fdf7f4;
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      font-size: 0.9rem;
+    }
 
-.hero {
-  text-align: center;
-  padding: 5rem 2rem;
-  background-color: #fdf7f4;
-}
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      background-color: #fdf7f4;
+    }
 
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-  color: #4b3a30;
-}
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #4b3a30;
+    }
 
-.hero p {
-  font-size: 1.3rem;
-  color: #6b4c3b;
-  margin-bottom: 2rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
+    .hero p {
+      font-size: 1.3rem;
+      color: #6b4c3b;
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-.hero .cta {
-  background-color: #d2b48c;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
+    .hero .cta {
+      background-color: #d2b48c;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
 
-.hero .cta:hover {
-  background-color: #b1916f;
-}
+    .hero .cta:hover {
+      background-color: #b1916f;
+    }
 
-/* === VERSIÓN MÓVIL === */
-@media (max-width: 768px) {
-  .logo {
-    position: static;
-    max-height: 80px;
-    margin: 10px auto 0 auto;
-    display: block;
-  }
+    @media (max-width: 768px) {
+      .logo {
+        position: static;
+        max-height: 80px;
+        margin: 10px auto 0 auto;
+        display: block;
+      }
 
-  .menu-toggle {
-    display: block;
-  }
+      .menu-toggle {
+        display: block;
+      }
 
-  nav {
-    display: none;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.95);
-    position: absolute;
-    top: 70px;
-    right: 10px;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.95);
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 85%;
+        max-width: 300px;
+      }
 
-  nav.active {
-    display: flex;
-  }
+      nav.active {
+        display: flex;
+      }
 
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
+      nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
 
-  .language-selector {
-    position: static;
-    text-align: center;
-    margin: 1rem auto 0 auto;
-    background: transparent;
-    box-shadow: none;
-    font-size: 1rem;
-  }
+      nav ul li {
+        margin-bottom: 0.8rem;
+      }
 
-  .hero h1 {
-    font-size: 2rem;
-  }
+      nav ul li:last-child {
+        margin-bottom: 0;
+      }
 
-  .hero p {
-    font-size: 1.1rem;
-  }
-}
+      nav ul li a {
+        background-color: #e8d5d2;
+        color: #4b3a30;
+        padding: 0.9rem 1.2rem;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: 600;
+        display: block;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: background 0.3s, transform 0.2s;
+      }
+
+      nav ul li a:hover {
+        background-color: #d2b48c;
+        color: #fff;
+        transform: scale(1.02);
+      }
+
+      .language-selector {
+        position: static;
+        text-align: center;
+        margin: 1rem auto 0 auto;
+        background: transparent;
+        box-shadow: none;
+        font-size: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+    }
   </style>
 </head>
 
@@ -220,7 +238,6 @@ nav ul li a:hover {
       <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Logo Princi General Consulting" class="logo" />
     </a>
 
-    <!-- Botón hamburguesa -->
     <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
 
     <nav id="mobile-menu" aria-label="Menú principal">
@@ -232,12 +249,12 @@ nav ul li a:hover {
         <li><a href="contacto.html" data-key="contact">Contacto</a></li>
       </ul>
     </nav>
-
-   
   </header>
- <div class="language-selector">
-      <div id="google_translate_element"></div>
-    </div>
+
+  <div class="language-selector">
+    <div id="google_translate_element"></div>
+  </div>
+
   <main>
     <section class="hero">
       <h1 data-key="hero-title">Consultoría internacional en liderazgo consciente</h1>
@@ -248,20 +265,21 @@ nav ul li a:hover {
     </section>
   </main>
 
- <script>
-  function toggleMenu() {
-    const nav = document.getElementById("mobile-menu");
-    nav.classList.toggle("active");
-  }
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("mobile-menu");
+      nav.classList.toggle("active");
+    }
 
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      includedLanguages: 'en,it,fr,de,pt',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'en,it,fr,de,pt',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
+
