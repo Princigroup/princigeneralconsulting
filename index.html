@@ -10,202 +10,90 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fdfaf7;
-      color: #4b3a30;
-    }
+   body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfaf7;
+  color: #4b3a30;
+}
 
-    header {
-      position: relative;
-      height: 300px;
-      background-image: url(dane-deaner-_-KLkj7on_c-unsplash.jpg);
-      background-size: cover;
-      background-position: center;
-      color: #333;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    }
+header {
+  position: relative;
+  height: 300px;
+  background-image: url(dane-deaner-_-KLkj7on_c-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
 
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(245, 245, 245, 0.4);
-      z-index: 0;
-    }
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(245, 245, 245, 0.4);
+  z-index: 0;
+}
 
-    .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      max-height: 100px;
-      z-index: 2;
-      cursor: pointer;
-    }
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  max-height: 100px;
+  z-index: 2;
+  cursor: pointer;
+}
 
-    nav {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      z-index: 2;
-      max-width: 90%;
-    }
+.menu-toggle {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #4b3a30;
+  cursor: pointer;
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      margin: 0;
-      padding: 0;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-    }
+nav {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  max-width: 90%;
+}
 
-    nav ul li a {
-      text-decoration: none;
-      color: #4b3a30;
-      background-color: #e8d5d2;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      white-space: nowrap;
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
 
-    nav ul li a:hover {
-      background-color: #d2b48c;
-      color: #fff;
-    }
+nav ul li a {
+  text-decoration: none;
+  color: #4b3a30;
+  background-color: #e8d5d2;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
 
-    .language-selector {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      z-index: 2;
-    }
+nav ul li a:hover {
+  background-color: #d2b48c;
+  color: #fff;
+}
 
-    .language-selector select {
-      padding: 0.5rem;
-      border-radius: 5px;
-      background-color: #e8d5d2;
-      color: #4b3a30;
-      font-weight: 600;
-      border: none;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 5rem 2rem;
-      background-color: #fdf7f4;
-    }
-
-    .hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
-      color: #4b3a30;
-    }
-
-    .hero p {
-      font-size: 1.3rem;
-      color: #6b4c3b;
-      margin-bottom: 2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .hero .cta {
-      background-color: #d2b48c;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .hero .cta:hover {
-      background-color: #b1916f;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        position: static;
-        max-width: 100%;
-        margin-top: 10px;
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.8rem;
-      }
-
-      .logo {
-        position: static;
-        max-height: 80px;
-        margin: 10px;
-      }
-
-      .language-selector {
-        top: auto;
-        right: auto;
-        bottom: 10px;
-        left: 10px;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .hero p {
-        font-size: 1.1rem;
-      }
-    }
-    .menu-toggle {
-      display: none;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      z-index: 3;
-      background: none;
-      border: none;
-      font-size: 2rem;
-      color: #4b3a30;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.9);
-        position: absolute;
-        top: 80px;
-        right: 10px;
-        padding: 1rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      }
-
-      nav.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-      }
-
-     .language-selector {
-  position: fixed;
+.language-selector {
+  position: absolute;
   top: 20px;
   right: 20px;
   z-index: 9999;
@@ -215,8 +103,77 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   font-size: 0.9rem;
 }
-/* Versión móvil */
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background-color: #fdf7f4;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #4b3a30;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: #6b4c3b;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero .cta {
+  background-color: #d2b48c;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.hero .cta:hover {
+  background-color: #b1916f;
+}
+
+/* === VERSIÓN MÓVIL === */
 @media (max-width: 768px) {
+  .logo {
+    position: static;
+    max-height: 80px;
+    margin: 10px auto 0 auto;
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
   .language-selector {
     position: static;
     text-align: center;
@@ -225,11 +182,13 @@
     box-shadow: none;
     font-size: 1rem;
   }
-.language-selector {
-  margin-bottom: 1rem;
-}
-  #google_translate_element {
-    display: inline-block;
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
   }
 }
   </style>
@@ -269,21 +228,20 @@
     </section>
   </main>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("mobile-menu");
-      nav.classList.toggle("active");
-    }
+ <script>
+  function toggleMenu() {
+    const nav = document.getElementById("mobile-menu");
+    nav.classList.toggle("active");
+  }
 
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'es',
-        includedLanguages: 'en,it,fr,de,pt',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-    }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'es',
+      includedLanguages: 'en,it,fr,de,pt',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
-
