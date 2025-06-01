@@ -3,18 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <meta name="description" content="Servicios de consultoría estratégica, coaching, formación y mentoría para líderes, emprendedoras y organizaciones con propósito. Alinea tus valores con tu negocio.">
-  <meta name="keywords" content="consultoría, coaching ejecutivo, liderazgo consciente, mentoría, finanzas éticas, seguros, formación, emprendimiento consciente, desarrollo personal">
-  <meta name="author" content="Princi General Consulting">
+  
+  <!-- SEO básico -->
+  <meta name="description" content="Princi General Consulting ofrece consultoría estratégica, coaching ejecutivo, formación y mentoría para líderes y organizaciones que desean transformar el mundo con propósito y valores éticos.">
+  <meta name="keywords" content="consultoría estratégica, liderazgo consciente, coaching ejecutivo, mentoría, formación empresarial, desarrollo personal, emprendimiento ético, dirección con propósito, mindfulness, PNL, valores, alta dirección, ONG, empresas éticas">
+  <meta name="author" content="Tamara Pinillos Blanco - Princi General Consulting">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Servicios | Princi General Consulting">
-  <meta property="og:description" content="Acompañamos a líderes, emprendedores y organizaciones en su crecimiento con propósito. Conoce nuestros servicios de consultoría, coaching y mentoría.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.tusitio.com/servicios.html">
-  <meta property="og:image" content="https://www.tusitio.com/imagen-compartida.jpg"> <!-- Actualiza con tu imagen -->
-  <link rel="canonical" href="https://www.tusitio.com/servicios.html" />
+
+  <!-- Open Graph para redes sociales -->
+  <meta property="og:title" content="Servicios | Princi General Consulting" />
+  <meta property="og:description" content="Conoce nuestros servicios en consultoría, liderazgo consciente y formación para transformar tu organización con propósito." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.princigeneralconsulting.com/servicios.html" />
+  <meta property="og:image" content="https://www.princigeneralconsulting.com/img/og-servicios.jpg" /> <!-- Reemplaza con tu imagen real -->
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.princigeneralconsulting.com/servicios.html" />
+
+  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" />
-  <title>Servicios | Consultoría Estratégica, Coaching y Mentoría</title>
+
+  <!-- Título de la pestaña -->
+  <title>Servicios | Consultoría Estratégica, Coaching y Formación con Propósito</title>
   <style>
     body {
       margin: 0;
@@ -61,18 +71,17 @@
       z-index: 3;
       flex-direction: column;
       justify-content: space-between;
-      width: 28px;
+      width: 30px;
       height: 22px;
       cursor: pointer;
     }
 
     .menu-toggle span {
       display: block;
-      width: 100%;
       height: 3px;
       background: #4b3a30;
+      margin-bottom: 5px;
       border-radius: 2px;
-      transition: 0.3s ease;
     }
 
     nav {
@@ -85,11 +94,10 @@
     nav ul {
       list-style: none;
       display: flex;
+      justify-content: flex-end;
       gap: 1.5rem;
       margin: 0;
       padding: 0;
-      flex-wrap: wrap;
-      justify-content: flex-start;
     }
 
     nav ul li a {
@@ -99,8 +107,9 @@
       padding: 0.6rem 1.2rem;
       border-radius: 8px;
       font-weight: 600;
-      transition: background 0.3s ease, color 0.3s ease;
+      transition: all 0.3s ease;
       white-space: nowrap;
+      display: inline-block;
     }
 
     nav ul li a:hover,
@@ -109,45 +118,114 @@
       color: #fff;
     }
 
+    /* Traductor Google escritorio */
+    #google_translate_element {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 9999;
+      background: #fdfaf7;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    main {
+      max-width: 600px;
+      margin: 2rem auto 4rem auto;
+      padding: 0 2rem;
+      color: #4b3a30;
+    }
+
+    main h1 {
+      font-size: 2.8rem;
+      color: #6b4c3b;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+   /* ==== Estilos para móvil ==== */
     @media (max-width: 768px) {
       header {
-        height: auto;
-        padding-bottom: 1rem;
+        height: 120px;
+        padding-bottom: 0;
       }
 
       .logo {
-        position: relative;
-        top: 0;
-        left: 0;
-        display: block;
-        margin: 1rem auto 0 auto;
         max-height: 80px;
+        margin: 1rem auto 0 auto;
+        display: block;
+        position: relative;
       }
 
       .menu-toggle {
         display: flex;
       }
 
+      /* Menú desplegado estilo móvil mejorado */
       nav {
         display: none;
-        top: 70px;
+        position: fixed;
+        top: 60px;
         right: 20px;
-        background: #fdfaf7;
-        padding: 1rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        background: #fff;
+        padding: 1.5rem 2rem;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        width: 220px;
+        z-index: 9999;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
       }
 
       nav.active {
         display: block;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
       }
 
       nav ul {
+        display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.2rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 0.9rem 1.3rem;
+        border-radius: 10px;
+        background-color: #e8d5d2;
+        color: #4b3a30;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0 2px 6px rgba(210, 180, 140, 0.5);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      nav ul li a:hover,
+      nav ul li a[aria-current="page"] {
+        background-color: #c5a16a;
+        box-shadow: 0 4px 12px rgba(197, 161, 106, 0.7);
+        color: #fff;
+      }
+
+      /* Traductor Google móvil */
+      #google_translate_element {
+        position: static;
+        margin: 1rem auto 0 auto;
+        text-align: center;
+        font-size: 1rem;
+        box-shadow: none;
       }
     }
-
     main {
       max-width: 900px;
       margin: 2rem auto 4rem auto;
@@ -263,11 +341,12 @@
            alt="Princi General Consulting Logo" class="logo" />
     </a>
 
-    <div class="menu-toggle" onclick="toggleMenu()">
+    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')" aria-label="Toggle navigation menu" role="button" tabindex="0" onkeydown="if(event.key==='Enter'){this.click();}">
       <span></span>
       <span></span>
       <span></span>
     </div>
+
 
     <nav id="mainMenu">
       <ul>
@@ -317,4 +396,3 @@
   </script>
 </body>
 </html>
-
