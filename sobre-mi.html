@@ -8,8 +8,9 @@
   <meta name="author" content="Tamara Pinillos Blanco" />
   <meta property="og:title" content="Sobre mí | Tamara Pinillos Blanco - Princi General Consulting" />
   <meta property="og:description" content="Descubre la trayectoria profesional y espiritual de Tamara Pinillos Blanco, fundadora de Princi General Consulting." />
-  <meta property="og:image" content="yo.jpg" />
+  <meta property="og:image" content="tamara-pinillos-blanco-consultora.jpg" />
   <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.ico" />
   <title>Sobre mí | Tamara Pinillos Blanco - Princi General Consulting</title>
 
   <style>
@@ -157,61 +158,90 @@
       color: var(--color-text);
     }
 
-    .timeline {
-      max-width: 900px;
-      margin: 4rem auto;
-      padding: 0 2rem;
-      border-left: 3px solid var(--color-primary);
-    }
+   .sobre-mi {
+    padding: 4rem 2rem;
+    background-color: #fffaf5;
+  }
 
-    .timeline h2 {
-      text-align: center;
-      font-size: 2rem;
-      color: var(--color-primary-dark);
-      margin-bottom: 3rem;
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b1916f;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #444;
+  }
+
+  .timeline {
+    position: relative;
+    margin-left: 2rem;
+    border-left: 2px solid #b1916f;
+    padding-left: 2rem;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 4rem; /* más espacio a la izquierda */
+    min-height: 3.5rem; /* garantiza espacio para la fecha */
+  }
+
+  .timeline-year {
+    position: absolute;
+    left: -60px;
+    top: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #fffaf5;
+    color: #b1916f;
+    border: 2px solid #b1916f;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+
+  .timeline-content {
+    background-color: #f9f5f0;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+
+  .timeline-content p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .timeline {
+      border-left: none;
+      padding-left: 0;
+      margin-left: 0;
     }
 
     .timeline-item {
-      position: relative;
-      margin-bottom: 3rem;
-      padding-left: 2rem;
+      padding-left: 0;
     }
 
     .timeline-year {
-      position: absolute;
-      left: -60px;
-      top: 0;
-      font-size: 1.2rem;
-      font-weight: bold;
-      background: var(--color-bg);
-      color: #b1916f;
-      border: 2px solid var(--color-primary);
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      position: relative;
+      left: 0;
+      margin-bottom: 0.5rem;
+      display: inline-block;
     }
 
-    .timeline-content h3 {
-      margin: 0;
-      font-size: 1.3rem;
-      color: var(--color-text);
+    .timeline-content {
+      margin-top: 0.5rem;
     }
-
-    .timeline-content p {
-      margin: 0.5rem 0 0;
-      color: var(--color-primary-dark);
-      line-height: 1.6;
-    }
-
-    @media (max-width: 768px) {
-      .timeline {
-        border-left: none;
-      }
-      .timeline-year {
-        left: -10px;
-      }
-    }
-
+  }
     .profile-pic-container {
       text-align: center;
       margin: 2rem 0;
@@ -309,63 +339,65 @@
   </p>
 </main>
 
-<section class="timeline" aria-label="Línea de tiempo profesional de Tamara">
-  <h2>Mi trayectoria en hitos</h2>
+<section id="sobre-mi" class="section sobre-mi">
+  <div class="container">
+    <h2 class="section-title">Sobre mí</h2>
+    <p class="section-subtitle">Un recorrido por mi camino personal y profesional</p>
 
-  <div class="timeline-item">
-    <div class="timeline-year">2010</div>
-    <div class="timeline-content">
-      <h3>Inicio en Italia</h3>
-      <p>En Italia continué mi carrera en el sector de seguros, expandiendo mis habilidades en gestión y asesoría.</p>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-year">2011-2018</div>
-    <div class="timeline-content">
-      <h3>Suiza y primeros emprendimientos</h3>
-      <p>Fundé una empresa de consultoría para empresas y particulares, gestionando trámites y ofreciendo asesoría en finanzas y seguros.</p>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-year">2018-2023</div>
-    <div class="timeline-content">
-      <h3>Formación y transformación personal</h3>
-      <p>Me formé en coaching ejecutivo, PNL, mindfulness, psicología positiva y negociación ética, integrando mi visión espiritual y profesional.</p>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-year">2023 - Hoy</div>
-    <div class="timeline-content">
-      <h3>Fundación de Princi & Co Group</h3>
-      <p>Constituí Princi & Co Group y asumí la dirección de AaCc Psicòlegs, enfocándome en liderazgo consciente y proyectos de transformación.</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">2010</div>
+        <div class="timeline-content">
+          <p>Inicio mi trayectoria internacional trasladándome a Italia, donde continuo mi carrera en el sector seguros.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2011</div>
+        <div class="timeline-content">
+          <p>Me instalo en Suiza y fundo una consultora para apoyar a empresas y personas en gestiones administrativas, fiscales y aseguradoras.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2018</div>
+        <div class="timeline-content">
+          <p>Inicio un proceso de transformación espiritual que me lleva a estudiar liderazgo consciente, desarrollo humano y emprendimiento con propósito.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-content">
+          <p>Fundo <strong>Princi & Co Group</strong> y asumo la dirección de <strong>AaCc Psicòlegs</strong>, integrando el coaching, la alta dirección y la formación con propósito divino.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2025</div>
+        <div class="timeline-content">
+          <p>Lanzo <strong>Princi General Consulting</strong> como marca internacional de liderazgo consciente, estrategia ética y transformación organizacional con alma.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <script>
-  // Menú hamburguesa para móvil
   function toggleMenu() {
     const nav = document.getElementById('mainMenu');
-    const btn = document.querySelector('.menu-toggle');
-    const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
-    btn.setAttribute('aria-expanded', !expanded);
-    nav.classList.toggle('active');
-  }
-
-  // Traductor Google
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
-    }, 'google_translate_element');
+    const expanded = nav.classList.toggle('active');
+    const button = document.querySelector('.menu-toggle');
+    button.setAttribute('aria-expanded', expanded);
   }
 </script>
 
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
+<!-- Google Translate -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+      'google_translate_element'
+    );
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
