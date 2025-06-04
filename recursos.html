@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Princi General Consulting</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header {
+      position: relative;
+      background-image: url('hand-3318659_1280.png');
+      background-size: cover;
+      background-position: center;
+      height: 380px;
+      padding: 1rem 2rem;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(61, 43, 31, 0.5);
+      z-index: 0;
+    }
+
+    header * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-container {
+      position: absolute;
+      top: 1rem;
+      left: 2rem;
+    }
+
+    .logo {
+      height: 120px;
+      width: auto;
+    }
+
+    .desktop-menu {
+      position: absolute;
+      bottom: 1rem;
+      right: 2rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .desktop-menu a {
+      background-color: #e8d5d2;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .desktop-menu a:hover {
+      background-color: #e8d5d2;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      background: none;
+      border: none;
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      z-index: 2;
+    }
+
+    .menu-toggle span {
+      background: #fff;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #d5bfa3;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .mobile-menu a {
+      color: #fff;
+      padding: 0.5rem 0;
+      text-decoration: none;
+      border-bottom: 1px solid #fff;
+    }
+
+    @media (max-width: 768px) {
+      .desktop-menu {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .mobile-menu.show {
+        display: flex;
+      }
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #ad855d;
+    }
+
+    main {
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    section {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #ad855d;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #8c6b4f;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    input[type="submit"] {
+      background-color: #ad855d;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #8c6b4f;
+    }
+
+    footer {
+      background-color: #3d2b1f;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="/" class="logo-container">
+      <img src="Nero e Crema Elegante Cibo e Bevande Logo.png" alt="Logotipo de Princi General Consulting" class="logo"/>
+    </a>
+
+    <nav class="desktop-menu" aria-label="Menú principal">
+      <a href="/">Inicio</a>
+      <a href="/sobre-mi.html">Sobre mí</a>
+      <a href="/servicios.html">Servicios</a>
+      <a href="/programas.html">Programas</a>
+      <a href="/recursos.html">Recursos</a>
+      <a href="/contacto.html">Contacto</a>
+    </nav>
+
+    <button class="menu-toggle" aria-label="Abrir menú" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/">Inicio</a>
+      <a href="/sobre-mi.html">Sobre mí</a>
+      <a href="/servicios.html">Servicios</a>
+      <a href="/programas.html">Programas</a>
+      <a href="/recursos.html">Recursos</a>
+      <a href="/contacto.html">Contacto</a>
+    </div>
+  </header>
+
+  <main>
+    <h1>Recursos Gratuitos para Líderes Conscientes</h1>
+    <p style="text-align: center;">Crece con propósito. Lidera con alma.</p>
+
+    <section>
+      <h2>📘 PDF Gratis</h2>
+      <p><strong>“Los 3 pilares del liderazgo consciente”</strong><br>
+      Una guía práctica e inspiradora para iniciar tu camino hacia un liderazgo con propósito.</p>
+      <a class="cta-button" href="LOS 3 PILARES DEL LIDERAZGO CONSCIENTE (1).pdf" download>Descargar ahora</a>
+    </section>
+
+    <section>
+      <h2>🎥 Masterclass mensual gratuita</h2>
+      <p><strong>“Liderazgo con alma”</strong><br>
+      Únete a las sesiones mensuales gratuitas con Tamara Pinillos Blanco y aprende a liderar con visión, claridad y conexión espiritual.</p>
+      <a class="cta-button" href="/masterclass-liderazgo-con-alma">Reservar mi plaza</a>
+    </section>
+
+    <section>
+      <h2>📩 Suscríbete a nuestro boletín</h2>
+      <p>Recibe herramientas, reflexiones y actualizaciones para líderes que quieren transformar el mundo desde el alma.</p>
+
+      <form action="#" method="POST">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required />
+
+        <input type="submit" value="Suscribirme ahora" />
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Princi General Consulting. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
