@@ -60,6 +60,7 @@
       width: auto;
     }
 
+    /* Menú escritorio */
     .desktop-menu {
       position: absolute;
       bottom: 1rem;
@@ -70,7 +71,7 @@
 
     .desktop-menu a {
       background-color: #e8d5d2;
-      color: #fff;
+      color: white;
       text-decoration: none;
       padding: 0.5rem 1rem;
       border-radius: 8px;
@@ -78,10 +79,12 @@
       transition: background 0.3s ease;
     }
 
-    .desktop-menu a:hover {
+    .desktop-menu a:hover,
+    .desktop-menu a[aria-current="page"] {
       background-color: #e8d5d2;
     }
 
+    /* Botón menú móvil */
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -91,6 +94,7 @@
       top: 1rem;
       right: 1.5rem;
       z-index: 2;
+      cursor: pointer;
     }
 
     .menu-toggle span {
@@ -98,8 +102,10 @@
       height: 3px;
       margin: 4px 0;
       width: 25px;
+      border-radius: 2px;
     }
 
+    /* Menú móvil */
     .mobile-menu {
       display: none;
       flex-direction: column;
@@ -109,13 +115,24 @@
       right: 20px;
       padding: 1rem;
       border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 2;
     }
 
     .mobile-menu a {
-      color: #fff;
+      color: white;
       padding: 0.5rem 0;
       text-decoration: none;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid white;
+      font-weight: bold;
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu.show {
+      display: flex;
     }
 
     @media (max-width: 768px) {
@@ -124,10 +141,6 @@
       }
 
       .menu-toggle {
-        display: flex;
-      }
-
-      .mobile-menu.show {
         display: flex;
       }
     }
@@ -160,7 +173,7 @@
       display: inline-block;
       margin-top: 1.5rem;
       padding: 0.75rem 1.5rem;
-      background-color: #ad855d;
+      background-color: #e8d5d2;
       color: #fff;
       text-decoration: none;
       border-radius: 8px;
@@ -195,6 +208,8 @@
       color: white;
       border: none;
       cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
     }
 
     input[type="submit"]:hover {
@@ -217,15 +232,13 @@
     </a>
 
     <nav class="desktop-menu" aria-label="Menú principal">
-  <ul>
-    <li><a href="/">Inicio</a></li>
-    <li><a href="/sobre-mi.html">Sobre mí</a></li>
-    <li><a href="/servicios.html">Servicios</a></li>
-    <li><a href="/programas.html">Programas</a></li>
-    <li><a href="/recursos.html" aria-current="page">Recursos</a></li>
-    <li><a href="/contacto.html">Contacto</a></li>
-  </ul>
-</nav>
+      <a href="/">Inicio</a>
+      <a href="/sobre-mi.html">Sobre mí</a>
+      <a href="/servicios.html">Servicios</a>
+      <a href="/programas.html">Programas</a>
+      <a href="/recursos.html" aria-current="page">Recursos</a>
+      <a href="/contacto.html">Contacto</a>
+    </nav>
 
     <button class="menu-toggle" aria-label="Abrir menú" onclick="toggleMenu()">
       <span></span>
@@ -292,6 +305,7 @@
   </div>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 Princi General Consulting. Todos los derechos reservados.</p>
   </footer>
