@@ -265,15 +265,31 @@
       <h2>📩 Suscríbete a nuestro boletín</h2>
       <p>Recibe herramientas, reflexiones y actualizaciones para líderes que quieren transformar el mundo desde el alma.</p>
 
-      <form action="#" method="POST">
-        <label for="name">Nombre</label>
-        <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+       <form action="https://formspree.io/f/xdkzekqr" method="POST" class="mt-8 space-y-6 text-left max-w-xl mx-auto">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
+        <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-rose-500 focus:border-rose-500">
+      </div>
 
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required />
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
+        <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-rose-500 focus:border-rose-500">
+      </div>
 
-        <input type="submit" value="Suscribirme ahora" />
-      </form>
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700">Mensaje (opcional)</label>
+        <textarea name="message" id="message" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-rose-500 focus:border-rose-500" placeholder="¿Qué te gustaría compartir con nosotros?"></textarea>
+      </div>
+
+      <input type="hidden" name="_redirect" value="https://www.princigroup.com/gracias.html">
+
+      <div class="text-center">
+        <button type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-rose-600 px-6 py-2 text-white font-medium shadow-sm hover:bg-rose-700">
+          Suscribirme ahora
+        </button>
+      </div>
+    </form>
+  </div>
     </section>
   </main>
   <footer>
