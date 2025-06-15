@@ -65,8 +65,11 @@
       transition: background 0.3s ease;
     }
 
-    .cta-button:hover {
+    .cta-button:hover,
+    .cta-button:focus {
       background-color: #b37880;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(179, 120, 128, 0.5);
     }
 
     footer {
@@ -86,9 +89,9 @@
   <main>
     <h2>Muy pronto disponible</h2>
     <p>Estamos preparando un espacio transformador para líderes como tú.</p>
-    <p class="coming-soon">✨ Inscripciones abiertas próximamente ✨</p>
+    <p class="coming-soon" aria-live="polite">✨ Inscripciones abiertas próximamente ✨</p>
 
-    <a href="/recursos.html" class="cta-button">Ver otros recursos gratuitos</a>
+    <a href="/recursos.html" class="cta-button" role="button">Ver otros recursos gratuitos</a>
   </main>
 
   <footer>
