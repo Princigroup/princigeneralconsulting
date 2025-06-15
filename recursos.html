@@ -24,6 +24,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f7f3;
     }
 
     header {
@@ -71,17 +72,18 @@
 
     .desktop-menu a {
       background-color: #e8d5d2;
-      color: white;
+      color: #3d2b1f;
       text-decoration: none;
       padding: 0.5rem 1rem;
       border-radius: 8px;
       font-weight: bold;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     .desktop-menu a:hover,
     .desktop-menu a[aria-current="page"] {
-      background-color: #e8d5d2;
+      background-color: #ad855d;
+      color: white;
     }
 
     /* Botón menú móvil */
@@ -120,15 +122,20 @@
     }
 
     .mobile-menu a {
-      color: white;
+      color: #3d2b1f;
       padding: 0.5rem 0;
       text-decoration: none;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid #3d2b1f;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
 
     .mobile-menu a:last-child {
       border-bottom: none;
+    }
+
+    .mobile-menu a:hover {
+      color: #ad855d;
     }
 
     .mobile-menu.show {
@@ -148,12 +155,13 @@
     h1, h2 {
       text-align: center;
       color: #ad855d;
+      margin-top: 0;
     }
 
     main {
       padding: 3rem 1rem;
       max-width: 800px;
-      margin: 0 auto;
+      margin: 0 auto 3rem auto;
     }
 
     section {
@@ -167,6 +175,7 @@
     p {
       font-size: 1.1rem;
       line-height: 1.6;
+      color: #3d2b1f;
     }
 
     .cta-button {
@@ -174,15 +183,16 @@
       margin-top: 1.5rem;
       padding: 0.75rem 1.5rem;
       background-color: #e8d5d2;
-      color: #fff;
+      color: #3d2b1f;
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     .cta-button:hover {
-      background-color: #8c6b4f;
+      background-color: #ad855d;
+      color: white;
     }
 
     form {
@@ -190,10 +200,12 @@
       flex-direction: column;
       gap: 1rem;
       margin-top: 1rem;
+      max-width: 100%;
     }
 
     label {
       font-weight: bold;
+      color: #3d2b1f;
     }
 
     input, textarea {
@@ -201,6 +213,9 @@
       border: 1px solid #ccc;
       border-radius: 8px;
       font-size: 1rem;
+      font-family: inherit;
+      box-sizing: border-box;
+      color: #3d2b1f;
     }
 
     input[type="submit"] {
@@ -210,6 +225,8 @@
       cursor: pointer;
       font-weight: bold;
       transition: background 0.3s ease;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
     }
 
     input[type="submit"]:hover {
@@ -221,6 +238,7 @@
       color: white;
       text-align: center;
       padding: 1rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -240,25 +258,25 @@
       <a href="/contacto.html">Contacto</a>
     </nav>
 
-    <button class="menu-toggle" aria-label="Abrir menú" onclick="toggleMenu()">
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Menú principal móvil">
       <a href="/">Inicio</a>
       <a href="/sobre-mi.html">Sobre mí</a>
       <a href="/servicios.html">Servicios</a>
       <a href="/programas.html">Programas</a>
       <a href="/recursos.html">Recursos</a>
       <a href="/contacto.html">Contacto</a>
-    </div>
+    </nav>
   </header>
 
   <main>
     <h1>Recursos Gratuitos para Líderes Conscientes</h1>
-    <p style="text-align: center;">Crece con propósito. Lidera con alma.</p>
+    <p style="text-align: center; margin-bottom: 2rem;">Crece con propósito. Lidera con alma.</p>
 
     <section>
       <h2>📘 PDF Gratis</h2>
@@ -269,50 +287,39 @@
 
     <section>
       <h2>🎥 Masterclass mensual gratuita</h2>
-      <p><strong>“Liderazgo con alma”</strong><br>
-      Únete a las sesiones mensuales gratuitas con Tamara Pinillos Blanco y aprende a liderar con visión, claridad y conexión espiritual.</p>
-      <a class="cta-button" href="/masterclass.html">Reservar mi plaza</a>
+      <p><strong>“Liderazgo con alma”</strong> - Clases online en directo para transformar tu visión y tu impacto.</p>
+      <a class="cta-button" href="https://zoom.us/j/123456789" target="_blank" rel="noopener">Únete a la próxima sesión</a>
     </section>
 
     <section>
-      <h2>📩 Suscríbete a nuestro boletín</h2>
-      <p>Recibe herramientas, reflexiones y actualizaciones para líderes que quieren transformar el mundo desde el alma.</p>
+      <h2>📬 Suscríbete al boletín</h2>
+      <p>Recibe en tu correo inspiración, consejos y herramientas para crecer en tu liderazgo consciente.</p>
+      <form action="https://formsubmit.co/tamarapinillos@princigeneralconsulting.com" method="POST" target="_blank" novalidate>
+        <label for="name">Nombre completo:</label>
+        <input id="name" name="name" type="text" required placeholder="Tu nombre"/>
 
-       <form action="https://formspree.io/f/xdkzekqr" method="POST" class="mt-8 space-y-6 text-left max-w-xl mx-auto">
-      <div>
-        <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
-        <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-rose-500 focus:border-rose-500">
-      </div>
+        <label for="email">Correo electrónico:</label>
+        <input id="email" name="email" type="email" required placeholder="tuemail@ejemplo.com"/>
 
-      <div>
-        <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
-        <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-rose-500 focus:border-rose-500">
-      </div>
+        <label for="message">Mensaje (opcional):</label>
+        <textarea id="message" name="message" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
 
-      <div>
-        <label for="message" class="block text-sm font-medium text-gray-700">Mensaje (opcional)</label>
-        <textarea name="message" id="message" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-rose-500 focus:border-rose-500" placeholder="¿Qué te gustaría compartir con nosotros?"></textarea>
-      </div>
-
-      <input type="hidden" name="_redirect" value="https://www.princigroup.com/gracias.html">
-
-      <div class="text-center">
-        <button type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-rose-600 px-6 py-2 text-white font-medium shadow-sm hover:bg-rose-700">
-          Suscribirme ahora
-        </button>
-      </div>
-    </form>
-  </div>
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="submit" value="Suscribirme" />
+      </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Princi General Consulting. Todos los derechos reservados.</p>
+    &copy; 2025 Princi General Consulting. Todos los derechos reservados.
   </footer>
 
   <script>
     function toggleMenu() {
       const menu = document.getElementById('mobileMenu');
+      const btn = document.querySelector('.menu-toggle');
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!isExpanded));
       menu.classList.toggle('show');
     }
   </script>
