@@ -308,7 +308,15 @@
       }, 'google_translate_element');
     }
   </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ <script defer>
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      const script = document.createElement('script');
+      script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      document.body.appendChild(script);
+    }, 1500); // Carga diferida tras 1.5 segundos
+  });
+</script>
 </body>
 </html>
 
