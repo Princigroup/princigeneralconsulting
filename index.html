@@ -68,64 +68,101 @@
       z-index: 2;
       cursor: pointer;
     }
-
-    .menu-toggle {
-      display: none;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      z-index: 3;
-      background: none;
-      border: none;
-      font-size: 2rem;
-      color: #4b3a30;
-      cursor: pointer;
-    }
-
-    nav {
+    nav.desktop-menu {
       position: absolute;
       bottom: 20px;
-      right: 20px;
-      z-index: 3;
-      max-width: 90%;
+      z-index: 2;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    nav ul {
+    nav.desktop-menu ul {
       list-style: none;
       display: flex;
-      gap: 1.5rem;
+      gap: 1.2rem;
       margin: 0;
       padding: 0;
-      flex-wrap: wrap;
-      justify-content: flex-start;
     }
 
-    nav ul li a {
+    nav.desktop-menu ul li a {
       text-decoration: none;
       color: #4b3a30;
       background-color: #e8d5d2;
-      padding: 0.6rem 1.2rem;
+      padding: 0.6rem 1rem;
       border-radius: 8px;
       font-weight: 600;
-      transition: all 0.3s ease;
-      white-space: nowrap;
     }
 
-    nav ul li a:hover {
+    nav.desktop-menu ul li a:hover,
+    nav.desktop-menu ul li a[aria-current="page"] {
       background-color: #d2b48c;
       color: #fff;
     }
-
-    .language-selector {
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
       position: absolute;
-      top: 20px;
-      right: 120px;
-      z-index: 4;
-      background: #fdf7f4;
-      padding: 0.4rem 0.8rem;
+      top: 1rem;
+      right: 1.5rem;
+      z-index: 3;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background: #fff;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+      border-radius: 2px;
+      display: block;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #d5bfa3;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 1rem;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      font-size: 0.9rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 3;
+      min-width: 150px;
+    }
+
+    .mobile-menu a {
+      color: #3d2b1f;
+      padding: 0.5rem 0;
+      text-decoration: none;
+      border-bottom: 1px solid #3d2b1f;
+      font-weight: bold;
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu a:hover {
+      color: #ad855d;
+    }
+
+    .mobile-menu.show {
+      display: flex;
+    }
+
+    #google_translate_element {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 9999;
+      background: #fdfaf7;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
 
     .hero {
@@ -164,77 +201,41 @@
     }
 
     @media (max-width: 768px) {
+     header {
+        height: 160px;
+        padding: 1rem;
+        justify-content: flex-start;
+      }
+
       .logo {
-        position: static;
-        max-height: 80px;
-        margin: 10px auto 0 auto;
-        display: block;
+        max-height: 70px;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
       }
 
       .menu-toggle {
-        display: block;
-      }
-
-      nav {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.95);
-        position: absolute;
-        top: 70px;
-        right: 10px;
-        padding: 1rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        width: 85%;
-        max-width: 300px;
-        z-index: 999;
-      }
-
-      nav.active {
         display: flex;
       }
 
-      nav ul {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
+      nav.desktop-menu {
+        display: none;
       }
 
-      nav ul li {
-        margin-bottom: 0.8rem;
+      .mobile-menu {
+        top: 55px;
+        right: 10px;
+        min-width: 140px;
       }
 
-      nav ul li:last-child {
-        margin-bottom: 0;
-      }
-
-      nav ul li a {
-        background-color: #e8d5d2;
-        color: #4b3a30;
-        padding: 0.9rem 1.2rem;
-        border-radius: 10px;
-        text-align: center;
-        font-weight: 600;
-        display: block;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        transition: background 0.3s, transform 0.2s;
-      }
-
-      nav ul li a:hover {
-        background-color: #d2b48c;
-        color: #fff;
-        transform: scale(1.02);
-      }
-
-      .language-selector {
+       #google_translate_element {
         position: static;
         text-align: center;
-        margin: 1rem auto 0 auto;
         background: transparent;
-        box-shadow: none;
         font-size: 1rem;
+        box-shadow: none;
+        margin-bottom: 1rem;
       }
-
       .hero h1 {
         font-size: 2rem;
       }
@@ -261,19 +262,30 @@
       <img src="Logo-Princi.webp" alt="Logotipo de Princi General Consulting" class="logo"/>
     </a>
 
-    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
-
-    <nav id="mobile-menu" aria-label="Menú principal">
-      <ul>
-        <li><a href="index.html" data-key="home">Inicio</a></li>
-        <li><a href="sobre-mi.html" data-key="about">Sobre mí</a></li>
-        <li><a href="servicios.html" data-key="services">Servicios</a></li>
-        <li><a href="programas.html" data-key="programs">Programas</a></li>
-        <li><a href="recursos.html" data-key="resources">Recursos</a></li>
-        <li><a href="contacto.html" data-key="contact">Contacto</a></li>
-      </ul>
-    </nav>
-
+   <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu(this)">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+    <nav id="mainMenu" class="desktop-menu" aria-label="Menú principal">
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="sobre-mi.html">Sobre mí</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="programas.html">Programas</a></li>
+    <li><a href="/recursos.html">Recursos</a></li>  
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Menú principal móvil">
+  <a href="/">Inicio</a>
+  <a href="/sobre-mi.html">Sobre mí</a>
+  <a href="/servicios.html">Servicios</a>
+  <a href="/programas.html">Programas</a>
+  <a href="/recursos.html">Recursos</a>
+  <a href="/contacto.html">Contacto</a>
+</nav>
+  </header>
     <div class="language-selector">
       <div id="google_translate_element"></div>
     </div>
@@ -300,10 +312,13 @@
   </main>
 
   <script>
-    function toggleMenu() {
-      const nav = document.getElementById("mobile-menu");
-      nav.classList.toggle("active");
-    }
+   function toggleMenu(button) {
+    const mobileMenu = document.getElementById("mobileMenu");
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", !isExpanded);
+    mobileMenu.classList.toggle("show");
+  }
+  </script>
 
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
@@ -324,4 +339,5 @@
     });
   </script>
 </body>
+</html>
 </html>
