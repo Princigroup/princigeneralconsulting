@@ -1,29 +1,19 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  
-  <!-- SEO básico -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Princi General Consulting ofrece consultoría estratégica, coaching ejecutivo, formación y mentoría para líderes y organizaciones que desean transformar el mundo con propósito y valores éticos.">
   <meta name="keywords" content="consultoría estratégica, liderazgo consciente, coaching ejecutivo, mentoría, formación empresarial, desarrollo personal, emprendimiento ético, dirección con propósito, mindfulness, PNL, valores, alta dirección, ONG, empresas éticas">
   <meta name="author" content="Tamara Pinillos Blanco - Princi General Consulting">
   <meta name="robots" content="index, follow">
-
-  <!-- Open Graph para redes sociales -->
   <meta property="og:title" content="Servicios | Princi General Consulting" />
   <meta property="og:description" content="Conoce nuestros servicios en consultoría, liderazgo consciente y formación para transformar tu organización con propósito." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.princigeneralconsulting.com/servicios.html" />
-  <meta property="og:image" content="https://www.princigeneralconsulting.com/img/og-servicios.jpg" /> <!-- Reemplaza con tu imagen real -->
-
-  <!-- Canonical -->
+  <meta property="og:image" content="https://www.princigeneralconsulting.com/img/og-servicios.jpg" />
   <link rel="canonical" href="https://www.princigeneralconsulting.com/servicios.html" />
-
-  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" />
-
-  <!-- Título de la pestaña -->
   <title>Servicios | Consultoría Estratégica, Coaching y Formación con Propósito</title>
   <style>
     body {
@@ -36,13 +26,12 @@
     header {
       position: relative;
       height: 380px;
-       background-image: url(cytonn-photography-n95VMLxqM2I-unsplash.webp);
+      background-image: url(cytonn-photography-n95VMLxqM2I-unsplash.webp);
       background-size: cover;
       background-position: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
     }
 
     header::before {
@@ -58,67 +47,96 @@
       position: absolute;
       top: 20px;
       left: 20px;
-      max-height: 140px;
+      max-height: 100px;
       z-index: 2;
-      cursor: pointer;
     }
 
-    .menu-toggle {
-      display: none;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      z-index: 3;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 30px;
-      height: 22px;
-      cursor: pointer;
-    }
-
-    .menu-toggle span {
-      display: block;
-      height: 3px;
-      background: #4b3a30;
-      margin-bottom: 5px;
-      border-radius: 2px;
-    }
-
-    nav {
+    nav.desktop-menu {
       position: absolute;
       bottom: 20px;
-      right: 20px;
       z-index: 2;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    nav ul {
+    nav.desktop-menu ul {
       list-style: none;
       display: flex;
-      justify-content: flex-end;
-      gap: 1.5rem;
+      gap: 1.2rem;
       margin: 0;
       padding: 0;
     }
 
-    nav ul li a {
+    nav.desktop-menu ul li a {
       text-decoration: none;
       color: #4b3a30;
       background-color: #e8d5d2;
-      padding: 0.6rem 1.2rem;
+      padding: 0.6rem 1rem;
       border-radius: 8px;
       font-weight: 600;
-      transition: all 0.3s ease;
-      white-space: nowrap;
-      display: inline-block;
     }
 
-    nav ul li a:hover,
-    nav ul li a[aria-current="page"] {
+    nav.desktop-menu ul li a:hover,
+    nav.desktop-menu ul li a[aria-current="page"] {
       background-color: #d2b48c;
       color: #fff;
     }
 
-    /* Traductor Google escritorio */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      z-index: 3;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background: #fff;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+      border-radius: 2px;
+      display: block;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #d5bfa3;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 3;
+      min-width: 150px;
+    }
+
+    .mobile-menu a {
+      color: #3d2b1f;
+      padding: 0.5rem 0;
+      text-decoration: none;
+      border-bottom: 1px solid #3d2b1f;
+      font-weight: bold;
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu a:hover {
+      color: #ad855d;
+    }
+
+    .mobile-menu.show {
+      display: flex;
+    }
+
     #google_translate_element {
       position: fixed;
       top: 10px;
@@ -132,195 +150,106 @@
     }
 
     main {
-      max-width: 600px;
-      margin: 2rem auto 4rem auto;
-      padding: 0 2rem;
-      color: #4b3a30;
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1.5rem;
+      font-family: 'Georgia', serif;
+      color: #3d2b1f;
     }
 
     main h1 {
-      font-size: 2.8rem;
-      color: #6b4c3b;
-      margin-bottom: 2rem;
       text-align: center;
-    }
-
-   /* ==== Estilos para móvil ==== */
-    @media (max-width: 768px) {
-      header {
-        height: 120px;
-        padding-bottom: 0;
-      }
-
-      .logo {
-        max-height: 80px;
-        margin: 1rem auto 0 auto;
-        display: block;
-        position: relative;
-      }
-
-      .menu-toggle {
-        display: flex;
-      }
-
-      /* Menú desplegado estilo móvil mejorado */
-      nav {
-        display: none;
-        position: fixed;
-        top: 60px;
-        right: 20px;
-        background: #fff;
-        padding: 1.5rem 2rem;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        width: 220px;
-        z-index: 9999;
-        opacity: 0;
-        transform: translateY(-10px);
-        pointer-events: none;
-        transition: opacity 0.3s ease, transform 0.3s ease;
-      }
-
-      nav.active {
-        display: block;
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-      }
-
-      nav ul {
-        display: flex;
-        flex-direction: column;
-        gap: 1.2rem;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      nav ul li a {
-        display: block;
-        padding: 0.9rem 1.3rem;
-        border-radius: 10px;
-        background-color: #e8d5d2;
-        color: #4b3a30;
-        font-weight: 600;
-        text-align: center;
-        text-decoration: none;
-        box-shadow: 0 2px 6px rgba(210, 180, 140, 0.5);
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      nav ul li a:hover,
-      nav ul li a[aria-current="page"] {
-        background-color: #c5a16a;
-        box-shadow: 0 4px 12px rgba(197, 161, 106, 0.7);
-        color: #fff;
-      }
-
-      /* Traductor Google móvil */
-      #google_translate_element {
-        position: static;
-        margin: 1rem auto 0 auto;
-        text-align: center;
-        font-size: 1rem;
-        box-shadow: none;
-      }
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto 4rem auto;
-      padding: 0 2rem;
-    }
-
-    main h1 {
-      font-size: 2.8rem;
-      color: #6b4c3b;
+      color: #ad855d;
+      font-size: 2.5rem;
       margin-bottom: 2rem;
-      text-align: center;
     }
 
     .services {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
     }
 
     .service-item {
-      background-color: #fff8f6;
+      background-color: #fdf7f0;
       padding: 1.5rem;
+      border-radius: 1rem;
       border-left: 6px solid #d2b48c;
-      border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
     .service-item h3 {
       margin-top: 0;
-      color: #6b4c3b;
-      font-size: 1.4rem;
+      color: #6d4c41;
+      font-size: 1.3rem;
     }
 
     .service-item p {
-      margin: 0.5rem 0 0 0;
       line-height: 1.6;
-      color: #4b3a30;
+      margin: 0.5rem 0 0;
     }
 
-     @media (max-width: 768px) {
-      nav {
-        display: none;
-        position: absolute;
-        top: 80px;
-        right: 20px;
-        background: var(--color-bg);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
+    @media (max-width: 768px) {
+      header {
+        height: 160px;
         padding: 1rem;
+        justify-content: flex-start;
       }
-      nav.active {
-        display: block;
+
+      .logo {
+        max-height: 70px;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
       }
-      nav ul {
-        flex-direction: column;
-        gap: 1rem;
-      }
+
       .menu-toggle {
         display: flex;
       }
+
+      nav.desktop-menu {
+        display: none;
+      }
+
+      .mobile-menu {
+        top: 55px;
+        right: 10px;
+        min-width: 140px;
+      }
+
+      #google_translate_element {
+        position: static;
+        text-align: center;
+        background: transparent;
+        font-size: 1rem;
+        box-shadow: none;
+        margin-bottom: 1rem;
+      }
+
+      main {
+        padding: 1rem;
+        max-width: 100%;
+      }
+
+      main h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+       @media (max-width: 768px) {
+    .services {
+      grid-template-columns: 1fr !important;
     }
-
-      /* Contenedor traductor Google */
-#google_translate_element {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 9999;
-  background: var(--color-bg);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  padding: 0.3rem 0.6rem;
-  font-size: 0.85rem;
-  transition: all 0.3s ease;
-}
-
-/* En pantallas móviles */
-@media (max-width: 768px) {
-  #google_translate_element {
-    position: static;
-    margin: 1rem auto 0 auto;
-    display: block;
-    max-width: 90%;
-    box-shadow: none;
-    border-radius: 0;
-    background: transparent;
-    font-size: 1rem;
-    text-align: center;
   }
-}
+
+      .service-item {
+        padding: 1.2rem;
+        border-left-width: 4px;
+      }
+    }
   </style>
 </head>
 <body>
-
-  <!-- Traductor de Google -->
   <div id="google_translate_element"></div>
   <script type="text/javascript">
     function googleTranslateElementInit() {
@@ -331,34 +260,18 @@
       }, 'google_translate_element');
     }
   </script>
-  <script type="text/javascript"
-    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <header>
-    <a href="index.html"><img src="Logo-Princi.webp" alt="Logotipo de Princi General Consulting" class="logo"/>
-      </a>
-
-    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')" aria-label="Toggle navigation menu" role="button" tabindex="0" onkeydown="if(event.key==='Enter'){this.click();}">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-
-    <nav id="mainMenu">
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="sobre-mi.html">Sobre mí</a></li>
-    <li><a href="servicios.html" aria-current="page">Servicios</a></li>
-    <li><a href="programas.html">Programas</a></li>
-    <li><a href="recursos.html">Recursos</a></li> <!-- Añadido -->
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-</nav>
+    <a href="index.html">
+      <img src="Logo-Princi.webp" alt="Princi General Consulting Logo" class="logo" />
+    </a>
+    <button class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    <nav class="desktop-menu"><ul><li><a href="index.html">Inicio</a></li><li><a href="sobre-mi.html">Sobre mí</a></li><li><a href="servicios.html" aria-current="page">Servicios</a></li><li><a href="programas.html">Programas</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="contacto.html">Contacto</a></li></ul></nav>
+    <nav class="mobile-menu" id="mobileMenu"><a href="index.html">Inicio</a><a href="sobre-mi.html">Sobre mí</a><a href="servicios.html" aria-current="page">Servicios</a><a href="programas.html">Programas</a><a href="recursos.html">Recursos</a><a href="contacto.html">Contacto</a></nav>
   </header>
 
- <main class="servicios" style="padding: 3rem 1rem; max-width: 1000px; margin: auto; font-family: 'Georgia', serif; color: #3d2b1f;">
+  <main class="servicios" style="padding: 3rem 1rem; max-width: 1000px; margin: auto; font-family: 'Georgia', serif; color: #3d2b1f;">
   <h1 style="font-size: 2.5rem; text-align: center; color: #ad855d; margin-bottom: 2rem;">Servicios</h1>
 
   <section class="services" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
@@ -391,11 +304,14 @@
   </section>
 </main>
 
+  </section>
+</main>
 
 
   <script>
     function toggleMenu() {
-      document.getElementById("mainMenu").classList.toggle("active");
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('show');
     }
   </script>
 </body>
