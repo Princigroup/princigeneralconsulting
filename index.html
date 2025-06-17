@@ -16,11 +16,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.princigeneralconsulting.com" />
   <meta property="og:image" content="https://www.princigeneralconsulting.com/img/portada-princi-general.jpg" />
-<link rel="preconnect" href="https://translate.google.com">
-<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
 
   <link rel="canonical" href="https://www.princigeneralconsulting.com" />
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link rel="preconnect" href="https://translate.google.com">
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="dane-deaner-_-KLkj7on_c-unsplash.webp" type="image/webp">
+  <link rel="preload" as="image" href="Logo-Princi.webp" type="image/webp">
 
   <style>
     body {
@@ -33,9 +36,9 @@
     header {
       position: relative;
       height: 300px;
-      overflow: hidden;
       color: #333;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      z-index: 10;
     }
 
     header img.bg-hero {
@@ -83,7 +86,7 @@
       position: absolute;
       bottom: 20px;
       right: 20px;
-      z-index: 2;
+      z-index: 3;
       max-width: 90%;
     }
 
@@ -116,8 +119,8 @@
     .language-selector {
       position: absolute;
       top: 20px;
-      right: 20px;
-      z-index: 9999;
+      right: 120px;
+      z-index: 4;
       background: #fdf7f4;
       padding: 0.4rem 0.8rem;
       border-radius: 8px;
@@ -184,6 +187,7 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         width: 85%;
         max-width: 300px;
+        z-index: 999;
       }
 
       nav.active {
@@ -244,7 +248,6 @@
 
 <body>
   <header>
-    <!-- Imagen LCP optimizada -->
     <img 
       src="dane-deaner-_-KLkj7on_c-unsplash.webp" 
       alt="Fondo liderazgo consciente" 
@@ -256,7 +259,6 @@
 
     <a href="index.html">
       <img src="Logo-Princi.webp" alt="Logotipo de Princi General Consulting" class="logo"/>
-      <link rel="preload" as="image" href="dane-deaner-_-KLkj7on_c-unsplash.webp" type="image/webp">
     </a>
 
     <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
@@ -271,11 +273,11 @@
         <li><a href="contacto.html" data-key="contact">Contacto</a></li>
       </ul>
     </nav>
-  </header>
 
-  <div class="language-selector">
-    <div id="google_translate_element"></div>
-  </div>
+    <div class="language-selector">
+      <div id="google_translate_element"></div>
+    </div>
+  </header>
 
   <main>
     <section class="hero">
@@ -311,15 +313,15 @@
       }, 'google_translate_element');
     }
   </script>
- <script defer>
-  window.addEventListener('load', function () {
-    setTimeout(function () {
-      const script = document.createElement('script');
-      script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-      document.body.appendChild(script);
-    }, 1500); // Carga diferida tras 1.5 segundos
-  });
-</script>
+
+  <script defer>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        const script = document.createElement('script');
+        script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        document.body.appendChild(script);
+      }, 1500);
+    });
+  </script>
 </body>
 </html>
-
