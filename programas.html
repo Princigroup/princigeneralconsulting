@@ -22,237 +22,242 @@
   <link rel="icon" href="favicon.ico" />
     <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fdfaf7;
-      color: #4b3a30;
-    }
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfaf7;
+    color: #4b3a30;
+  }
 
+  header {
+    position: relative;
+    height: 380px;
+    background-image: url(programas.webp);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(245, 245, 245, 0.4);
+    z-index: 0;
+  }
+
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-height: 100px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  nav.desktop-menu {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  nav.desktop-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav.desktop-menu ul li a {
+    text-decoration: none;
+    color: #4b3a30;
+    background-color: #e8d5d2;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+
+  nav.desktop-menu ul li a:hover,
+  nav.desktop-menu ul li a[aria-current="page"] {
+    background-color: #d2b48c;
+    color: #fff;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 3;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    background: #4b3a30;
+    height: 3px;
+    margin: 4px 0;
+    width: 25px;
+    border-radius: 2px;
+    display: block;
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #e8d5d2;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 3;
+    min-width: 150px;
+  }
+
+  .mobile-menu a {
+    color: #4b3a30;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    border-bottom: 1px solid #4b3a30;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-menu a:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-menu a:hover {
+    color: #ad855d;
+  }
+
+  .mobile-menu.show {
+    display: flex;
+  }
+
+  /* Traductor Google escritorio */
+  #google_translate_element {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    background: #fdfaf7;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    font-family: 'Georgia', serif;
+    color: #4b3a30;
+  }
+
+  main h1 {
+    font-size: 2.5rem;
+    color: #6b4c3b;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .programs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .program-item {
+    background-color: #fff8f6;
+    padding: 1.5rem;
+    border-left: 6px solid #d2b48c;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+
+  .program-item h3 {
+    margin-top: 0;
+    color: #6b4c3b;
+  }
+
+  .program-item p {
+    margin: 0.5rem 0 0 0;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
     header {
-      position: relative;
-      background-image: url(programas.webp);
-      background-size: cover;
-      background-position: center;
-      height: 380px;
-      text-align: left;
-    }
-
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(245, 245, 245, 0.4);
-      z-index: 0;
+      height: 160px;
+      padding: 1rem;
+      justify-content: flex-start;
     }
 
     .logo {
+      max-height: 70px;
       position: absolute;
-      top: 20px;
-      left: 20px;
-      max-height: 140px;
-      z-index: 2;
-      cursor: pointer;
+      top: 1rem;
+      left: 1rem;
     }
 
     .menu-toggle {
-      display: none;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      z-index: 3;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 30px;
-      height: 22px;
-      cursor: pointer;
-    }
-
-    .menu-toggle span {
-      display: block;
-      height: 3px;
-      background: #4b3a30;
-      margin-bottom: 5px;
-      border-radius: 2px;
-    }
-
-    nav {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      z-index: 2;
-    }
-
-    nav ul {
-      list-style: none;
       display: flex;
-      justify-content: flex-end;
-      gap: 1.5rem;
-      margin: 0;
-      padding: 0;
     }
 
-    nav ul li a {
-      text-decoration: none;
-      color: #4b3a30;
-      background-color: #e8d5d2;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      white-space: nowrap;
-      display: inline-block;
+    nav.desktop-menu {
+      display: none;
     }
 
-    nav ul li a:hover,
-    nav ul li a[aria-current="page"] {
-      background-color: #d2b48c;
-      color: #fff;
-    }
-
-    /* Traductor Google escritorio */
-    #google_translate_element {
-      position: fixed;
-      top: 10px;
+    .mobile-menu {
+      top: 55px;
       right: 10px;
-      z-index: 9999;
-      background: #fdfaf7;
-      padding: 0.3rem 0.6rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      min-width: 140px;
+      background-color: #e8d5d2;
+    }
+
+    #google_translate_element {
+      position: static;
+      text-align: center;
+      background: transparent;
+      font-size: 1rem;
+      box-shadow: none;
+      margin-bottom: 1rem;
     }
 
     main {
-      max-width: 600px;
-      margin: 2rem auto 4rem auto;
-      padding: 0 2rem;
-      color: #4b3a30;
+      padding: 1rem;
+      max-width: 100%;
     }
 
     main h1 {
-      font-size: 2.8rem;
-      color: #6b4c3b;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-   @media (max-width: 768px) {
-      header {
-        height: 120px;
-        padding-bottom: 0;
-      }
-
-      .logo {
-        max-height: 80px;
-        margin: 1rem auto 0 auto;
-        display: block;
-        position: relative;
-      }
-
-      .menu-toggle {
-        display: flex;
-      }
-
-      /* Menú desplegado estilo móvil mejorado */
-      nav {
-        display: none;
-        position: fixed;
-        top: 60px;
-        right: 20px;
-        background: #fff;
-        padding: 1.5rem 2rem;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        width: 220px;
-        z-index: 9999;
-        opacity: 0;
-        transform: translateY(-10px);
-        pointer-events: none;
-        transition: opacity 0.3s ease, transform 0.3s ease;
-      }
-
-      nav.active {
-        display: block;
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-      }
-
-      nav ul {
-        display: flex;
-        flex-direction: column;
-        gap: 1.2rem;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      nav ul li a {
-        display: block;
-        padding: 0.9rem 1.3rem;
-        border-radius: 10px;
-        background-color: #e8d5d2;
-        color: #4b3a30;
-        font-weight: 600;
-        text-align: center;
-        text-decoration: none;
-        box-shadow: 0 2px 6px rgba(210, 180, 140, 0.5);
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      nav ul li a:hover,
-      nav ul li a[aria-current="page"] {
-        background-color: #c5a16a;
-        box-shadow: 0 4px 12px rgba(197, 161, 106, 0.7);
-        color: #fff;
-      }
-
-      /* Traductor Google móvil */
-      #google_translate_element {
-        position: static;
-        margin: 1rem auto 0 auto;
-        text-align: center;
-        font-size: 1rem;
-        box-shadow: none;
-      }
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
-
-    main h1 {
-      font-size: 2.5rem;
-      text-align: center;
-      color: #6b4c3b;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
     }
 
     .programs {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
+       grid-template-columns: 1fr !important;
     }
 
     .program-item {
-      background-color: #fff8f6;
-      padding: 1.5rem;
-      border-left: 6px solid #d2b48c;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 1.2rem;
+      border-left-width: 4px;
     }
+  }
+</style>
 
-    .program-item h3 {
-      margin-top: 0;
-      color: #6b4c3b;
-    }
-
-    .program-item p {
-      margin: 0.5rem 0 0 0;
-      line-height: 1.6;
-    }
-  </style>
 </head>
 
 <body>
@@ -271,25 +276,31 @@
 
   <header>
     <a href="index.html">
-     <img src="Logo-Princi.webp" alt="Logotipo de Princi General Consulting" class="logo"/>
+      <img src="Logo-Princi.webp" alt="Logo Princi General Consulting" class="logo">
     </a>
 
-    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')" aria-label="Toggle navigation menu" role="button" tabindex="0" onkeydown="if(event.key==='Enter'){this.click();}">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-
-    <nav id="mainMenu" aria-label="Menú principal">
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu(this)">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+    <nav id="mainMenu" class="desktop-menu" aria-label="Menú principal">
   <ul>
     <li><a href="index.html">Inicio</a></li>
     <li><a href="sobre-mi.html">Sobre mí</a></li>
     <li><a href="servicios.html">Servicios</a></li>
-    <li><a href="programas.html">Programas</a></li>
-    <li><a href="recursos.html" aria-current="page">Recursos</a></li>
+    <li><a href="programas.html" aria-current="page">Programas</a></li>
+    <li><a href="/recursos.html">Recursos</a></li>  
     <li><a href="contacto.html">Contacto</a></li>
   </ul>
+</nav>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Menú principal móvil">
+  <a href="/">Inicio</a>
+  <a href="/sobre-mi.html">Sobre mí</a>
+  <a href="/servicios.html">Servicios</a>
+  <a href="/programas.html">Programas</a>
+  <a href="/recursos.html">Recursos</a>
+  <a href="/contacto.html">Contacto</a>
 </nav>
   </header>
 
@@ -326,13 +337,13 @@
   </section>
 </main>
 
-
   <script>
-    function toggleMenu(button) {
-      const nav = document.getElementById("mainMenu");
-      button.classList.toggle("open");
-      nav.classList.toggle("active");
-    }
+   function toggleMenu(button) {
+    const mobileMenu = document.getElementById("mobileMenu");
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", !isExpanded);
+    mobileMenu.classList.toggle("show");
+  }
   </script>
 </body>
 </html>
