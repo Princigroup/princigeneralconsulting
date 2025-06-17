@@ -20,24 +20,26 @@
   <meta name="twitter:title" content="Contacto | Princi General Consulting" />
   <meta name="twitter:description" content="Contacta con Princi General Consulting para asesoramiento personalizado y soluciones a medida." />
   <meta name="twitter:image" content="https://www.princigeneralconsulting.com/assets/twitter-image-contacto.jpg" />
- <!-- Favicon -->
+
+  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" />
+
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #fdfaf7;
       color: #4b3a30;
     }
 
     header {
-  position: relative;
-  height: 380px;
-  background-image: url("markus-winkler-q3QPw37J6Xs-unsplash.webp");
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
+      position: relative;
+      height: 380px;
+      background-image: url(markus-winkler-q3QPw37J6Xs-unsplash.webp);
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
 
     header::before {
       content: "";
@@ -57,62 +59,104 @@
       cursor: pointer;
     }
 
-    .menu-toggle {
-      display: none;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      z-index: 3;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 30px;
-      height: 22px;
-      cursor: pointer;
-    }
-
-    .menu-toggle span {
-      display: block;
-      height: 3px;
-      background: #4b3a30;
-      margin-bottom: 5px;
-      border-radius: 2px;
-    }
-
-    nav {
+    nav.desktop-menu {
       position: absolute;
       bottom: 20px;
-      right: 20px;
       z-index: 2;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    nav ul {
+    nav.desktop-menu ul {
       list-style: none;
       display: flex;
-      justify-content: flex-end;
-      gap: 1.5rem;
+      gap: 1.2rem;
       margin: 0;
       padding: 0;
     }
 
-    nav ul li a {
+    nav.desktop-menu ul li a {
       text-decoration: none;
       color: #4b3a30;
       background-color: #e8d5d2;
-      padding: 0.6rem 1.2rem;
+      padding: 0.6rem 1rem;
       border-radius: 8px;
       font-weight: 600;
-      transition: all 0.3s ease;
-      white-space: nowrap;
-      display: inline-block;
+      transition: background-color 0.3s, color 0.3s;
     }
 
-    nav ul li a:hover,
-    nav ul li a[aria-current="page"] {
+    nav.desktop-menu ul li a:hover,
+    nav.desktop-menu ul li a[aria-current="page"] {
       background-color: #d2b48c;
       color: #fff;
     }
 
-    /* Traductor Google escritorio */
+    /* Menú hamburguesa */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      z-index: 3;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    /* Líneas hamburguesa */
+    .menu-toggle span {
+      background: #d2b48c; /* marrón claro */
+      height: 3px;
+      margin: 5px 0;
+      width: 28px;
+      border-radius: 2px;
+      display: block;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Cambiar color línea cuando activo (opcional) */
+    .menu-toggle[aria-expanded="true"] span {
+      background: #a27c54; /* más oscuro al abrir */
+    }
+
+    /* Menú móvil oculto por defecto */
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #d5bfa3;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 3;
+      min-width: 150px;
+    }
+
+    .mobile-menu a {
+      color: #3d2b1f;
+      padding: 0.5rem 0;
+      text-decoration: none;
+      border-bottom: 1px solid #3d2b1f;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu a:hover {
+      color: #ad855d;
+    }
+
+    .mobile-menu.show {
+      display: flex;
+    }
+
     #google_translate_element {
       position: fixed;
       top: 10px;
@@ -153,6 +197,7 @@
       font-weight: 600;
       margin-bottom: 0.3rem;
       color: #6b4c3b;
+      display: block;
     }
 
     input[type="text"],
@@ -162,8 +207,10 @@
       border: 1px solid #d2b48c;
       border-radius: 6px;
       font-size: 1rem;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       resize: vertical;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     textarea {
@@ -208,82 +255,39 @@
     /* ==== Estilos para móvil ==== */
     @media (max-width: 768px) {
       header {
-        height: 120px;
-        padding-bottom: 0;
+        height: 160px;
+        padding: 1rem;
+        justify-content: flex-start;
       }
 
       .logo {
-        max-height: 80px;
-        margin: 1rem auto 0 auto;
-        display: block;
-        position: relative;
+        max-height: 70px;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
       }
 
       .menu-toggle {
         display: flex;
       }
 
-      /* Menú desplegado estilo móvil mejorado */
-      nav {
+      nav.desktop-menu {
         display: none;
-        position: fixed;
-        top: 60px;
-        right: 20px;
-        background: #fff;
-        padding: 1.5rem 2rem;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        width: 220px;
-        z-index: 9999;
-        opacity: 0;
-        transform: translateY(-10px);
-        pointer-events: none;
-        transition: opacity 0.3s ease, transform 0.3s ease;
       }
 
-      nav.active {
-        display: block;
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
+      .mobile-menu {
+        top: 55px;
+        right: 10px;
+        min-width: 140px;
       }
 
-      nav ul {
-        display: flex;
-        flex-direction: column;
-        gap: 1.2rem;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      nav ul li a {
-        display: block;
-        padding: 0.9rem 1.3rem;
-        border-radius: 10px;
-        background-color: #e8d5d2;
-        color: #4b3a30;
-        font-weight: 600;
-        text-align: center;
-        text-decoration: none;
-        box-shadow: 0 2px 6px rgba(210, 180, 140, 0.5);
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      nav ul li a:hover,
-      nav ul li a[aria-current="page"] {
-        background-color: #c5a16a;
-        box-shadow: 0 4px 12px rgba(197, 161, 106, 0.7);
-        color: #fff;
-      }
-
-      /* Traductor Google móvil */
       #google_translate_element {
         position: static;
-        margin: 1rem auto 0 auto;
         text-align: center;
+        background: transparent;
         font-size: 1rem;
         box-shadow: none;
+        margin-bottom: 1rem;
       }
     }
   </style>
@@ -292,7 +296,7 @@
 <body>
 
   <!-- Traductor de Google -->
-  <div id="google_translate_element"></div>
+  <div id="google_translate_element" aria-label="Selector de idioma"></div>
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
@@ -302,63 +306,76 @@
       }, 'google_translate_element');
     }
   </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
 
   <header>
     <a href="index.html">
-     <img src="Logo-Princi.webp" alt="Logotipo de Princi General Consulting" class="logo"/>
+      <img src="Logo-Princi.webp" alt="Logotipo de Princi General Consulting" class="logo" />
     </a>
 
-    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')" aria-label="Toggle navigation menu" role="button" tabindex="0" onkeydown="if(event.key==='Enter'){this.click();}">
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu(this)">
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </button>
 
-    <nav aria-label="Menú principal">
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="sobre-mi.html">Sobre mí</a></li>
-    <li><a href="servicios.html">Servicios</a></li>
-    <li><a href="programas.html">Programas</a></li>
-    <li><a href="recursos.html">Recursos</a></li>
-    <li><a href="contacto.html" aria-current="page">Contacto</a></li>
-  </ul>
-</nav>
+    <nav id="mainMenu" class="desktop-menu" aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="programas.html">Programas</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Menú principal móvil">
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="programas.html">Programas</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="contacto.html" aria-current="page">Contacto</a>
+    </nav>
   </header>
 
   <main>
     <h1>Contacto</h1>
 
-    <form action="https://formspree.io/f/xjkrvbdd" method="POST">
-  <label for="name">Nombre completo</label>
-  <input type="text" id="name" name="name" required placeholder="Escribe tu nombre" />
+    <form action="https://formsubmit.co/tamarapinillos@princigeneralconsulting.com" method="POST" novalidate>
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://www.princigeneralconsulting.com/gracias.html" />
+      <input type="hidden" name="_subject" value="Nuevo mensaje de contacto desde la web" />
 
-  <label for="email">Correo electrónico</label>
-  <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com" />
+      <label for="nombre">Nombre completo *</label>
+      <input id="nombre" name="nombre" type="text" placeholder="Tu nombre completo" required minlength="3" maxlength="50" autocomplete="name" />
 
-  <label for="message">Mensaje</label>
-  <textarea id="message" name="message" required placeholder="Cuéntame en qué puedo ayudarte..."></textarea>
+      <label for="email">Correo electrónico *</label>
+      <input id="email" name="email" type="email" placeholder="Tu correo electrónico" required autocomplete="email" />
 
-  <label for="privacy">
-    <input type="checkbox" id="privacy" name="privacy" required />
-    Acepto la <a href="/privacidad.html" target="_blank">política de privacidad</a>
-  </label>
-  <input type="hidden" name="_next" value="https://www.princigeneralconsulting.com/gracias.html">
+      <label for="mensaje">Mensaje *</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tu mensaje" required minlength="10" maxlength="800"></textarea>
 
-  <button type="submit">Enviar mensaje</button>
-</form>
+      <button type="submit">Enviar</button>
+    </form>
 
     <section class="contact-info" aria-label="Información de contacto">
       <h2>Información de contacto</h2>
-      <p><strong>Teléfono:</strong> +34 631 607 490</p>
-      <p><strong>Email:</strong> <a href="mailto:tamarapinillos@princigeneralconsulting.com">tamarapinillos@princigeneralconsulting.com</a></p>
+      <p><strong>Teléfono:</strong> <a href="tel:+34631607490" aria-label="Llamar a 631 607 490">631 607 490</a></p>
+      <p><strong>Correo electrónico:</strong> <a href="mailto:tamarapinillos@princigeneralconsulting.com" aria-label="Enviar correo a tamarapinillos@princigeneralconsulting.com">tamarapinillos@princigeneralconsulting.com</a></p>
+      <p><strong>Dirección:</strong> Disponible bajo solicitud</p>
     </section>
   </main>
 
-</body>
-</html>
-
+  <script>
+    function toggleMenu(button) {
+      const mobileMenu = document.getElementById("mobileMenu");
+      const isExpanded = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", !isExpanded);
+      mobileMenu.classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
