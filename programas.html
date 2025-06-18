@@ -21,7 +21,6 @@
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" />
-
   <!-- Estilos -->
   <style>
     body {
@@ -208,20 +207,10 @@
 
   <!-- Traductor de Google -->
   <div id="google_translate_element"></div>
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'es',
-        includedLanguages: 'en,it,fr,de,pt',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-    }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <header>
     <a href="index.html">
-      <img src="Logo-Princi-v1.webp.webp" alt="Logo Princi General Consulting" class="logo" loading="lazy">
+      <img src="Logo-Princi-v1.webp.webp" alt="Logo Princi General Consulting" class="logo" loading="lazy" />
     </a>
     <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu(this)">
       <span></span><span></span><span></span>
@@ -246,7 +235,7 @@
     </nav>
   </header>
 
-  <main>
+   <main>
     <h1>Programas Formativos</h1>
     <section class="programs">
       <article class="program-item">
@@ -273,31 +262,34 @@
   </main>
 
   <script>
+    // Función para alternar menú móvil
     function toggleMenu(button) {
       const mobileMenu = document.getElementById("mobileMenu");
       const expanded = button.getAttribute("aria-expanded") === "true";
       button.setAttribute("aria-expanded", !expanded);
       mobileMenu.classList.toggle("show");
     }
-    <script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      includedLanguages: 'en,it,fr,de,pt'
-    }, 'google_translate_element');
-  }
 
-  function loadGoogleTranslateScript() {
-    var gtScript = document.createElement('script');
-    gtScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    gtScript.async = true;  // Opcional, pero recomendado
-    document.body.appendChild(gtScript);
-  }
+    // Inicializador Google Translate
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'en,it,fr,de,pt',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
 
-  // Carga el script después de que toda la página se haya cargado
-  window.addEventListener('load', loadGoogleTranslateScript);
-</script>
+    // Carga diferida del script de Google Translate para no bloquear renderizado
+    function loadGoogleTranslateScript() {
+      var gtScript = document.createElement('script');
+      gtScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      gtScript.async = true;
+      document.body.appendChild(gtScript);
+    }
+
+    // Ejecutar la carga tras el evento load
+    window.addEventListener('load', loadGoogleTranslateScript);
   </script>
+
 </body>
 </html>
