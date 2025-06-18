@@ -15,18 +15,18 @@
   <meta property="og:description" content="Descubre la trayectoria profesional, espiritual y empresarial de Tamara Pinillos Blanco, líder en consultoría internacional con propósito y fundadora de Princi General Consulting." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.princigeneralconsulting.com/sobre-mi.html" />
-  <meta property="og:image" content="https://www.princigeneralconsulting.com/img/tamara-pinillos-blanco.jpg" /> <!-- Asegúrate de usar la URL correcta de la imagen -->
+  <meta property="og:image" content="https://www.princigeneralconsulting.com/img/tamara-pinillos-blanco.jpg" />
 
   <!-- Canonical -->
   <link rel="canonical" href="https://www.princigeneralconsulting.com/sobre-mi.html" />
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
-  <!-- Título del navegador -->
   <title>Sobre mí | Tamara Pinillos Blanco - Liderazgo con Propósito</title>
+
   <style>
   :root {
     --color-text: #4b3a30;
@@ -46,7 +46,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--color-bg);
     color: var(--color-text);
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
   header {
@@ -98,7 +98,6 @@
   }
 
   /* Menú escritorio */
-   /* Menú escritorio centrado */
   nav.desktop-menu {
     position: absolute;
     bottom: 20px;
@@ -169,16 +168,13 @@
     display: flex;
   }
 
-  /* Mostrar hamburguesa y ocultar menú escritorio en pantallas pequeñas */
   @media (max-width: 768px) {
     nav.desktop-menu {
       display: none;
     }
-
     .menu-toggle {
       display: flex;
     }
-
     .mobile-menu {
       display: none;
     }
@@ -213,15 +209,17 @@
 
   main {
     max-width: 900px;
-    margin: 2rem auto 4rem;
+    margin: 3rem auto 4rem;
     padding: 0 2rem;
+    font-family: 'Georgia', serif;
+    color: #3d2b1f;
   }
 
   main h1 {
     font-size: 2.5rem;
     color: var(--color-primary-dark);
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   main p {
@@ -231,8 +229,8 @@
     color: var(--color-text);
   }
 
-  .sobre-mi {
-    padding: 4rem 2rem;
+  .sobre-mi-section {
+    padding: 3rem 2rem;
     background-color: #fffaf5;
   }
 
@@ -298,18 +296,15 @@
       padding-left: 0;
       margin-left: 0;
     }
-
     .timeline-item {
       padding-left: 0;
     }
-
     .timeline-year {
       position: relative;
       left: 0;
       margin-bottom: 0.5rem;
       display: inline-block;
     }
-
     .timeline-content {
       margin-top: 0.5rem;
     }
@@ -327,7 +322,29 @@
     height: auto;
     display: inline-block;
   }
-</style>
+
+  .cta-contacto {
+    text-align: center;
+    margin: 3rem 0 5rem;
+    font-size: 1.3rem;
+    color: var(--color-primary-dark);
+    font-weight: 600;
+  }
+
+  .cta-contacto a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-primary);
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .cta-contacto a:hover,
+  .cta-contacto a:focus {
+    color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+  }
+  </style>
 
 </head>
 <body>
@@ -336,23 +353,29 @@
   <img src="Logo-Princi.webp" alt="Logotipo de Princi General Consulting" class="logo" loading="lazy" />
 
   <!-- Botón menú móvil -->
-  <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu()" onkeydown="if(event.key==='Enter'){this.click();}">
+  <button
+    class="menu-toggle"
+    aria-label="Abrir menú"
+    aria-expanded="false"
+    onclick="toggleMenu()"
+    onkeydown="if(event.key==='Enter'){this.click();}"
+  >
     <span></span>
     <span></span>
     <span></span>
   </button>
 
-  <!-- Menú de escritorio -->
-<nav id="mainMenu" class="desktop-menu" aria-label="Navegación principal" role="navigation">
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="sobre-mi.html" aria-current="page">Sobre mí</a></li>
-    <li><a href="servicios.html">Servicios</a></li>
-    <li><a href="programas.html">Programas</a></li>
-    <li><a href="recursos.html">Recursos</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-</nav>
+  <!-- Menú escritorio -->
+  <nav id="mainMenu" class="desktop-menu" aria-label="Navegación principal" role="navigation">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="sobre-mi.html" aria-current="page">Sobre mí</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="programas.html">Programas</a></li>
+      <li><a href="recursos.html">Recursos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
 
   <!-- Menú móvil -->
   <nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil">
@@ -368,72 +391,74 @@
 <!-- Contenedor para el Traductor de Google -->
 <div id="google_translate_element" aria-label="Selector de idioma Google Translate"></div>
 
-<main class="sobre-mi" style="padding: 3rem 1rem; max-width: 900px; margin: 0 auto; color: #3d2b1f; font-family: 'Georgia', serif;">
-  <section class="profile-pic-container" aria-label="Retrato de Tamara Pinillos Blanco">
-  <img src="tamara-pinillos-blanco-consultora.jpg" alt="Retrato de Tamara Pinillos Blanco" loading="lazy" />
-</section>
-  <h1 style="font-size: 2.5rem; color: #ad855d; text-align: center; margin-bottom: 2rem;">Sobre mí / Nuestra historia</h1>
+<main role="main" class="sobre-mi-section">
+  <article aria-label="Biografía profesional y personal de Tamara Pinillos Blanco">
+    <section class="profile-pic-container" aria-label="Retrato de Tamara Pinillos Blanco">
+      <img src="tamara-pinillos-blanco-consultora.jpg" alt="Fotografía profesional de Tamara Pinillos Blanco, fundadora de Princi General Consulting" loading="lazy" />
+    </section>
 
-  <p>
-    Mi nombre es <strong>Tamara Pinillos Blanco</strong>, y desde hace más de una década acompaño a líderes, equipos, emprendedores y organizaciones a descubrir su verdadera esencia y proyectar su propósito al mundo. Soy fundadora de <strong>Princi General Consulting</strong>, una consultoría internacional especializada en <strong>liderazgo consciente</strong>, nacida desde la profunda convicción de que el <strong>liderazgo con propósito</strong> transforma vidas, empresas y comunidades.
-  </p>
+    <h1>Sobre mí / Nuestra historia</h1>
 
-  <p>
-    Con formación en <strong>MBA en Alta Dirección Europea</strong>, <strong>coaching ejecutivo</strong>, <strong>PNL</strong>, <strong>mindfulness</strong>, <strong>psicología positiva</strong> y <strong>negociación ética</strong>, fusiono conocimiento empresarial con herramientas de desarrollo humano y espiritual. Mi enfoque une lo racional con lo emocional, lo estratégico con lo esencial, lo visible con lo invisible.
-  </p>
+    <p>
+      Mi nombre es <strong>Tamara Pinillos Blanco</strong>, y desde hace más de una década acompaño a líderes, equipos, emprendedores y organizaciones a descubrir su verdadera esencia y proyectar su propósito al mundo. Soy fundadora de <strong>Princi General Consulting</strong>, una consultoría internacional especializada en <strong>liderazgo consciente</strong>, nacida desde la profunda convicción de que el <strong>liderazgo con propósito</strong> transforma vidas, empresas y comunidades.
+    </p>
 
-  <p>
-    <strong>Princi General Consulting</strong> nace como un llamado a integrar <strong>experiencia profesional</strong>, <strong>misión de vida</strong> y <strong>servicio real</strong> a personas y proyectos con alma. Diseñamos procesos personalizados para líderes conscientes, organizaciones con valores y entidades solidarias. Colaboramos con <strong>ONG</strong>, <strong>misiones humanitarias</strong> y proyectos con propósito para ofrecer <strong>formación transformadora</strong> y <strong>herramientas de impacto positivo</strong>.
-  </p>
+    <p>
+      Con formación en <strong>MBA en Alta Dirección Europea</strong>, <strong>coaching ejecutivo</strong>, <strong>PNL</strong>, <strong>mindfulness</strong>, <strong>psicología positiva</strong> y <strong>negociación ética</strong>, fusiono conocimiento empresarial con herramientas de desarrollo humano y espiritual. Mi enfoque une lo racional con lo emocional, lo estratégico con lo esencial, lo visible con lo invisible.
+    </p>
 
-  <p>
-    Esta historia es también la historia de quienes eligen confiar en su intuición, su fe y su propósito. Personas valientes que deciden <strong>liderar desde el alma</strong>. A través de <strong>mentorías</strong>, <strong>programas formativos</strong> y <strong>acompañamiento profundo</strong>, les ayudamos a integrar lo profesional con lo espiritual, lo humano con lo empresarial.
-  </p>
+    <p>
+      <strong>Princi General Consulting</strong> nace como un llamado a integrar <strong>experiencia profesional</strong>, <strong>misión de vida</strong> y <strong>servicio real</strong> a personas y proyectos con alma. Diseñamos procesos personalizados para líderes conscientes, organizaciones con valores y entidades solidarias. Colaboramos con <strong>ONG</strong>, <strong>misiones humanitarias</strong> y proyectos con propósito para ofrecer <strong>formación transformadora</strong> y <strong>herramientas de impacto positivo</strong>.
+    </p>
 
-  <p style="text-align: center; font-style: italic; font-size: 1.2rem; color: #6d4c41; margin-top: 2rem;">
-    "Liderar desde el alma es recordar quién eres, para guiar con verdad, paz y visión."
-  </p>
-</main>
+    <p>
+      Esta historia es también la historia de quienes eligen confiar en su intuición, su fe y su propósito. Personas valientes que deciden <strong>liderar desde el alma</strong>. A través de <strong>mentorías</strong>, <strong>programas formativos</strong> y <strong>acompañamiento profundo</strong>, les ayudamos a integrar lo profesional con lo espiritual, lo humano con lo empresarial.
+    </p>
 
-<section id="sobre-mi" class="section sobre-mi">
-  <div class="container">
-    <h2 class="section-title">Sobre mí</h2>
+    <p style="text-align: center; font-style: italic; font-size: 1.2rem; color: #6d4c41; margin-top: 2rem;">
+      "Liderar desde el alma es recordar quién eres, para guiar con verdad, paz y visión."
+    </p>
+  </article>
+
+  <section aria-label="Línea temporal de trayectoria profesional" class="timeline-section">
+    <h2 class="section-title">Mi trayectoria profesional</h2>
     <p class="section-subtitle">Un recorrido por mi camino personal y profesional</p>
 
     <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-year">2010</div>
+      <article class="timeline-item" aria-label="Año 2010: Inicio en Italia en el sector seguros">
+        <time class="timeline-year" datetime="2010">2010</time>
         <div class="timeline-content">
           <p>Inicio mi trayectoria internacional trasladándome a Italia, donde continuo mi carrera en el sector seguros.</p>
         </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2011</div>
+      </article>
+
+      <article class="timeline-item" aria-label="Año 2011: Fundación de consultora en Suiza">
+        <time class="timeline-year" datetime="2011">2011</time>
         <div class="timeline-content">
           <p>Me instalo en Suiza y fundo una consultora para apoyar a empresas y personas en gestiones administrativas, fiscales y aseguradoras.</p>
         </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2018</div>
-        <div class="timeline-content">
-          <p>Inicio un proceso de transformación espiritual que me lleva a estudiar liderazgo consciente, desarrollo humano y emprendimiento con propósito.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2023</div>
-        <div class="timeline-content">
-          <p>Fundo <strong>Princi & Co Group</strong> y asumo la dirección de <strong>AaCc Psicòlegs</strong>, integrando el coaching, la alta dirección y la formación con propósito divino.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2025</div>
-        <div class="timeline-content">
-          <p>Lanzo <strong>Princi General Consulting</strong> como marca internacional de liderazgo consciente, estrategia ética y transformación organizacional con alma.</p>
-        </div>
-      </div>
-    </div>
+      </article>
+
+      <article class="timeline-item" aria-label="Año 2018: Inicio de transformación espiritual">
+  <time class="timeline-year" datetime="2018">2018</time>
+  <div class="timeline-content">
+    <p>Inicio un proceso de transformación espiritual que me lleva a estudiar liderazgo consciente, desarrollo humano y emprendimiento con propósito.</p>
   </div>
-</section>
+</article>
+
+<article class="timeline-item" aria-label="Año 2023: Fundación de Princi & Co Group y dirección de AaCc Psicòlegs">
+  <time class="timeline-year" datetime="2023">2023</time>
+  <div class="timeline-content">
+    <p>Fundo <strong>Princi & Co Group</strong> y asumo la dirección de <strong>AaCc Psicòlegs</strong>, integrando el coaching, la alta dirección y la formación con propósito divino.</p>
+  </div>
+</article>
+
+<article class="timeline-item" aria-label="Año 2025: Lanzamiento de Princi General Consulting">
+  <time class="timeline-year" datetime="2025">2025</time>
+  <div class="timeline-content">
+    <p>Lanzo <strong>Princi General Consulting</strong> como marca internacional de liderazgo consciente, estrategia ética y transformación organizacional con alma.</p>
+  </div>
+</article>
 
 <script>
   function toggleMenu() {
