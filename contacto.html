@@ -8,6 +8,14 @@
   <meta name="keywords" content="consultoría, contacto, asesoramiento, Princi General Consulting, email, teléfono" />
   <meta name="author" content="Princi General Consulting" />
 
+  <!-- Preload para Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Preconnect para el traductor -->
+  <link rel="preconnect" href="https://translate.google.com" crossorigin>
+
   <!-- Open Graph -->
   <meta property="og:title" content="Contacto | Princi General Consulting" />
   <meta property="og:description" content="Contacta con Princi General Consulting para asesoramiento personalizado y soluciones a medida." />
@@ -24,6 +32,7 @@
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" />
 
+  <!-- CSS optimizado externo recomendado. Aquí incluido por simplicidad -->
   <style>
     body {
       margin: 0;
@@ -35,9 +44,7 @@
     header {
       position: relative;
       height: 380px;
-      background-image: url(markus-winkler-q3QPw37J6Xs-unsplash.webp);
-      background-size: cover;
-      background-position: center;
+      background: url('markus-winkler-q3QPw37J6Xs-unsplash.webp') center/cover no-repeat;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
@@ -55,6 +62,7 @@
       top: 20px;
       left: 20px;
       max-height: 140px;
+      width: auto;
       z-index: 2;
       cursor: pointer;
     }
@@ -91,7 +99,6 @@
       color: #fff;
     }
 
-    /* Menú hamburguesa */
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -105,9 +112,8 @@
       padding: 0;
     }
 
-    /* Líneas hamburguesa */
     .menu-toggle span {
-      background: #d2b48c; /* marrón claro */
+      background: #d2b48c;
       height: 3px;
       margin: 5px 0;
       width: 28px;
@@ -116,12 +122,10 @@
       transition: background-color 0.3s ease;
     }
 
-    /* Cambiar color línea cuando activo (opcional) */
     .menu-toggle[aria-expanded="true"] span {
-      background: #a27c54; /* más oscuro al abrir */
+      background: #a27c54;
     }
 
-    /* Menú móvil oculto por defecto */
     .mobile-menu {
       display: none;
       flex-direction: column;
@@ -142,7 +146,6 @@
       text-decoration: none;
       border-bottom: 1px solid #3d2b1f;
       font-weight: bold;
-      transition: color 0.3s ease;
     }
 
     .mobile-menu a:last-child {
@@ -173,7 +176,6 @@
       max-width: 600px;
       margin: 2rem auto 4rem auto;
       padding: 0 2rem;
-      color: #4b3a30;
     }
 
     main h1 {
@@ -197,7 +199,6 @@
       font-weight: 600;
       margin-bottom: 0.3rem;
       color: #6b4c3b;
-      display: block;
     }
 
     input[type="text"],
@@ -207,10 +208,8 @@
       border: 1px solid #d2b48c;
       border-radius: 6px;
       font-size: 1rem;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       resize: vertical;
       width: 100%;
-      box-sizing: border-box;
     }
 
     textarea {
@@ -226,8 +225,6 @@
       color: #fff;
       border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-      align-self: flex-start;
     }
 
     button:hover {
@@ -240,29 +237,22 @@
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
       margin-top: 2rem;
-      color: #6b4c3b;
       font-size: 1.1rem;
-      line-height: 1.6;
     }
 
     .contact-info h2 {
-      margin-top: 0;
-      margin-bottom: 1rem;
       font-size: 1.8rem;
       color: #6b4c3b;
     }
 
-    /* ==== Estilos para móvil ==== */
     @media (max-width: 768px) {
       header {
         height: 160px;
         padding: 1rem;
-        justify-content: flex-start;
       }
 
       .logo {
         max-height: 70px;
-        position: absolute;
         top: 1rem;
         left: 1rem;
       }
@@ -295,9 +285,8 @@
 
 <body>
 
-  <!-- Traductor de Google -->
   <div id="google_translate_element" aria-label="Selector de idioma"></div>
-  <script type="text/javascript">
+  <script>
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'es',
@@ -310,16 +299,14 @@
 
   <header>
     <a href="index.html">
-      <img src="Logo-Princi.webp" alt="Logotipo de Princi General Consulting" class="logo" />
+      <img src="Logo-Princi.webp" alt="Logotipo de Princi General Consulting" class="logo" loading="lazy" width="140" height="140" />
     </a>
 
     <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu(this)">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
 
-    <nav id="mainMenu" class="desktop-menu" aria-label="Menú principal">
+    <nav class="desktop-menu" aria-label="Menú principal" role="navigation">
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="sobre-mi.html">Sobre mí</a></li>
@@ -330,7 +317,7 @@
       </ul>
     </nav>
 
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Menú principal móvil">
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil" role="navigation">
       <a href="index.html">Inicio</a>
       <a href="sobre-mi.html">Sobre mí</a>
       <a href="servicios.html">Servicios</a>
@@ -343,7 +330,8 @@
   <main>
     <h1>Contacto</h1>
 
-    <form action="https://formsubmit.co/tamarapinillos@princigeneralconsulting.com" method="POST" novalidate>
+    <form action="https://formsubmit.co/tamarapinillos@princigeneralconsulting.com" method="POST" novalidate role="form" aria-labelledby="form-contacto">
+      <h2 id="form-contacto" class="sr-only">Formulario de contacto</h2>
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_next" value="https://www.princigeneralconsulting.com/gracias.html" />
       <input type="hidden" name="_subject" value="Nuevo mensaje de contacto desde la web" />
@@ -352,18 +340,19 @@
       <input id="nombre" name="nombre" type="text" placeholder="Tu nombre completo" required minlength="3" maxlength="50" autocomplete="name" />
 
       <label for="email">Correo electrónico *</label>
-      <input id="email" name="email" type="email" placeholder="Tu correo electrónico" required autocomplete="email" />
+      <input id="email" name="email" type="email" placeholder="Tu correo electrónico" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" autocomplete="email" />
 
       <label for="mensaje">Mensaje *</label>
       <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tu mensaje" required minlength="10" maxlength="800"></textarea>
 
       <button type="submit">Enviar</button>
+      <p style="font-size: 0.8rem; color: #6b4c3b;">Al enviar este formulario, aceptas nuestra <a href="privacidad.html">Política de Privacidad</a>.</p>
     </form>
 
     <section class="contact-info" aria-label="Información de contacto">
       <h2>Información de contacto</h2>
-      <p><strong>Teléfono:</strong> <a href="tel:+34631607490" aria-label="Llamar a 631 607 490">631 607 490</a></p>
-      <p><strong>Correo electrónico:</strong> <a href="mailto:tamarapinillos@princigeneralconsulting.com" aria-label="Enviar correo a tamarapinillos@princigeneralconsulting.com">tamarapinillos@princigeneralconsulting.com</a></p>
+      <p><strong>Teléfono:</strong> <a href="tel:+34631607490">631 607 490</a></p>
+      <p><strong>Correo electrónico:</strong> <a href="mailto:tamarapinillos@princigeneralconsulting.com">tamarapinillos@princigeneralconsulting.com</a></p>
       <p><strong>Dirección:</strong> Disponible bajo solicitud</p>
     </section>
   </main>
@@ -375,6 +364,18 @@
       button.setAttribute("aria-expanded", !isExpanded);
       mobileMenu.classList.toggle("show");
     }
+  </script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Princi General Consulting",
+    "url": "https://www.princigeneralconsulting.com",
+    "email": "tamarapinillos@princigeneralconsulting.com",
+    "telephone": "+34631607490"
+  }
   </script>
 
 </body>
