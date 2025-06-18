@@ -26,7 +26,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
   <title>Inicio | Princi General Consulting - Liderazgo Consciente</title>
-
   <style>
   :root {
     --color-text: #4b3a30;
@@ -52,7 +51,7 @@
   header {
     position: relative;
     height: 380px;
-    background-image: url('dane-deaner-KLkj7on_c-v2.webp.webp');
+   background-image: url('dane-deaner-KLkj7on_c-v2.webp');
     background-size: cover;
     background-position: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -262,7 +261,7 @@
 
 <header role="banner">
   <a href="index.html" aria-label="Ir a inicio">
-    <img src="Logo-Princi-v1.webp.webp" alt="Logotipo de Princi General Consulting" class="logo" loading="lazy" />
+    <img src="Logo-Princi-v1.webp" alt="Logotipo de Princi General Consulting" class="logo" loading="lazy" />
   </a>
 
   <!-- Botón menú móvil -->
@@ -270,6 +269,7 @@
     class="menu-toggle"
     aria-label="Abrir menú"
     aria-expanded="false"
+    aria-controls="mobileMenu"
     onclick="toggleMenu()"
     onkeydown="if(event.key==='Enter'){this.click();}"
   >
@@ -291,7 +291,7 @@
   </nav>
 
   <!-- Menú móvil -->
-  <nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil">
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil" role="navigation">
     <a href="index.html">Inicio</a>
     <a href="sobre-mi.html">Sobre mí</a>
     <a href="servicios.html">Servicios</a>
@@ -326,7 +326,7 @@
     const menu = document.getElementById('mobileMenu');
     const button = document.querySelector('.menu-toggle');
     const isExpanded = button.getAttribute('aria-expanded') === 'true';
-    button.setAttribute('aria-expanded', !isExpanded);
+    button.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
     menu.classList.toggle('show');
   }
 </script>
@@ -335,7 +335,11 @@
 <script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement(
-      { pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, includedLanguages: 'en,it,fr,de,pt' },
+      {
+        pageLanguage: 'es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        includedLanguages: 'en,it,fr,de,pt'
+      },
       'google_translate_element'
     );
   }
