@@ -1,8 +1,11 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicios | Consultoría Estratégica, Coaching y Formación con Propósito</title>
+
+  <!-- SEO -->
   <meta name="description" content="Princi General Consulting ofrece consultoría estratégica, coaching ejecutivo, formación y mentoría para líderes y organizaciones que desean transformar el mundo con propósito y valores éticos.">
   <meta name="keywords" content="consultoría estratégica, liderazgo consciente, coaching ejecutivo, mentoría, formación empresarial, desarrollo personal, emprendimiento ético, dirección con propósito, mindfulness, PNL, valores, alta dirección, ONG, empresas éticas">
   <meta name="author" content="Tamara Pinillos Blanco - Princi General Consulting">
@@ -14,7 +17,7 @@
   <meta property="og:image" content="https://www.princigeneralconsulting.com/img/og-servicios.jpg" />
   <link rel="canonical" href="https://www.princigeneralconsulting.com/servicios.html" />
   <link rel="icon" href="favicon.ico" />
-  <title>Servicios | Consultoría Estratégica, Coaching y Formación con Propósito</title>
+
   <style>
     body {
       margin: 0;
@@ -22,18 +25,14 @@
       background-color: #fdfaf7;
       color: #4b3a30;
     }
-
     header {
       position: relative;
       height: 380px;
-      background-image: url(cytonn-photography-n95VMLxqM2I-unsplash.webp);
-      background-size: cover;
-      background-position: center;
+      background: url(cytonn-photography-n95VMLxqM2I-unsplash.webp) center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-
     header::before {
       content: "";
       position: absolute;
@@ -42,7 +41,6 @@
       background: rgba(245, 245, 245, 0.4);
       z-index: 0;
     }
-
     .logo {
       position: absolute;
       top: 20px;
@@ -50,15 +48,13 @@
       max-height: 100px;
       z-index: 2;
     }
-
     nav.desktop-menu {
       position: absolute;
       bottom: 20px;
-      z-index: 2;
       left: 50%;
       transform: translateX(-50%);
+      z-index: 2;
     }
-
     nav.desktop-menu ul {
       list-style: none;
       display: flex;
@@ -66,22 +62,19 @@
       margin: 0;
       padding: 0;
     }
-
-    nav.desktop-menu ul li a {
+    nav.desktop-menu a {
       text-decoration: none;
       color: #4b3a30;
-      background-color: #e8d5d2;
+      background: #e8d5d2;
       padding: 0.6rem 1rem;
       border-radius: 8px;
       font-weight: 600;
     }
-
-    nav.desktop-menu ul li a:hover,
-    nav.desktop-menu ul li a[aria-current="page"] {
-      background-color: #d2b48c;
+    nav.desktop-menu a:hover,
+    nav.desktop-menu a[aria-current="page"] {
+      background: #d2b48c;
       color: #fff;
     }
-
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -93,7 +86,6 @@
       border: none;
       cursor: pointer;
     }
-
     .menu-toggle span {
       background: #fff;
       height: 3px;
@@ -102,11 +94,10 @@
       border-radius: 2px;
       display: block;
     }
-
     .mobile-menu {
       display: none;
       flex-direction: column;
-      background-color: #d5bfa3;
+      background: #d5bfa3;
       position: absolute;
       top: 60px;
       right: 20px;
@@ -116,7 +107,6 @@
       z-index: 3;
       min-width: 150px;
     }
-
     .mobile-menu a {
       color: #3d2b1f;
       padding: 0.5rem 0;
@@ -124,19 +114,15 @@
       border-bottom: 1px solid #3d2b1f;
       font-weight: bold;
     }
-
     .mobile-menu a:last-child {
       border-bottom: none;
     }
-
     .mobile-menu a:hover {
       color: #ad855d;
     }
-
     .mobile-menu.show {
       display: flex;
     }
-
     #google_translate_element {
       position: fixed;
       top: 10px;
@@ -148,75 +134,60 @@
       font-size: 0.85rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
-
     main {
       max-width: 1000px;
       margin: auto;
       padding: 2rem 1.5rem;
       font-family: 'Georgia', serif;
-      color: #3d2b1f;
     }
-
     main h1 {
       text-align: center;
       color: #ad855d;
       font-size: 2.5rem;
       margin-bottom: 2rem;
     }
-
     .services {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
     }
-
     .service-item {
-      background-color: #fdf7f0;
+      background: #fdf7f0;
       padding: 1.5rem;
       border-radius: 1rem;
       border-left: 6px solid #d2b48c;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
-
     .service-item h3 {
-      margin-top: 0;
+      margin: 0 0 0.5rem;
       color: #6d4c41;
       font-size: 1.3rem;
     }
-
     .service-item p {
       line-height: 1.6;
-      margin: 0.5rem 0 0;
     }
-
     @media (max-width: 768px) {
       header {
         height: 160px;
         padding: 1rem;
         justify-content: flex-start;
       }
-
       .logo {
         max-height: 70px;
-        position: absolute;
         top: 1rem;
         left: 1rem;
       }
-
       .menu-toggle {
         display: flex;
       }
-
       nav.desktop-menu {
         display: none;
       }
-
       .mobile-menu {
         top: 55px;
         right: 10px;
         min-width: 140px;
       }
-
       #google_translate_element {
         position: static;
         text-align: center;
@@ -225,93 +196,86 @@
         box-shadow: none;
         margin-bottom: 1rem;
       }
-
       main {
         padding: 1rem;
-        max-width: 100%;
       }
-
       main h1 {
         font-size: 2rem;
         margin-bottom: 1.5rem;
       }
-
-       @media (max-width: 768px) {
-    .services {
-      grid-template-columns: 1fr !important;
-    }
-  }
-
-      .service-item {
-        padding: 1.2rem;
-        border-left-width: 4px;
+      .services {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
   <div id="google_translate_element"></div>
-  <script type="text/javascript">
+
+  <header>
+    <a href="index.html"><img src="Logo-Princi.webp" alt="Princi General Consulting Logo" class="logo" /></a>
+    <button class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    <nav class="desktop-menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="servicios.html" aria-current="page">Servicios</a></li>
+        <li><a href="programas.html">Programas</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="servicios.html" aria-current="page">Servicios</a>
+      <a href="programas.html">Programas</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Servicios</h1>
+    <section class="services">
+      <div class="service-item">
+        <h3>Consultoría Estratégica con Propósito</h3>
+        <p>Diseñamos planes estratégicos alineados con los <strong>valores éticos</strong> de cada organización, su <strong>visión espiritual</strong> y objetivos sostenibles.</p>
+      </div>
+      <div class="service-item">
+        <h3>Coaching Ejecutivo y Liderazgo Consciente</h3>
+        <p>Acompañamiento personalizado para líderes que desean <strong>liderar con alma</strong>. Integramos <strong>PNL</strong>, <strong>gestión emocional</strong> y <strong>mindfulness</strong>.</p>
+      </div>
+      <div class="service-item">
+        <h3>Formación para Equipos y Organizaciones</h3>
+        <p>Programas en <strong>liderazgo ético</strong>, <strong>bienestar</strong>, <strong>gestión del cambio</strong> y <strong>dirección consciente</strong>, adaptados a empresas y ONG.</p>
+      </div>
+      <div class="service-item">
+        <h3>Mentoría para Emprendedoras del Bien</h3>
+        <p>Guía para <strong>mujeres líderes</strong> que quieren lanzar o escalar <strong>proyectos sostenibles</strong> con enfoque espiritual y coherente.</p>
+      </div>
+      <div class="service-item">
+        <h3>Asesoramiento en Seguros y Finanzas Éticas</h3>
+        <p>Más de 10 años de experiencia en <strong>seguros y soluciones financieras conscientes</strong> alineadas con tus valores y propósito.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('show');
+    }
+    window.addEventListener("load", function() {
+      const s = document.createElement("script");
+      s.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      document.body.appendChild(s);
+    });
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'es',
         includedLanguages: 'en,it,fr,de,pt',
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
       }, 'google_translate_element');
-    }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-  <header>
-    <a href="index.html">
-      <img src="Logo-Princi.webp" alt="Princi General Consulting Logo" class="logo" />
-    </a>
-    <button class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
-    <nav class="desktop-menu"><ul><li><a href="index.html">Inicio</a></li><li><a href="sobre-mi.html">Sobre mí</a></li><li><a href="servicios.html" aria-current="page">Servicios</a></li><li><a href="programas.html">Programas</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="contacto.html">Contacto</a></li></ul></nav>
-    <nav class="mobile-menu" id="mobileMenu"><a href="index.html">Inicio</a><a href="sobre-mi.html">Sobre mí</a><a href="servicios.html" aria-current="page">Servicios</a><a href="programas.html">Programas</a><a href="recursos.html">Recursos</a><a href="contacto.html">Contacto</a></nav>
-  </header>
-
-  <main class="servicios" style="padding: 3rem 1rem; max-width: 1000px; margin: auto; font-family: 'Georgia', serif; color: #3d2b1f;">
-  <h1 style="font-size: 2.5rem; text-align: center; color: #ad855d; margin-bottom: 2rem;">Servicios</h1>
-
-  <section class="services" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-    
-    <div class="service-item" style="background: #fdf7f0; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-      <h3 style="color: #6d4c41;">Consultoría Estratégica con Propósito</h3>
-      <p>Diseñamos planes estratégicos alineados con los <strong>valores éticos</strong> de cada organización, su <strong>visión espiritual</strong> y objetivos sostenibles. Unimos <strong>dirección empresarial</strong> con <strong>conciencia y propósito</strong> para tomar decisiones que transforman.</p>
-    </div>
-
-    <div class="service-item" style="background: #fdf7f0; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-      <h3 style="color: #6d4c41;">Coaching Ejecutivo y Liderazgo Consciente</h3>
-      <p>Acompañamiento personalizado para líderes que desean <strong>liderar con alma</strong>, mejorar su comunicación, su influencia y su conexión con el equipo. Integramos <strong>PNL</strong>, <strong>gestión emocional</strong> y <strong>mindfulness ejecutivo</strong>.</p>
-    </div>
-
-    <div class="service-item" style="background: #fdf7f0; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-      <h3 style="color: #6d4c41;">Formación para Equipos y Organizaciones</h3>
-      <p>Programas formativos en <strong>liderazgo ético</strong>, <strong>bienestar corporativo</strong>, <strong>gestión del cambio</strong> y <strong>dirección consciente</strong>. En modalidad presencial, online o híbrida. Adaptados a <strong>empresas con valores</strong>, <strong>ONG</strong> y proyectos de impacto social.</p>
-    </div>
-
-    <div class="service-item" style="background: #fdf7f0; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-      <h3 style="color: #6d4c41;">Mentoría para Emprendedoras del Bien</h3>
-      <p>Espacio de guía para <strong>mujeres líderes</strong>, terapeutas y emprendedoras que desean crear o escalar <strong>proyectos conscientes y sostenibles</strong>. Desde la visión, el enfoque espiritual y el propósito, hasta el modelo de negocio y comunicación alineada.</p>
-    </div>
-
-    <div class="service-item" style="background: #fdf7f0; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-      <h3 style="color: #6d4c41;">Asesoramiento en Seguros y Finanzas Éticas</h3>
-      <p>Te asesoramos para alinear tu economía con tus valores. Más de 10 años de experiencia en <strong>seguros personales y profesionales</strong>, y en <strong>soluciones financieras conscientes</strong> para proteger tu vida, tu proyecto y tu legado con coherencia y sentido.</p>
-    </div>
-
-  </section>
-</main>
-
-  </section>
-</main>
-
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('show');
     }
   </script>
 </body>
