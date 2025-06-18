@@ -295,9 +295,7 @@
       }, 'google_translate_element');
     }
   </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
-
-  <header>
+    <header>
     <a href="index.html">
       <img src="Logo-Princi-v1.webp.webp" alt="Logotipo de Princi General Consulting" class="logo" loading="lazy" width="140" height="140" />
     </a>
@@ -357,26 +355,24 @@
     </section>
   </main>
 
-  <script>
-    function toggleMenu(button) {
-      const mobileMenu = document.getElementById("mobileMenu");
-      const isExpanded = button.getAttribute("aria-expanded") === "true";
-      button.setAttribute("aria-expanded", !isExpanded);
-      mobileMenu.classList.toggle("show");
-    }
-  </script>
-
-  <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Princi General Consulting",
-    "url": "https://www.princigeneralconsulting.com",
-    "email": "tamarapinillos@princigeneralconsulting.com",
-    "telephone": "+34631607490"
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'es',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      includedLanguages: 'en,it,fr,de,pt'
+    }, 'google_translate_element');
   }
-  </script>
 
+  function loadGoogleTranslateScript() {
+    var gtScript = document.createElement('script');
+    gtScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    gtScript.async = true;  // Opcional, pero recomendado
+    document.body.appendChild(gtScript);
+  }
+
+  // Carga el script después de que toda la página se haya cargado
+  window.addEventListener('load', loadGoogleTranslateScript);
+</script>
 </body>
 </html>
