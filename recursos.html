@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Recursos gratuitos | Liderazgo consciente | Princi General Consulting</title>
-  <meta name="description" content="Descarga recursos gratuitos sobre liderazgo consciente, accede a clases online y suscríbete al boletín de Tamara Pinillos Blanco para liderar con alma.">
+  <meta name="description" content="Descarga recursos gratuitos sobre liderazgo consciente, accede a clases online y suscríbete al boletín de Tamara Pinillos Blanco para liderar con alma." />
   <meta name="keywords" content="recursos liderazgo consciente, PDF gratis liderazgo, masterclass liderazgo, Tamara Pinillos Blanco, Princi General Consulting" />
   <meta name="author" content="Tamara Pinillos Blanco" />
 
@@ -18,16 +18,13 @@
   <link rel="canonical" href="https://www.princigroup.com/recursos.html" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-  <!-- Fonts preload (opcional si usas fuentes externas) -->
-  <!-- <link rel="preload" href="https://fonts.googleapis.com/css2?family=...&display=swap" as="style" /> -->
-
   <style>
     :root {
       --color-primary: #ad855d;
       --color-secondary: #e8d5d2;
       --color-text: #3d2b1f;
     }
-    * {box-sizing: border-box;}
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -48,7 +45,7 @@
       background: rgba(61, 43, 31, 0.5);
       z-index: 0;
     }
-    header * {position: relative; z-index: 1;}
+    header * { position: relative; z-index: 1; }
     .logo-container {
       position: absolute;
       top: 1rem;
@@ -63,6 +60,7 @@
       bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
+      z-index: 1;
     }
     nav.desktop-menu ul {
       display: flex;
@@ -94,6 +92,7 @@
       top: 1rem;
       right: 1.5rem;
       cursor: pointer;
+      z-index: 2;
     }
     .menu-toggle span {
       background: #fff;
@@ -101,6 +100,7 @@
       margin: 4px 0;
       width: 25px;
       border-radius: 2px;
+      display: block;
     }
     .mobile-menu {
       display: none;
@@ -112,7 +112,8 @@
       padding: 1rem;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      z-index: 2;
+      z-index: 3;
+      min-width: 150px;
     }
     .mobile-menu a {
       color: #3d2b1f;
@@ -121,12 +122,12 @@
       border-bottom: 1px solid #3d2b1f;
       font-weight: bold;
     }
-    .mobile-menu a:last-child {border-bottom: none;}
-    .mobile-menu a:hover {color: #ad855d;}
-    .mobile-menu.show {display: flex;}
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: #ad855d; }
+    .mobile-menu.show { display: flex; }
     @media (max-width: 768px) {
-      .desktop-menu {display: none;}
-      .menu-toggle {display: flex;}
+      .desktop-menu { display: none; }
+      .menu-toggle { display: flex; }
     }
     .translate {
       position: absolute;
@@ -152,10 +153,15 @@
       padding: 2rem;
       margin-bottom: 2rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .recurso h2 {
       font-size: 1.6rem;
       color: var(--color-text);
+      margin-top: 0;
     }
     .recurso a {
       display: inline-block;
@@ -175,12 +181,19 @@
       max-width: 500px;
       margin: 0 auto;
     }
+    form label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
     form input, form textarea {
       width: 100%;
       padding: 0.5rem;
       margin-bottom: 1rem;
       border-radius: 8px;
       border: 1px solid #ccc;
+      font-family: inherit;
+      font-size: 1rem;
     }
     form input[type="submit"] {
       background: var(--color-primary);
@@ -188,68 +201,93 @@
       border: none;
       cursor: pointer;
       font-weight: bold;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    form input[type="submit"]:hover {
+      background: #8c6a43;
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <a href="/" class="logo-container">
-      <img src="Logo-Princi-v1.webp.webp" alt="Logotipo de Princi General Consulting" class="logo" loading="lazy" />
+  <header role="banner">
+    <a href="index.html" class="logo-container" aria-label="Ir a inicio">
+      <img src="Logo-Princi-v1.webp.webp.webp" alt="Logotipo de Princi General Consulting" class="logo" loading="lazy" />
     </a>
-    <div class="translate" id="google_translate_element"></div>
+    <div class="translate" id="google_translate_element" aria-label="Selector de idioma Google Translate"></div>
 
     <nav class="desktop-menu" aria-label="Menú principal">
       <ul>
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/sobre-mi.html">Sobre mí</a></li>
-        <li><a href="/servicios.html">Servicios</a></li>
-        <li><a href="/programas.html">Programas</a></li>
-        <li><a href="/recursos.html" aria-current="page">Recursos</a></li>
-        <li><a href="/contacto.html">Contacto</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="programas.html">Programas</a></li>
+        <li><a href="recursos.html" aria-current="page">Recursos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
 
-    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu()">
+    <button
+      class="menu-toggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="mobileMenu"
+      onclick="toggleMenu()"
+    >
       <span></span><span></span><span></span>
     </button>
 
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil">
-      <a href="/">Inicio</a>
-      <a href="/sobre-mi.html">Sobre mí</a>
-      <a href="/servicios.html">Servicios</a>
-      <a href="/programas.html">Programas</a>
-      <a href="/recursos.html">Recursos</a>
-      <a href="/contacto.html">Contacto</a>
+    <nav
+      class="mobile-menu"
+      id="mobileMenu"
+      aria-label="Menú móvil"
+      role="navigation"
+    >
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="programas.html">Programas</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
   </header>
 
-  <main>
+  <main role="main">
     <h1>Recursos Gratuitos para Líderes Conscientes</h1>
     <p>Crece con propósito. Lidera con alma.</p>
 
-    <section class="recurso">
-      <h2>📘 PDF Gratuito</h2>
-      <p><strong>“Los 3 pilares del liderazgo consciente”</strong><br>Una guía práctica para iniciar tu camino hacia un liderazgo con propósito.</p>
+    <section class="recurso" aria-labelledby="pdf-title">
+      <h2 id="pdf-title">📘 PDF Gratuito</h2>
+      <p><strong>“Los 3 pilares del liderazgo consciente”</strong><br />Una guía práctica para iniciar tu camino hacia un liderazgo con propósito.</p>
       <a href="los-3-pilares-liderazgo-consciente.pdf" download>Descargar ahora</a>
     </section>
 
-    <section class="recurso">
-      <h2>🎥 Masterclass mensual gratuita</h2>
-      <p><strong>“Liderazgo con alma”</strong><br>Clases online en directo para transformar tu visión y tu impacto.</p>
+    <section class="recurso" aria-labelledby="masterclass-title">
+      <h2 id="masterclass-title">🎥 Masterclass mensual gratuita</h2>
+      <p><strong>“Liderazgo con alma”</strong><br />Clases online en directo para transformar tu visión y tu impacto.</p>
       <a href="masterclass.html">Únete a la próxima sesión</a>
     </section>
 
-    <section class="recurso">
-      <h2>📬 Suscríbete al boletín</h2>
+    <section class="recurso" aria-labelledby="boletin-title">
+      <h2 id="boletin-title">📬 Suscríbete al boletín</h2>
       <p>Recibe inspiración, consejos y herramientas para crecer en tu liderazgo consciente.</p>
-      <form action="https://formsubmit.co/tamarapinillos@princigeneralconsulting.com" method="POST" target="_blank" novalidate>
+      <form
+        action="https://formsubmit.co/tamarapinillos@princigeneralconsulting.com"
+        method="POST"
+        target="_blank"
+        novalidate
+        aria-label="Formulario de suscripción al boletín"
+      >
         <label for="name">Nombre completo:</label>
         <input id="name" name="name" type="text" required placeholder="Tu nombre" />
+
         <label for="email">Correo electrónico:</label>
         <input id="email" name="email" type="email" required placeholder="tuemail@ejemplo.com" />
+
         <label for="message">Mensaje (opcional):</label>
         <textarea id="message" name="message" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+
         <input type="hidden" name="_captcha" value="false" />
         <input type="submit" value="Suscribirme" />
       </form>
@@ -261,30 +299,28 @@
       const menu = document.getElementById('mobileMenu');
       const btn = document.querySelector('.menu-toggle');
       const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', !isExpanded);
+      btn.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
       menu.classList.toggle('show');
     }
   </script>
 
   <script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      includedLanguages: 'en,it,fr,de,pt'
-    }, 'google_translate_element');
-  }
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        includedLanguages: 'en,it,fr,de,pt',
+      }, 'google_translate_element');
+    }
 
-  function loadGoogleTranslateScript() {
-    var gtScript = document.createElement('script');
-    gtScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    gtScript.async = true;  // Opcional, pero recomendado
-    document.body.appendChild(gtScript);
-  }
+    function loadGoogleTranslateScript() {
+      const gtScript = document.createElement('script');
+      gtScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      gtScript.async = true;
+      document.body.appendChild(gtScript);
+    }
 
-  // Carga el script después de que toda la página se haya cargado
-  window.addEventListener('load', loadGoogleTranslateScript);
-</script>
-
+    window.addEventListener('load', loadGoogleTranslateScript);
+  </script>
 </body>
 </html>
