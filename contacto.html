@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <!-- Preconnect para el traductor -->
-  <link rel="preconnect" href="https://translate.google.com" crossorigin>
+  <link rel="preconnect" href="https://translate.google.com" crossorigin />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Contacto | Princi General Consulting" />
@@ -286,18 +286,10 @@
 <body>
 
   <div id="google_translate_element" aria-label="Selector de idioma"></div>
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'es',
-        includedLanguages: 'en,it,fr,de,pt',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-    }
-  </script>
-    <header>
+
+  <header>
     <a href="index.html">
-      <img src="Logo-Princi-v1.webp.webp" alt="Logotipo de Princi General Consulting" class="logo" loading="lazy" width="140" height="140" />
+      <img src="Logo-Princi-v1.webp" alt="Logotipo de Princi General Consulting" class="logo" loading="lazy" width="140" height="140" />
     </a>
 
     <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu(this)">
@@ -355,24 +347,30 @@
     </section>
   </main>
 
-<script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      includedLanguages: 'en,it,fr,de,pt'
-    }, 'google_translate_element');
-  }
+  <script>
+    function toggleMenu(button) {
+      const menu = document.getElementById('mobileMenu');
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('show');
+    }
 
-  function loadGoogleTranslateScript() {
-    var gtScript = document.createElement('script');
-    gtScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    gtScript.async = true;  // Opcional, pero recomendado
-    document.body.appendChild(gtScript);
-  }
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'en,it,fr,de,pt',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
 
-  // Carga el script después de que toda la página se haya cargado
-  window.addEventListener('load', loadGoogleTranslateScript);
-</script>
+    function loadGoogleTranslateScript() {
+      var gtScript = document.createElement('script');
+      gtScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      gtScript.async = true;
+      document.body.appendChild(gtScript);
+    }
+
+    window.addEventListener('load', loadGoogleTranslateScript);
+  </script>
 </body>
 </html>
