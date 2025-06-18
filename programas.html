@@ -279,6 +279,25 @@
       button.setAttribute("aria-expanded", !expanded);
       mobileMenu.classList.toggle("show");
     }
+    <script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'es',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      includedLanguages: 'en,it,fr,de,pt'
+    }, 'google_translate_element');
+  }
+
+  function loadGoogleTranslateScript() {
+    var gtScript = document.createElement('script');
+    gtScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    gtScript.async = true;  // Opcional, pero recomendado
+    document.body.appendChild(gtScript);
+  }
+
+  // Carga el script después de que toda la página se haya cargado
+  window.addEventListener('load', loadGoogleTranslateScript);
+</script>
   </script>
 </body>
 </html>
