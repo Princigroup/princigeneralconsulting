@@ -18,252 +18,197 @@
   <meta property="og:image" content="https://www.princigeneralconsulting.com/assets/imagen-og-programas.jpg">
   <meta property="og:url" content="https://www.princigeneralconsulting.com/programas.html">
   <meta property="og:type" content="website">
- <!-- Favicon -->
+
+  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" />
-    <style>
+
+  <!-- Estilos -->
+  <style>
     body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fdfaf7;
-    color: #4b3a30;
-  }
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #fdfaf7;
+      color: #4b3a30;
+    }
 
-  header {
-    position: relative;
-    height: 380px;
-    background-image: url(programas.webp);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  header::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(245, 245, 245, 0.4);
-    z-index: 0;
-  }
-
-  .logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    max-height: 100px;
-    z-index: 2;
-    cursor: pointer;
-  }
-
-  nav.desktop-menu {
-    position: absolute;
-    bottom: 20px;
-    z-index: 2;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  nav.desktop-menu ul {
-    list-style: none;
-    display: flex;
-    gap: 1.2rem;
-    margin: 0;
-    padding: 0;
-  }
-
-  nav.desktop-menu ul li a {
-    text-decoration: none;
-    color: #4b3a30;
-    background-color: #e8d5d2;
-    padding: 0.6rem 1rem;
-    border-radius: 8px;
-    font-weight: 600;
-    white-space: nowrap;
-    display: inline-block;
-    transition: all 0.3s ease;
-  }
-
-  nav.desktop-menu ul li a:hover,
-  nav.desktop-menu ul li a[aria-current="page"] {
-    background-color: #d2b48c;
-    color: #fff;
-  }
-
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    z-index: 3;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  .menu-toggle span {
-    background: #4b3a30;
-    height: 3px;
-    margin: 4px 0;
-    width: 25px;
-    border-radius: 2px;
-    display: block;
-  }
-
-  .mobile-menu {
-    display: none;
-    flex-direction: column;
-    background-color: #e8d5d2;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    z-index: 3;
-    min-width: 150px;
-  }
-
-  .mobile-menu a {
-    color: #4b3a30;
-    padding: 0.5rem 0;
-    text-decoration: none;
-    border-bottom: 1px solid #4b3a30;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-
-  .mobile-menu a:last-child {
-    border-bottom: none;
-  }
-
-  .mobile-menu a:hover {
-    color: #ad855d;
-  }
-
-  .mobile-menu.show {
-    display: flex;
-  }
-
-  /* Traductor Google escritorio */
-  #google_translate_element {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 9999;
-    background: #fdfaf7;
-    padding: 0.3rem 0.6rem;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  }
-
-  main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
-    font-family: 'Georgia', serif;
-    color: #4b3a30;
-  }
-
-  main h1 {
-    font-size: 2.5rem;
-    color: #6b4c3b;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  .programs {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .program-item {
-    background-color: #fff8f6;
-    padding: 1.5rem;
-    border-left: 6px solid #d2b48c;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-
-  .program-item h3 {
-    margin-top: 0;
-    color: #6b4c3b;
-  }
-
-  .program-item p {
-    margin: 0.5rem 0 0 0;
-    line-height: 1.6;
-  }
-
-  @media (max-width: 768px) {
     header {
-      height: 160px;
-      padding: 1rem;
-      justify-content: flex-start;
+      position: relative;
+      height: 380px;
+      background: url(programas.webp) center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(245,245,245,0.4);
+      z-index: 0;
     }
 
     .logo {
-      max-height: 70px;
       position: absolute;
-      top: 1rem;
-      left: 1rem;
-    }
-
-    .menu-toggle {
-      display: flex;
+      top: 20px;
+      left: 20px;
+      max-height: 100px;
+      z-index: 2;
     }
 
     nav.desktop-menu {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    nav.desktop-menu ul {
+      display: flex;
+      gap: 1.2rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav.desktop-menu a {
+      text-decoration: none;
+      color: #4b3a30;
+      background: #e8d5d2;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav.desktop-menu a:hover,
+    nav.desktop-menu a[aria-current="page"] {
+      background: #d2b48c;
+      color: #fff;
+    }
+
+    .menu-toggle {
       display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      z-index: 3;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background: #4b3a30;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+      border-radius: 2px;
+      display: block;
     }
 
     .mobile-menu {
-      top: 55px;
-      right: 10px;
-      min-width: 140px;
-      background-color: #e8d5d2;
+      display: none;
+      flex-direction: column;
+      background: #e8d5d2;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 3;
+      min-width: 150px;
+    }
+
+    .mobile-menu a {
+      color: #4b3a30;
+      padding: 0.5rem 0;
+      text-decoration: none;
+      border-bottom: 1px solid #4b3a30;
+      font-weight: 600;
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu a:hover {
+      color: #ad855d;
+    }
+
+    .mobile-menu.show {
+      display: flex;
     }
 
     #google_translate_element {
-      position: static;
-      text-align: center;
-      background: transparent;
-      font-size: 1rem;
-      box-shadow: none;
-      margin-bottom: 1rem;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 9999;
+      background: #fdfaf7;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
 
     main {
-      padding: 1rem;
-      max-width: 100%;
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
     }
 
     main h1 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
+      font-size: 2.5rem;
+      color: #ad855d;
+      text-align: center;
+      margin-bottom: 2rem;
     }
 
     .programs {
-       grid-template-columns: 1fr !important;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
 
     .program-item {
-      padding: 1.2rem;
-      border-left-width: 4px;
+      background: #fff8f6;
+      padding: 1.5rem;
+      border-left: 6px solid #d2b48c;
+      border-radius: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
-  }
-</style>
 
+    .program-item h3 {
+      margin-top: 0;
+      color: #6d4c41;
+    }
+
+    .program-item p {
+      margin: 0.5rem 0 0;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      header { height: 160px; justify-content: flex-start; }
+      .logo { max-height: 70px; top: 1rem; left: 1rem; }
+      .menu-toggle { display: flex; }
+      nav.desktop-menu { display: none; }
+      .mobile-menu { top: 55px; right: 10px; }
+      #google_translate_element { position: static; box-shadow: none; background: transparent; text-align: center; margin-bottom: 1rem; }
+      main h1 { font-size: 2rem; }
+    }
+  </style>
 </head>
-
 <body>
+
   <!-- Traductor de Google -->
   <div id="google_translate_element"></div>
-  <script type="text/javascript">
+  <script>
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'es',
@@ -272,78 +217,68 @@
       }, 'google_translate_element');
     }
   </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <header>
     <a href="index.html">
-      <img src="Logo-Princi.webp" alt="Logo Princi General Consulting" class="logo">
+      <img src="Logo-Princi.webp" alt="Logo Princi General Consulting" class="logo" loading="lazy">
     </a>
-
     <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu(this)">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
-    <nav id="mainMenu" class="desktop-menu" aria-label="Menú principal">
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="sobre-mi.html">Sobre mí</a></li>
-    <li><a href="servicios.html">Servicios</a></li>
-    <li><a href="programas.html" aria-current="page">Programas</a></li>
-    <li><a href="/recursos.html">Recursos</a></li>  
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-</nav>
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Menú principal móvil">
-  <a href="/">Inicio</a>
-  <a href="/sobre-mi.html">Sobre mí</a>
-  <a href="/servicios.html">Servicios</a>
-  <a href="/programas.html">Programas</a>
-  <a href="/recursos.html">Recursos</a>
-  <a href="/contacto.html">Contacto</a>
-</nav>
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="desktop-menu" aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="programas.html" aria-current="page">Programas</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil">
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="programas.html">Programas</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
   </header>
 
-  <main class="programas" style="padding: 3rem 1rem; max-width: 1000px; margin: auto; font-family: 'Georgia', serif; color: #3d2b1f;">
-  <h1 style="font-size: 2.5rem; text-align: center; color: #ad855d; margin-bottom: 2.5rem;">Programas Formativos</h1>
-
-  <section class="programs" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-    
-    <article class="program-item" style="background: #fdf7f0; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-      <h3 style="color: #6d4c41;">Programa de Liderazgo Consciente</h3>
-      <p>Un curso transformador para <strong>líderes conscientes</strong> que desean integrar ética, autenticidad e impacto positivo. Incluye <strong>PNL</strong>, <strong>inteligencia emocional</strong>, y <strong>mindfulness aplicado a la gestión</strong> de personas y proyectos.</p>
-    </article>
-
-    <article class="program-item" style="background: #fdf7f0; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-      <h3 style="color: #6d4c41;">Formación en Coaching Ejecutivo</h3>
-      <p>Capacitación completa en <strong>coaching profesional con propósito</strong> para líderes, coaches y facilitadores que desean guiar con <strong>escucha activa</strong>, <strong>comunicación consciente</strong> y toma de decisiones desde el alma.</p>
-    </article>
-
-    <article class="program-item" style="background: #fdf7f0; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-      <h3 style="color: #6d4c41;">Desarrollo de Equipos de Alto Rendimiento</h3>
-      <p>Formación para crear <strong>equipos alineados con valores</strong>, cohesionados y resilientes, con metodologías que fomentan el <strong>liderazgo colaborativo</strong> y el <strong>bienestar organizacional</strong>.</p>
-    </article>
-
-    <article class="program-item" style="background: #fdf7f0; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-      <h3 style="color: #6d4c41;">Mentoría para Emprendedoras Conscientes</h3>
-      <p>Acompañamiento espiritual y estratégico para <strong>emprendedoras con propósito</strong>. Desde la visión hasta el modelo de negocio, con enfoque en sostenibilidad, autenticidad y crecimiento consciente.</p>
-    </article>
-
-    <article class="program-item" style="background: #fdf7f0; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-      <h3 style="color: #6d4c41;">Gestión Emocional y Mindfulness para Profesionales</h3>
-      <p>Herramientas prácticas para integrar <strong>atención plena</strong> y <strong>regulación emocional</strong> en el día a día profesional. Ideal para líderes, educadores y terapeutas que buscan mayor equilibrio y claridad mental.</p>
-    </article>
-
-  </section>
-</main>
+  <main>
+    <h1>Programas Formativos</h1>
+    <section class="programs">
+      <article class="program-item">
+        <h3>Programa de Liderazgo Consciente</h3>
+        <p>Un curso transformador para <strong>líderes conscientes</strong> que integran ética, autenticidad e impacto positivo. Incluye <strong>PNL</strong>, <strong>inteligencia emocional</strong> y <strong>mindfulness</strong>.</p>
+      </article>
+      <article class="program-item">
+        <h3>Formación en Coaching Ejecutivo</h3>
+        <p>Capacitación en <strong>coaching profesional con propósito</strong> para liderar con <strong>escucha activa</strong> y <strong>comunicación consciente</strong>.</p>
+      </article>
+      <article class="program-item">
+        <h3>Desarrollo de Equipos de Alto Rendimiento</h3>
+        <p>Equipos cohesionados y resilientes con <strong>liderazgo colaborativo</strong> y <strong>bienestar organizacional</strong>.</p>
+      </article>
+      <article class="program-item">
+        <h3>Mentoría para Emprendedoras Conscientes</h3>
+        <p>Acompañamiento estratégico para <strong>emprendedoras con propósito</strong> centrado en sostenibilidad y autenticidad.</p>
+      </article>
+      <article class="program-item">
+        <h3>Gestión Emocional y Mindfulness</h3>
+        <p>Herramientas prácticas para integrar <strong>atención plena</strong> y <strong>regulación emocional</strong> en el ámbito profesional.</p>
+      </article>
+    </section>
+  </main>
 
   <script>
-   function toggleMenu(button) {
-    const mobileMenu = document.getElementById("mobileMenu");
-    const isExpanded = button.getAttribute("aria-expanded") === "true";
-    button.setAttribute("aria-expanded", !isExpanded);
-    mobileMenu.classList.toggle("show");
-  }
+    function toggleMenu(button) {
+      const mobileMenu = document.getElementById("mobileMenu");
+      const expanded = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", !expanded);
+      mobileMenu.classList.toggle("show");
+    }
   </script>
 </body>
 </html>
