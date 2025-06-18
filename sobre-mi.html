@@ -28,322 +28,322 @@
   <title>Sobre mí | Tamara Pinillos Blanco - Liderazgo con Propósito</title>
 
   <style>
-  :root {
-    --color-text: #4b3a30;
-    --color-bg: #fdfaf7;
-    --color-primary: #d2b48c;
-    --color-primary-dark: #6b4c3b;
-    --color-secondary: #e8d5d2;
-    --color-overlay: rgba(245, 245, 245, 0.4);
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    line-height: 1.6;
-  }
-
-  header {
-    position: relative;
-    height: 380px;
-    background-image: url(ian-schneider-TamMbr4okv4-unsplash.webp);
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  }
-
-  header::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: var(--color-overlay);
-    z-index: 0;
-  }
-
-  .logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    max-height: 140px;
-    z-index: 2;
-    cursor: pointer;
-  }
-
-  /* Botón menú móvil (hamburguesa) */
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    background: none;
-    border: none;
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    z-index: 2;
-    cursor: pointer;
-  }
-
-  .menu-toggle span {
-    background: #fff;
-    height: 3px;
-    margin: 4px 0;
-    width: 25px;
-    border-radius: 2px;
-  }
-
-  /* Menú escritorio */
-  nav.desktop-menu {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-  }
-
-  nav.desktop-menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-  }
-
-  nav.desktop-menu ul li a {
-    text-decoration: none;
-    color: var(--color-text);
-    background-color: var(--color-secondary);
-    padding: 0.6rem 1.2rem;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    display: inline-block;
-  }
-
-  nav.desktop-menu ul li a:hover,
-  nav.desktop-menu ul li a[aria-current="page"] {
-    background-color: var(--color-primary);
-    color: #fff;
-  }
-
-  /* Menú móvil */
-  .mobile-menu {
-    display: none;
-    flex-direction: column;
-    background-color: #d5bfa3;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    z-index: 2;
-  }
-
-  .mobile-menu a {
-    color: #3d2b1f;
-    padding: 0.5rem 0;
-    text-decoration: none;
-    border-bottom: 1px solid #3d2b1f;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-
-  .mobile-menu a:last-child {
-    border-bottom: none;
-  }
-
-  .mobile-menu a:hover {
-    color: #ad855d;
-  }
-
-  .mobile-menu.show {
-    display: flex;
-  }
-
-  @media (max-width: 768px) {
-    nav.desktop-menu {
-      display: none;
+    :root {
+      --color-text: #4b3a30;
+      --color-bg: #fdfaf7;
+      --color-primary: #d2b48c;
+      --color-primary-dark: #6b4c3b;
+      --color-secondary: #e8d5d2;
+      --color-overlay: rgba(245, 245, 245, 0.4);
     }
-    .menu-toggle {
-      display: flex;
+
+    * {
+      box-sizing: border-box;
     }
-    .mobile-menu {
-      display: none;
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
     }
-  }
 
-  /* Traductor Google escritorio */
-  #google_translate_element {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 9999;
-    background: var(--color-bg);
-    padding: 0.3rem 0.6rem;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  }
-
-  @media (max-width: 768px) {
-    #google_translate_element {
-      position: static;
-      margin: 1rem auto 0 auto;
-      display: block;
-      max-width: 90%;
-      box-shadow: none;
-      border-radius: 0;
-      background: transparent;
-      font-size: 1rem;
-      text-align: center;
-    }
-  }
-
-  main {
-    max-width: 900px;
-    margin: 3rem auto 4rem;
-    padding: 0 2rem;
-    font-family: 'Georgia', serif;
-    color: #3d2b1f;
-  }
-
-  main h1 {
-    font-size: 2.5rem;
-    color: var(--color-primary-dark);
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  main p {
-    font-size: 1.2rem;
-    text-align: justify;
-    margin-bottom: 1.5rem;
-    color: var(--color-text);
-  }
-
-  .sobre-mi-section {
-    padding: 3rem 2rem;
-    background-color: #fffaf5;
-  }
-
-  .section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #8b5e3c;
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-
-  .section-subtitle {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-    color: #444;
-  }
-
-  .timeline {
-    position: relative;
-    margin-left: 2rem;
-    border-left: 2px solid #b1916f;
-    padding-left: 2rem;
-  }
-
-  .timeline-item {
-    position: relative;
-    margin-bottom: 3rem;
-    padding-left: 4rem;
-    min-height: 3.5rem;
-  }
-
-  .timeline-year {
-    position: absolute;
-    left: -60px;
-    top: 0;
-    font-size: 1rem;
-    font-weight: bold;
-    background: #fffaf5;
-    color: #b1916f;
-    border: 2px solid #b1916f;
-    padding: 0.2rem 0.6rem;
-    border-radius: 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-
-  .timeline-content {
-    background-color: #f9f5f0;
-    padding: 1rem 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-
-  .timeline-content p {
-    margin: 0;
-    font-size: 1rem;
-    color: #333;
-  }
-
-  @media (max-width: 768px) {
-    .timeline {
-      border-left: none;
-      padding-left: 0;
-      margin-left: 0;
-    }
-    .timeline-item {
-      padding-left: 0;
-    }
-    .timeline-year {
+    header {
       position: relative;
-      left: 0;
-      margin-bottom: 0.5rem;
+      height: 380px;
+      background-image: url(ian-schneider-TamMbr4okv4-unsplash.webp);
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: var(--color-overlay);
+      z-index: 0;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      max-height: 140px;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    /* Botón menú móvil (hamburguesa) */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      background: none;
+      border: none;
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background: #fff;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+      border-radius: 2px;
+    }
+
+    /* Menú escritorio */
+    nav.desktop-menu {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    nav.desktop-menu ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav.desktop-menu ul li a {
+      text-decoration: none;
+      color: var(--color-text);
+      background-color: var(--color-secondary);
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      white-space: nowrap;
       display: inline-block;
     }
-    .timeline-content {
-      margin-top: 0.5rem;
+
+    nav.desktop-menu ul li a:hover,
+    nav.desktop-menu ul li a[aria-current="page"] {
+      background-color: var(--color-primary);
+      color: #fff;
     }
-  }
 
-  .profile-pic-container {
-    text-align: center;
-    margin: 2rem 0;
-  }
+    /* Menú móvil */
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #d5bfa3;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 2;
+    }
 
-  .profile-pic-container img {
-    max-width: 250px;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    height: auto;
-    display: inline-block;
-  }
+    .mobile-menu a {
+      color: #3d2b1f;
+      padding: 0.5rem 0;
+      text-decoration: none;
+      border-bottom: 1px solid #3d2b1f;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
 
-  .cta-contacto {
-    text-align: center;
-    margin: 3rem 0 5rem;
-    font-size: 1.3rem;
-    color: var(--color-primary-dark);
-    font-weight: 600;
-  }
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
 
-  .cta-contacto a {
-    color: var(--color-primary);
-    text-decoration: none;
-    font-weight: 700;
-    border-bottom: 2px solid var(--color-primary);
-    transition: color 0.3s ease, border-color 0.3s ease;
-  }
+    .mobile-menu a:hover {
+      color: #ad855d;
+    }
 
-  .cta-contacto a:hover,
-  .cta-contacto a:focus {
-    color: var(--color-primary-dark);
-    border-color: var(--color-primary-dark);
-  }
+    .mobile-menu.show {
+      display: flex;
+    }
+
+    @media (max-width: 768px) {
+      nav.desktop-menu {
+        display: none;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      .mobile-menu {
+        display: none;
+      }
+    }
+
+    /* Traductor Google escritorio */
+    #google_translate_element {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 9999;
+      background: var(--color-bg);
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 768px) {
+      #google_translate_element {
+        position: static;
+        margin: 1rem auto 0 auto;
+        display: block;
+        max-width: 90%;
+        box-shadow: none;
+        border-radius: 0;
+        background: transparent;
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+
+    main {
+      max-width: 900px;
+      margin: 3rem auto 4rem;
+      padding: 0 2rem;
+      font-family: 'Georgia', serif;
+      color: #3d2b1f;
+    }
+
+    main h1 {
+      font-size: 2.5rem;
+      color: var(--color-primary-dark);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    main p {
+      font-size: 1.2rem;
+      text-align: justify;
+      margin-bottom: 1.5rem;
+      color: var(--color-text);
+    }
+
+    .sobre-mi-section {
+      padding: 3rem 2rem;
+      background-color: #fffaf5;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #8b5e3c;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+      color: #444;
+    }
+
+    .timeline {
+      position: relative;
+      margin-left: 2rem;
+      border-left: 2px solid #b1916f;
+      padding-left: 2rem;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+      padding-left: 4rem;
+      min-height: 3.5rem;
+    }
+
+    .timeline-year {
+      position: absolute;
+      left: -60px;
+      top: 0;
+      font-size: 1rem;
+      font-weight: bold;
+      background: #fffaf5;
+      color: #b1916f;
+      border: 2px solid #b1916f;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .timeline-content {
+      background-color: #f9f5f0;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .timeline-content p {
+      margin: 0;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .timeline {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
+      }
+      .timeline-item {
+        padding-left: 0;
+      }
+      .timeline-year {
+        position: relative;
+        left: 0;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+      }
+      .timeline-content {
+        margin-top: 0.5rem;
+      }
+    }
+
+    .profile-pic-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .profile-pic-container img {
+      max-width: 250px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      height: auto;
+      display: inline-block;
+    }
+
+    .cta-contacto {
+      text-align: center;
+      margin: 3rem 0 5rem;
+      font-size: 1.3rem;
+      color: var(--color-primary-dark);
+      font-weight: 600;
+    }
+
+    .cta-contacto a {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 700;
+      border-bottom: 2px solid var(--color-primary);
+      transition: color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .cta-contacto a:hover,
+    .cta-contacto a:focus {
+      color: var(--color-primary-dark);
+      border-color: var(--color-primary-dark);
+    }
   </style>
 
 </head>
@@ -428,7 +428,7 @@
       <article class="timeline-item" aria-label="Año 2010: Inicio en Italia en el sector seguros">
         <time class="timeline-year" datetime="2010">2010</time>
         <div class="timeline-content">
-          <p>Inicio mi trayectoria internacional trasladándome a Italia, donde continuo mi carrera en el sector seguros.</p>
+          <p>Inicio mi trayectoria internacional trasladándome a Italia, donde continúo mi carrera en el sector seguros.</p>
         </div>
       </article>
 
@@ -440,18 +440,18 @@
       </article>
 
       <article class="timeline-item" aria-label="Año 2018: Inicio de transformación espiritual">
-  <time class="timeline-year" datetime="2018">2018</time>
-  <div class="timeline-content">
-    <p>Inicio un proceso de transformación espiritual que me lleva a estudiar liderazgo consciente, desarrollo humano y emprendimiento con propósito.</p>
-  </div>
-</article>
+        <time class="timeline-year" datetime="2018">2018</time>
+        <div class="timeline-content">
+          <p>Inicio un proceso de transformación espiritual que me lleva a estudiar liderazgo consciente, desarrollo humano y emprendimiento con propósito.</p>
+        </div>
+      </article>
 
-<article class="timeline-item" aria-label="Año 2023: Fundación de Princi & Co Group y dirección de AaCc Psicòlegs">
-  <time class="timeline-year" datetime="2023">2023</time>
-  <div class="timeline-content">
-    <p>Fundo <strong>Princi & Co Group</strong> y asumo la dirección de <strong>AaCc Psicòlegs</strong>, integrando el coaching, la alta dirección y la formación con propósito divino.</p>
-  </div>
-</article>
+      <article class="timeline-item" aria-label="Año 2023: Fundación de Princi & Co Group y dirección de AaCc Psicòlegs">
+        <time class="timeline-year" datetime="2023">2023</time>
+        <div class="timeline-content">
+          <p>Fundo <strong>Princi & Co Group</strong> y asumo la dirección de <strong>AaCc Psicòlegs</strong>, integrando el coaching, la alta dirección y la formación con propósito divino.</p>
+        </div>
+      </article>
 
 <article class="timeline-item" aria-label="Año 2025: Lanzamiento de Princi General Consulting">
   <time class="timeline-year" datetime="2025">2025</time>
@@ -461,17 +461,18 @@
 </article>
 
 <script>
+  // Función para abrir/cerrar menú móvil y actualizar atributo aria-expanded
   function toggleMenu() {
     const menu = document.getElementById('mobileMenu');
     const button = document.querySelector('.menu-toggle');
     const isExpanded = button.getAttribute('aria-expanded') === 'true';
-    button.setAttribute('aria-expanded', !isExpanded);
+    button.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
     menu.classList.toggle('show');
   }
 </script>
 
-
 <script>
+  // Inicialización del traductor de Google
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'es',
@@ -480,14 +481,15 @@
     }, 'google_translate_element');
   }
 
+  // Carga dinámica del script de Google Translate
   function loadGoogleTranslateScript() {
-    var gtScript = document.createElement('script');
+    const gtScript = document.createElement('script');
     gtScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    gtScript.async = true;  // Opcional, pero recomendado
+    gtScript.async = true;
     document.body.appendChild(gtScript);
   }
 
-  // Carga el script después de que toda la página se haya cargado
+  // Ejecutar carga del traductor una vez que la página haya cargado
   window.addEventListener('load', loadGoogleTranslateScript);
 </script>
 
