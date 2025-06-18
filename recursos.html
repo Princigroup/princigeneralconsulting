@@ -2,30 +2,33 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Recursos gratuitos | Liderazgo consciente | Princi General Consulting</title>
   <meta name="description" content="Descarga recursos gratuitos sobre liderazgo consciente, accede a clases online y suscríbete al boletín de Tamara Pinillos Blanco para liderar con alma.">
 
-  <!-- Open Graph (Facebook, LinkedIn) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Recursos gratuitos para líderes conscientes | Princi General Consulting" />
   <meta property="og:description" content="PDF gratis, masterclass mensual y boletín exclusivo para transformar tu liderazgo con propósito." />
   <meta property="og:image" content="https://www.princigroup.com/img/logo-og.jpg" />
   <meta property="og:url" content="https://www.princigroup.com/recursos.html" />
   <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Recursos gratuitos para líderes conscientes" />
-  <meta name="twitter:description" content="Únete al movimiento del liderazgo con alma con los recursos de Princi General Consulting." />
-  <meta name="twitter:image" content="https://www.princigroup.com/img/logo-og.jpg" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <link rel="canonical" href="https://www.princigroup.com/recursos.html" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
   <style>
+    :root {
+      --color-primary: #ad855d;
+      --color-secondary: #e8d5d2;
+      --color-text: #3d2b1f;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f9f7f3;
+      color: var(--color-text);
     }
 
     header {
@@ -62,32 +65,39 @@
       width: auto;
     }
 
-    /* Menú escritorio */
-    .desktop-menu {
+    nav.desktop-menu {
       position: absolute;
-      bottom: 1rem;
-      right: 2rem;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    nav.desktop-menu ul {
+      list-style: none;
       display: flex;
-      gap: 1rem;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
     }
 
-    .desktop-menu a {
-      background-color: #e8d5d2;
-      color: #3d2b1f;
+    nav.desktop-menu ul li a {
       text-decoration: none;
-      padding: 0.5rem 1rem;
+      color: var(--color-text);
+      background-color: var(--color-secondary);
+      padding: 0.6rem 1.2rem;
       border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s ease, color 0.3s ease;
+      font-weight: 600;
+      transition: all 0.3s ease;
     }
 
-    .desktop-menu a:hover,
-    .desktop-menu a[aria-current="page"] {
-      background-color: #ad855d;
-      color: white;
+    nav.desktop-menu ul li a:hover,
+    nav.desktop-menu ul li a[aria-current="page"] {
+      background-color: var(--color-primary);
+      color: #fff;
     }
 
-    /* Botón menú móvil */
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -108,7 +118,6 @@
       border-radius: 2px;
     }
 
-    /* Menú móvil */
     .mobile-menu {
       display: none;
       flex-direction: column;
@@ -128,7 +137,6 @@
       text-decoration: none;
       border-bottom: 1px solid #3d2b1f;
       font-weight: bold;
-      transition: color 0.3s ease;
     }
 
     .mobile-menu a:last-child {
@@ -147,99 +155,64 @@
       .desktop-menu {
         display: none;
       }
-
       .menu-toggle {
         display: flex;
       }
     }
 
-    h1, h2 {
-      text-align: center;
-      color: #ad855d;
-      margin-top: 0;
+    .translate {
+      position: absolute;
+      top: 1rem;
+      right: 6rem;
+      z-index: 2;
     }
 
     main {
-      padding: 3rem 1rem;
-      max-width: 800px;
-      margin: 0 auto 3rem auto;
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
     }
 
-    section {
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
+    h1 {
+      font-size: 2.5rem;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
     }
 
     p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #3d2b1f;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
     }
 
-    .cta-button {
+    .recurso {
+      background-color: #fff;
+      border: 2px solid var(--color-secondary);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .recurso h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+    }
+
+    .recurso a {
       display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #e8d5d2;
-      color: #3d2b1f;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background-color: var(--color-primary);
+      color: white;
       text-decoration: none;
       border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s ease, color 0.3s ease;
+      transition: background-color 0.3s ease;
     }
 
-    .cta-button:hover {
-      background-color: #ad855d;
-      color: white;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1rem;
-      max-width: 100%;
-    }
-
-    label {
-      font-weight: bold;
-      color: #3d2b1f;
-    }
-
-    input, textarea {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-family: inherit;
-      box-sizing: border-box;
-      color: #3d2b1f;
-    }
-
-    input[type="submit"] {
-      background-color: #ad855d;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s ease;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #8c6b4f;
-    }
-
-    footer {
-      background-color: #3d2b1f;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
+    .recurso a:hover {
+      background-color: #8c6a43;
     }
   </style>
 </head>
@@ -247,22 +220,24 @@
 <body>
   <header>
     <a href="/" class="logo-container">
-<img src="Logo-Princi.webp" alt="Logotipo de Princi General Consulting" class="logo" loading="lazy" />
+      <img src="Logo-Princi.webp" alt="Logotipo de Princi General Consulting" class="logo" loading="lazy" />
     </a>
 
+    <div class="translate" id="google_translate_element"></div>
+
     <nav class="desktop-menu" aria-label="Menú principal">
-      <a href="/">Inicio</a>
-      <a href="/sobre-mi.html">Sobre mí</a>
-      <a href="/servicios.html">Servicios</a>
-      <a href="/programas.html">Programas</a>
-      <a href="/recursos.html" aria-current="page">Recursos</a>
-      <a href="/contacto.html">Contacto</a>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/sobre-mi.html">Sobre mí</a></li>
+        <li><a href="/servicios.html">Servicios</a></li>
+        <li><a href="/programas.html">Programas</a></li>
+        <li><a href="/recursos.html" aria-current="page">Recursos</a></li>
+        <li><a href="/contacto.html">Contacto</a></li>
+      </ul>
     </nav>
 
     <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
 
     <nav class="mobile-menu" id="mobileMenu" aria-label="Menú principal móvil">
@@ -276,44 +251,40 @@
   </header>
 
   <main>
-    <h1>Recursos Gratuitos para Líderes Conscientes</h1>
-    <p style="text-align: center; margin-bottom: 2rem;">Crece con propósito. Lidera con alma.</p>
+  <h1>Recursos Gratuitos para Líderes Conscientes</h1>
+  <p style="text-align: center;">Crece con propósito. Lidera con alma.</p>
 
-    <section>
-      <h2>📘 PDF Gratis</h2>
-      <p><strong>“Los 3 pilares del liderazgo consciente”</strong><br>
-      Una guía práctica e inspiradora para iniciar tu camino hacia un liderazgo con propósito.</p>
-      <a class="cta-button" href="los-3-pilares-liderazgo-consciente.pdf" download>Descargar ahora</a>
-    </section>
+  <section class="recurso">
+    <h2>📘 PDF Gratuito</h2>
+    <p><strong>“Los 3 pilares del liderazgo consciente”</strong><br>Una guía práctica e inspiradora para iniciar tu camino hacia un liderazgo con propósito.</p>
+    <a href="los-3-pilares-liderazgo-consciente.pdf" download>Descargar ahora</a>
+  </section>
 
-    <section>
-      <h2>🎥 Masterclass mensual gratuita</h2>
-      <p><strong>“Liderazgo con alma”</strong> - Clases online en directo para transformar tu visión y tu impacto.</p>
-      <a class="cta-button" href="https://zoom.us/j/123456789" target="_blank" rel="noopener">Únete a la próxima sesión</a>
-    </section>
+  <section class="recurso">
+  <h2>🎥 Masterclass mensual gratuita</h2>
+  <p><strong>“Liderazgo con alma”</strong><br>Clases online en directo para transformar tu visión y tu impacto.</p>
+  <a href="masterclass.html">Únete a la próxima sesión</a>
+</section>
 
-    <section>
-      <h2>📬 Suscríbete al boletín</h2>
-      <p>Recibe en tu correo inspiración, consejos y herramientas para crecer en tu liderazgo consciente.</p>
-      <form action="https://formsubmit.co/tamarapinillos@princigeneralconsulting.com" method="POST" target="_blank" novalidate>
-        <label for="name">Nombre completo:</label>
-        <input id="name" name="name" type="text" required placeholder="Tu nombre"/>
+  <section class="recurso">
+    <h2>📬 Suscríbete al boletín</h2>
+    <p>Recibe inspiración, consejos y herramientas para crecer en tu liderazgo consciente.</p>
+    <form action="https://formsubmit.co/tamarapinillos@princigeneralconsulting.com" method="POST" target="_blank" novalidate style="max-width: 500px; margin: 0 auto; text-align: left;">
+      <label for="name">Nombre completo:</label><br>
+      <input id="name" name="name" type="text" required placeholder="Tu nombre" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border-radius: 8px; border: 1px solid #ccc;" />
 
-        <label for="email">Correo electrónico:</label>
-        <input id="email" name="email" type="email" required placeholder="tuemail@ejemplo.com"/>
+      <label for="email">Correo electrónico:</label><br>
+      <input id="email" name="email" type="email" required placeholder="tuemail@ejemplo.com" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border-radius: 8px; border: 1px solid #ccc;" />
 
-        <label for="message">Mensaje (opcional):</label>
-        <textarea id="message" name="message" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+      <label for="message">Mensaje (opcional):</label><br>
+      <textarea id="message" name="message" rows="4" placeholder="¿En qué podemos ayudarte?" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border-radius: 8px; border: 1px solid #ccc;"></textarea>
 
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="submit" value="Suscribirme" />
-      </form>
-    </section>
-  </main>
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="submit" value="Suscribirme" style="background-color: var(--color-primary); color: white; padding: 0.7rem 1.5rem; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;" />
+    </form>
+  </section>
+</main>
 
-  <footer>
-    &copy; 2025 Princi General Consulting. Todos los derechos reservados.
-  </footer>
 
   <script>
     function toggleMenu() {
@@ -324,5 +295,18 @@
       menu.classList.toggle('show');
     }
   </script>
+
+  <!-- Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'es,en,it',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>
