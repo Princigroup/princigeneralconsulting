@@ -85,7 +85,7 @@
       position: absolute;
       top: 1rem;
       right: 1.5rem;
-      z-index: 10;
+      z-index: 2;
       cursor: pointer;
     }
 
@@ -95,27 +95,6 @@
       margin: 4px 0;
       width: 25px;
       border-radius: 2px;
-    }
-
-    /* Botón Traducir */
-    #translateBtn {
-      position: absolute;
-      top: 1rem;
-      right: 4.5rem;
-      background: var(--color-primary);
-      border: none;
-      color: white;
-      padding: 0.35rem 0.6rem;
-      font-size: 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-      z-index: 10;
-      transition: background-color 0.3s ease;
-    }
-    #translateBtn:hover,
-    #translateBtn:focus {
-      background-color: var(--color-primary-dark);
-      outline: none;
     }
 
     /* Menú escritorio */
@@ -199,24 +178,19 @@
       .mobile-menu {
         display: none;
       }
-      #translateBtn {
-        right: 3rem; /* Ajuste en móvil para que no choque */
-        top: 1rem;
-      }
     }
 
     /* Traductor Google escritorio */
     #google_translate_element {
-      display: none;
       position: fixed;
-      top: 3.5rem;
-      right: 1rem;
+      top: 10px;
+      right: 10px;
       z-index: 9999;
       background: var(--color-bg);
       padding: 0.3rem 0.6rem;
       border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       font-size: 0.85rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
 
     @media (max-width: 768px) {
@@ -375,7 +349,7 @@
 </head>
 <body>
 
-<header role="banner" style="position: relative;">
+<header role="banner">
   <img src="Logo-Princi-v1.webp" alt="Logotipo de Princi General Consulting" class="logo" loading="lazy" />
 
   <!-- Botón menú móvil -->
@@ -389,14 +363,6 @@
     <span></span>
     <span></span>
     <span></span>
-  </button>
-
-  <!-- Botón Traducir -->
-  <button
-    id="translateBtn"
-    aria-label="Traducir página"
-  >
-    🌐 Traducir
   </button>
 
   <!-- Menú escritorio -->
@@ -423,7 +389,7 @@
 </header>
 
 <!-- Contenedor para el Traductor de Google -->
-<div id="google_translate_element" aria-label="Selector de idioma" ></div>
+<div id="google_translate_element" aria-label="Selector de idioma Google Translate"></div>
 
 <main role="main" class="sobre-mi-section">
   <article aria-label="Biografía profesional y personal de Tamara Pinillos Blanco">
@@ -480,19 +446,19 @@
         </div>
       </article>
 
-      <article class="timeline-item" aria-label="Año 2023: Fundación de Princi & Co Group">
+      <article class="timeline-item" aria-label="Año 2023: Fundación de Princi & Co Group y dirección de AaCc Psicòlegs">
         <time class="timeline-year" datetime="2023">2023</time>
         <div class="timeline-content">
-          <p>Fundación de <strong>Princi & Co Group</strong>, consolidando mi visión de una consultoría internacional enfocada en liderazgo con alma y dirección ética.</p>
+          <p>Fundo <strong>Princi & Co Group</strong> y asumo la dirección de <strong>AaCc Psicòlegs</strong>, integrando el coaching, la alta dirección y la formación con propósito divino.</p>
         </div>
       </article>
-    </div>
-  </section>
 
-  <section class="cta-contacto" aria-label="Invitación a contacto">
-    <p>¿Quieres saber más o colaborar conmigo? <a href="contacto.html">Contáctame aquí</a>.</p>
-  </section>
-</main>
+<article class="timeline-item" aria-label="Año 2025: Lanzamiento de Princi General Consulting">
+  <time class="timeline-year" datetime="2025">2025</time>
+  <div class="timeline-content">
+    <p>Lanzo <strong>Princi General Consulting</strong> como marca internacional de liderazgo consciente, estrategia ética y transformación organizacional con alma.</p>
+  </div>
+</article>
 
 <script>
   // Función para abrir/cerrar menú móvil y actualizar atributo aria-expanded
@@ -503,7 +469,9 @@
     button.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
     menu.classList.toggle('show');
   }
+</script>
 
+<script>
   // Inicialización del traductor de Google
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
@@ -513,20 +481,16 @@
     }, 'google_translate_element');
   }
 
-  // Carga dinámica del script de Google Translate al hacer clic en el botón
-  document.getElementById('translateBtn').addEventListener('click', function() {
-    const translateElem = document.getElementById('google_translate_element');
-    // Mostrar el contenedor del traductor
-    translateElem.style.display = 'block';
+  // Carga dinámica del script de Google Translate
+  function loadGoogleTranslateScript() {
+    const gtScript = document.createElement('script');
+    gtScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    gtScript.async = true;
+    document.body.appendChild(gtScript);
+  }
 
-    // Comprobar si el script ya está cargado para no cargarlo varias veces
-    if (!window.google || !window.google.translate) {
-      const gtScript = document.createElement('script');
-      gtScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-      gtScript.async = true;
-      document.body.appendChild(gtScript);
-    }
-  });
+  // Ejecutar carga del traductor una vez que la página haya cargado
+  window.addEventListener('load', loadGoogleTranslateScript);
 </script>
 
 </body>
