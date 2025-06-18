@@ -6,21 +6,22 @@
   <title>Programas | Princi General Consulting</title>
 
   <!-- SEO -->
-  <meta name="description" content="Descubre nuestros programas de liderazgo consciente, coaching ejecutivo y bienestar organizacional. Transforma tu propósito en acción.">
-  <meta name="keywords" content="programas, liderazgo consciente, coaching ejecutivo, mentoría, mindfulness, emprendimiento consciente, formación">
-  <meta name="author" content="Princi General Consulting">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Descubre nuestros programas de liderazgo consciente, coaching ejecutivo y bienestar organizacional. Transforma tu propósito en acción." />
+  <meta name="keywords" content="programas, liderazgo consciente, coaching ejecutivo, mentoría, mindfulness, emprendimiento consciente, formación" />
+  <meta name="author" content="Princi General Consulting" />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.princigeneralconsulting.com/programas.html" />
 
   <!-- Redes sociales -->
-  <meta property="og:title" content="Programas | Princi General Consulting">
-  <meta property="og:description" content="Explora nuestros programas formativos para líderes y organizaciones con propósito.">
-  <meta property="og:image" content="https://www.princigeneralconsulting.com/assets/imagen-og-programas.jpg">
-  <meta property="og:url" content="https://www.princigeneralconsulting.com/programas.html">
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="Programas | Princi General Consulting" />
+  <meta property="og:description" content="Explora nuestros programas formativos para líderes y organizaciones con propósito." />
+  <meta property="og:image" content="https://www.princigeneralconsulting.com/assets/imagen-og-programas.jpg" />
+  <meta property="og:url" content="https://www.princigeneralconsulting.com/programas.html" />
+  <meta property="og:type" content="website" />
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" />
+
   <!-- Estilos -->
   <style>
     body {
@@ -208,14 +209,20 @@
   <!-- Traductor de Google -->
   <div id="google_translate_element"></div>
 
-  <header>
-    <a href="index.html">
-      <img src="Logo-Princi-v1.webp.webp" alt="Logo Princi General Consulting" class="logo" loading="lazy" />
+  <header role="banner">
+    <a href="index.html" aria-label="Ir a inicio">
+      <img src="Logo-Princi-v1.webp.webp.webp" alt="Logo Princi General Consulting" class="logo" loading="lazy" />
     </a>
-    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu(this)">
+    <button
+      class="menu-toggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="mobileMenu"
+      onclick="toggleMenu(this)"
+    >
       <span></span><span></span><span></span>
     </button>
-    <nav class="desktop-menu" aria-label="Menú principal">
+    <nav class="desktop-menu" aria-label="Menú principal" role="navigation">
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="sobre-mi.html">Sobre mí</a></li>
@@ -225,7 +232,7 @@
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil">
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil" role="navigation">
       <a href="index.html">Inicio</a>
       <a href="sobre-mi.html">Sobre mí</a>
       <a href="servicios.html">Servicios</a>
@@ -235,7 +242,7 @@
     </nav>
   </header>
 
-   <main>
+  <main role="main">
     <h1>Programas Formativos</h1>
     <section class="programs">
       <article class="program-item">
@@ -266,7 +273,7 @@
     function toggleMenu(button) {
       const mobileMenu = document.getElementById("mobileMenu");
       const expanded = button.getAttribute("aria-expanded") === "true";
-      button.setAttribute("aria-expanded", !expanded);
+      button.setAttribute("aria-expanded", expanded ? "false" : "true");
       mobileMenu.classList.toggle("show");
     }
 
