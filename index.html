@@ -248,47 +248,46 @@
 </head>
 
 <body>
-  <header>
-    <img 
-      src="dane-deaner-_-KLkj7on_c-unsplash.webp" 
-      alt="Fondo liderazgo consciente" 
-      class="bg-hero" 
-      fetchpriority="high" 
-      loading="eager" 
-      width="390" height="260"
-    />
+   <header>
+    <img src="dane-deaner-_-KLkj7on_c-unsplash.webp" 
+         alt="Fondo liderazgo consciente" 
+         class="bg-hero" 
+         fetchpriority="high" 
+         loading="eager" 
+         width="390" 
+         height="260" />
 
     <a href="index.html">
       <img src="Logo-Princi.webp" alt="Logotipo de Princi General Consulting" class="logo"/>
     </a>
 
-   <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu(this)">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu(this)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <nav id="mainMenu" class="desktop-menu" aria-label="Menú principal">
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="sobre-mi.html">Sobre mí</a></li>
-    <li><a href="servicios.html">Servicios</a></li>
-    <li><a href="programas.html">Programas</a></li>
-    <li><a href="/recursos.html">Recursos</a></li>  
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-</nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="programas.html">Programas</a></li>
+        <li><a href="recursos.html">Recursos</a></li>  
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
     <nav class="mobile-menu" id="mobileMenu" aria-label="Menú principal móvil">
-  <a href="/">Inicio</a>
-  <a href="/sobre-mi.html">Sobre mí</a>
-  <a href="/servicios.html">Servicios</a>
-  <a href="/programas.html">Programas</a>
-  <a href="/recursos.html">Recursos</a>
-  <a href="/contacto.html">Contacto</a>
-</nav>
-  </header>
-    <div class="language-selector">
-      <div id="google_translate_element"></div>
-    </div>
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="programas.html">Programas</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <div id="google_translate_element"></div>
   </header>
 
   <main>
@@ -301,24 +300,27 @@
     </section>
 
     <section class="bienvenida" style="padding: 3rem 1rem; text-align: center; max-width: 800px; margin: 0 auto;">
-      <h2 style="font-size: 2rem; color: #ad855d; margin-bottom: 1rem;">Bienvenida a <span style="color: #d5a288;">Princi General Consulting</span></h2>
-      <p style="font-size: 1.15rem; line-height: 1.6; color: #3d2b1f;">
-        El espacio donde el <strong>liderazgo consciente</strong> se une con la <strong>dirección estratégica con valores</strong>.
-        Acompaño a <strong>líderes</strong>, <strong>emprendedores</strong> y <strong>organizaciones</strong> a encontrar su
-        <strong>propósito divino</strong>, con herramientas de <strong>coaching con propósito</strong>,
-        <strong>formación espiritual</strong> y <strong>transformación personal y profesional</strong>.
-      </p>
-    </section>
+  <h2 style="font-size: 2rem; color: #ad855d; margin-bottom: 1rem;">Bienvenida a <span style="color: #d5a288;">Princi General Consulting</span></h2>
+  <p style="font-size: 1.15rem; line-height: 1.6; color: #3d2b1f;">
+    El espacio donde el <strong>liderazgo consciente</strong> se une con la <strong>dirección estratégica con valores</strong>.
+    Acompaño a <strong>líderes</strong>, <strong>emprendedores</strong> y <strong>organizaciones</strong> a encontrar su
+    <strong>propósito divino</strong>, con herramientas de <strong>coaching con propósito</strong>,
+    <strong>formación espiritual</strong> y <strong>transformación personal y profesional</strong>.
+  </p>
+  <a href="servicios.html" 
+     style="display: inline-block; margin-top: 1.5rem; padding: 0.75rem 2rem; background-color: #ad855d; color: white; font-weight: 600; border-radius: 5px; text-decoration: none; transition: background-color 0.3s ease;">
+    Nuestros Servicios
+  </a>
+</section>
   </main>
 
   <script>
-   function toggleMenu(button) {
-    const mobileMenu = document.getElementById("mobileMenu");
-    const isExpanded = button.getAttribute("aria-expanded") === "true";
-    button.setAttribute("aria-expanded", !isExpanded);
-    mobileMenu.classList.toggle("show");
-  }
-  </script>
+    function toggleMenu(button) {
+      const mobileMenu = document.getElementById("mobileMenu");
+      const isExpanded = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", !isExpanded);
+      mobileMenu.classList.toggle("show");
+    }
 
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
@@ -339,5 +341,4 @@
     });
   </script>
 </body>
-</html>
 </html>
