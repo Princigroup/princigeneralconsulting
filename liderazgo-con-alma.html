@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Masterclass | Liderazgo con Alma</title>
-  <meta name="description" content="Inscríbete gratis a la Masterclass sobre liderazgo consciente y con propósito, por Tamara Pinillos Blanco.">
+  <title>Inscríbete | Masterclass “Liderazgo con Alma”</title>
+  <meta name="description" content="Vive una experiencia transformadora con Tamara Pinillos Blanco. Descubre el liderazgo consciente y con propósito que cambiará tu forma de impactar al mundo.">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     body {
@@ -17,14 +17,14 @@
 
     header {
       background-color: #d5bfa3;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
       text-align: center;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2rem;
+      font-size: 2.3rem;
       color: #ad855d;
+      margin: 0;
     }
 
     main {
@@ -39,11 +39,36 @@
 
     h2 {
       color: #ad855d;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
     }
 
     p {
       font-size: 1.1rem;
       line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    ul.benefits {
+      text-align: left;
+      margin: 2rem auto;
+      max-width: 600px;
+      padding-left: 1.2rem;
+      color: #4b3a30;
+    }
+
+    ul.benefits li {
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 1.2rem;
+    }
+
+    ul.benefits li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #d99aa2;
+      font-weight: bold;
     }
 
     form {
@@ -55,7 +80,6 @@
       display: block;
       margin-bottom: 1rem;
       font-weight: bold;
-      color: #4b3a30;
     }
 
     form input[type="email"],
@@ -66,7 +90,6 @@
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 1rem;
-      box-sizing: border-box;
     }
 
     form button {
@@ -78,38 +101,23 @@
       font-weight: bold;
       font-size: 1rem;
       cursor: pointer;
-      transition: background 0.3s ease;
       margin-top: 1rem;
+      transition: background 0.3s ease;
     }
 
     form button:hover {
       background-color: #b37880;
     }
 
-    .coming-soon {
-      font-size: 1.3rem;
-      color: #8c6b4f;
-      font-weight: bold;
-      margin: 2rem 0;
-    }
-
     .cta-button {
       display: inline-block;
       margin-top: 2rem;
       padding: 0.75rem 1.5rem;
-      background-color: #d99aa2;
+      background-color: #ad855d;
       color: #fff;
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .cta-button:hover,
-    .cta-button:focus {
-      background-color: #b37880;
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(179, 120, 128, 0.5);
     }
 
     footer {
@@ -123,29 +131,36 @@
 <body>
 
   <header>
-    <h1>Masterclass “Liderazgo con Alma”</h1>
+    <h1>Masterclass Gratuita: <br>“Liderazgo con Alma”</h1>
   </header>
 
   <main>
-    <h2>Inscríbete gratis</h2>
-    <p>Únete a esta experiencia gratuita donde exploraremos el liderazgo desde una mirada más consciente, ética y conectada con tu propósito divino.</p>
+    <h2>Activa el líder consciente que vive en ti</h2>
+    <p>Una experiencia única con <strong>Tamara Pinillos Blanco</strong> para reconectar con tu propósito, liderar con valores y dejar una huella transformadora en tu vida y en los demás.</p>
 
-    <!-- Formulario con Formspree -->
+    <ul class="benefits">
+      <li>Aprende las claves del liderazgo con alma y coherencia.</li>
+      <li>Descubre cómo integrar espiritualidad y estrategia.</li>
+      <li>Conecta con una comunidad de líderes conscientes.</li>
+      <li>Accede a herramientas prácticas de coaching transformacional.</li>
+    </ul>
+
+    <h2>Inscripción gratuita</h2>
+    <p>Déjanos tu correo para reservar tu plaza. ¡Las plazas son limitadas!</p>
+
     <form action="https://formspree.io/f/xeokljvb" method="POST">
-      <label for="email">Tu correo electrónico:
+      <label for="email">Correo electrónico:
         <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
       </label>
 
-      <label for="message">Tu mensaje (opcional):
+      <label for="message">Mensaje (opcional):
         <textarea id="message" name="message" rows="4" placeholder="¿Qué te gustaría compartir?"></textarea>
       </label>
 
       <button type="submit">Quiero inscribirme</button>
     </form>
 
-    <p class="coming-soon" aria-live="polite">✨ Plazas limitadas. ¡Reserva la tuya ahora! ✨</p>
-
-    <a href="/recursos.html" class="cta-button" role="button">Ver otros recursos gratuitos</a>
+    <a href="/recursos.html" class="cta-button">Ver otros recursos gratuitos</a>
   </main>
 
   <footer>
