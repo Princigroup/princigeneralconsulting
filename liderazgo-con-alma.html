@@ -13,6 +13,7 @@
       color: #3d2b1f;
       margin: 0;
       padding: 0;
+      line-height: 1.5;
     }
 
     header {
@@ -25,11 +26,12 @@
       font-size: 2.3rem;
       color: #ad855d;
       margin: 0;
+      line-height: 1.2;
     }
 
     main {
       max-width: 800px;
-      margin: 3rem auto;
+      margin: 3rem auto 4rem;
       padding: 2rem;
       background-color: #fff;
       border-radius: 12px;
@@ -45,8 +47,8 @@
 
     p {
       font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      color: #4b3a30;
     }
 
     ul.benefits {
@@ -60,7 +62,8 @@
     ul.benefits li {
       margin-bottom: 1rem;
       position: relative;
-      padding-left: 1.2rem;
+      padding-left: 1.5rem;
+      font-weight: 600;
     }
 
     ul.benefits li::before {
@@ -72,24 +75,38 @@
     }
 
     form {
-      margin-top: 2rem;
+      margin-top: 2.5rem;
       text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     form label {
       display: block;
-      margin-bottom: 1rem;
-      font-weight: bold;
+      margin-bottom: 0.6rem;
+      font-weight: 700;
+      color: #4b3a30;
     }
 
     form input[type="email"],
     form textarea {
       width: 100%;
       padding: 0.75rem;
-      margin-top: 0.5rem;
+      margin-top: 0.2rem;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 1rem;
+      font-family: inherit;
+      box-sizing: border-box;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+
+    form input[type="email"]:focus,
+    form textarea:focus {
+      border-color: #ad855d;
+      outline: none;
     }
 
     form button {
@@ -99,14 +116,17 @@
       border: none;
       border-radius: 8px;
       font-weight: bold;
-      font-size: 1rem;
+      font-size: 1.1rem;
       cursor: pointer;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
+      width: 100%;
       transition: background 0.3s ease;
     }
 
-    form button:hover {
+    form button:hover,
+    form button:focus {
       background-color: #b37880;
+      outline: none;
     }
 
     .cta-button {
@@ -118,27 +138,49 @@
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover,
+    .cta-button:focus {
+      background-color: #b37880;
+      outline: none;
     }
 
     footer {
+      background-color: #f1e9e3;
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
-      color: #7b6b5d;
+      color: #4b3a30;
+    }
+
+    footer nav a {
+      margin: 0 1rem;
+      color: #6b4c3b;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer nav a:hover,
+    footer nav a:focus {
+      color: #ad855d;
+      outline: none;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Masterclass Gratuita: <br>“Liderazgo con Alma”</h1>
+    <h1>Masterclass Gratuita:<br>“Liderazgo con Alma”</h1>
   </header>
 
   <main>
     <h2>Activa el líder consciente que vive en ti</h2>
     <p>Una experiencia única con <strong>Tamara Pinillos Blanco</strong> para reconectar con tu propósito, liderar con valores y dejar una huella transformadora en tu vida y en los demás.</p>
 
-    <ul class="benefits">
+    <ul class="benefits" aria-label="Beneficios de la masterclass Liderazgo con Alma">
       <li>Aprende las claves del liderazgo con alma y coherencia.</li>
       <li>Descubre cómo integrar espiritualidad y estrategia.</li>
       <li>Conecta con una comunidad de líderes conscientes.</li>
@@ -148,32 +190,34 @@
     <h2>Inscripción gratuita</h2>
     <p>Déjanos tu correo para reservar tu plaza. ¡Las plazas son limitadas!</p>
 
-    <form action="https://formspree.io/f/xeokljvb" method="POST">
-      <label for="email">Correo electrónico:
-        <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
-      </label>
+    <form action="https://formspree.io/f/xeokljvb" method="POST" aria-label="Formulario de inscripción a masterclass Liderazgo con Alma">
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com" aria-required="true" />
 
-      <label for="message">Mensaje (opcional):
-        <textarea id="message" name="message" rows="4" placeholder="¿Qué te gustaría compartir?"></textarea>
-      </label>
+      <label for="message">Mensaje (opcional):</label>
+      <textarea id="message" name="message" rows="4" placeholder="¿Qué te gustaría compartir?"></textarea>
 
       <button type="submit">Quiero inscribirme</button>
     </form>
 
-    <a href="/recursos.html" class="cta-button">Ver otros recursos gratuitos</a>
+    <a href="/recursos.html" class="cta-button" rel="noopener noreferrer">Ver otros recursos gratuitos</a>
   </main>
-<iframe data-w-token="7557bb699c57b350d8c5" data-w-type="pop-in" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" src="https://s773t.mjt.lu/wgt/s773t/00um/form?c=267c0d02" width="100%" style="height: 0;"></iframe>
-<iframe data-w-token="7557bb699c57b350d8c5" data-w-type="trigger" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://s773t.mjt.lu/wgt/s773t/00um/trigger?c=8863dfa4" width="100%" style="height: 0;"></iframe>
+<p style="text-align: center; font-weight: 600; color: #4b3a30; margin-bottom: 1rem;">
+  Haz clic en el botón para confirmar tu suscripción y recibir contenido exclusivo de liderazgo consciente directamente en tu correo.
+</p>
+  <iframe data-w-token="7557bb699c57b350d8c5" data-w-type="pop-in" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" src="https://s773t.mjt.lu/wgt/s773t/00um/form?c=267c0d02" width="100%" style="height: 0;" aria-hidden="true" tabindex="-1"></iframe>
+  <iframe data-w-token="7557bb699c57b350d8c5" data-w-type="trigger" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://s773t.mjt.lu/wgt/s773t/00um/trigger?c=8863dfa4" width="100%" style="height: 0;" aria-hidden="true" tabindex="-1"></iframe>
 
-<script type="text/javascript" src="https://app.mailjet.com/pas-nc-pop-in-v1.js"></script>
- <footer style="background-color:#f1e9e3; padding: 2rem; text-align: center; font-size: 0.9rem; color: #4b3a30;">
-  <p>&copy; 2025 Princi General Consulting. Todos los derechos reservados.</p>
-  <nav style="margin-top: 1rem;">
-    <a href="/aviso-legal.html" style="margin: 0 1rem; color: #6b4c3b; text-decoration: none;">Aviso Legal</a>
-    <a href="/politica-privacidad.html" style="margin: 0 1rem; color: #6b4c3b; text-decoration: none;">Política de Privacidad</a>
-    <a href="/politica-cookies.html" style="margin: 0 1rem; color: #6b4c3b; text-decoration: none;">Política de Cookies</a>
-  </nav>
-</footer>
+  <script type="text/javascript" src="https://app.mailjet.com/pas-nc-pop-in-v1.js"></script>
+
+  <footer>
+    <p>&copy; 2025 Princi General Consulting. Todos los derechos reservados.</p>
+    <nav>
+      <a href="/aviso-legal.html" rel="noopener noreferrer">Aviso Legal</a>
+      <a href="/politica-privacidad.html" rel="noopener noreferrer">Política de Privacidad</a>
+      <a href="/politica-cookies.html" rel="noopener noreferrer">Política de Cookies</a>
+    </nav>
+  </footer>
 
 </body>
 </html>
