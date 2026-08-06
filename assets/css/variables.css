@@ -1,0 +1,75 @@
+/* ==========================================
+   PRINCI GENERAL CONSULTING
+   Design System v2026
+==========================================*/
+
+:root{
+
+/* ========= COLORS ========= */
+
+--primary:#0B1F3A;
+--primary-dark:#071428;
+--secondary:#C8A45C;
+--secondary-light:#D9B978;
+
+--white:#FFFFFF;
+--black:#101010;
+
+--gray-50:#FAFAFA;
+--gray-100:#F5F5F5;
+--gray-200:#EAEAEA;
+--gray-300:#DADADA;
+--gray-500:#808080;
+--gray-700:#4A4A4A;
+--gray-900:#1F1F1F;
+
+
+/* ========= TYPOGRAPHY ========= */
+
+--font-title:'Montserrat',sans-serif;
+--font-body:'Inter',sans-serif;
+
+
+/* ========= FONT SIZES ========= */
+
+--fs-hero:72px;
+--fs-h1:56px;
+--fs-h2:42px;
+--fs-h3:30px;
+--fs-h4:22px;
+
+--fs-body:18px;
+--fs-small:15px;
+
+
+/* ========= SPACING ========= */
+
+--space-xs:8px;
+--space-sm:16px;
+--space-md:32px;
+--space-lg:64px;
+--space-xl:96px;
+--space-xxl:140px;
+
+
+/* ========= BORDER ========= */
+
+--radius-small:8px;
+--radius-medium:18px;
+--radius-large:30px;
+
+
+/* ========= SHADOW ========= */
+
+--shadow-soft:
+0 15px 40px rgba(0,0,0,.08);
+
+--shadow-large:
+0 30px 90px rgba(0,0,0,.12);
+
+
+/* ========= TRANSITIONS ========= */
+
+--transition:.35s ease;
+
+}
