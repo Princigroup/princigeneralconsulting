@@ -6,12 +6,14 @@
   <title>PRINCI General Consulting | Business Growth Partner</title>
   <meta name="description" content="PRINCI General Consulting acompaña a empresas, pymes y equipos directivos a diagnosticar, estructurar y acelerar su crecimiento mediante estrategia, implementación y seguimiento." />
   <meta name="theme-color" content="#081A33" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta name="princi-version" content="2026-08-26-v2" />
   <meta property="og:title" content="PRINCI General Consulting | Business Growth Partner" />
   <meta property="og:description" content="Estrategia, implementación y crecimiento sostenible con el método PRINCI Growth™." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://princi.group/" />
   <link rel="canonical" href="https://princi.group/" />
-  <link rel="icon" type="image/jpeg" href="logo-pg.jpg">
+  <link rel="icon" type="image/jpeg" href="logo-pg.jpg?v=20260826">
   <style>
     :root{
       --navy:#081A33;
@@ -122,7 +124,7 @@
       background:rgba(255,255,255,.03)
     }
     .lang-btn{
-      display:inline-block;
+      appearance:none;border:0;background:transparent;display:inline-block;
       color:rgba(255,255,255,.62);
       padding:3px 4px;
       cursor:pointer;
@@ -310,31 +312,26 @@
     .footer-links a{display:block;margin:7px 0;color:rgba(255,255,255,.74)}
     .footer-bottom{margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);font-size:.84rem}
 
-    /* Language — CSS only, no JavaScript required */
-    .lang-radio{
-      position:fixed;
-      opacity:0;
-      pointer-events:none;
-      width:1px;
-      height:1px;
+    /* Language */
+    [data-en]{display:none}
+    body.lang-en [data-es]{display:none!important}
+    body.lang-en [data-en]{display:initial}
+    body.lang-en p[data-en],
+    body.lang-en h1[data-en],
+    body.lang-en h2[data-en],
+    body.lang-en h3[data-en],
+    body.lang-en div[data-en]{display:block}
+    body.lang-en span[data-en]{display:inline}
+    body.lang-en strong[data-en]{display:block}
+    body.lang-en li[data-en]{display:list-item}
+    body.lang-en .eyebrow[data-en]{display:block}
+    body:not(.lang-en) [data-en]{display:none!important}
+    body.lang-en .lang-btn-en,
+    body:not(.lang-en) .lang-btn-es{color:var(--gold-2)}
+    body.lang-en .lang-btn-en::after,
+    body:not(.lang-en) .lang-btn-es::after{
+      content:"";display:block;height:2px;margin-top:2px;border-radius:2px;background:var(--gold);
     }
-    #lang-es:checked ~ .site [data-en]{display:none!important}
-    #lang-en:checked ~ .site [data-es]{display:none!important}
-
-    #lang-es:checked ~ .site .lang-btn-es,
-    #lang-en:checked ~ .site .lang-btn-en{
-      color:var(--gold-2);
-    }
-    #lang-es:checked ~ .site .lang-btn-es::after,
-    #lang-en:checked ~ .site .lang-btn-en::after{
-      content:"";
-      display:block;
-      height:2px;
-      margin-top:2px;
-      border-radius:2px;
-      background:var(--gold);
-    }
-
 
     /* Team */
     .team-section{padding-top:20px}
@@ -368,6 +365,20 @@
     }
     @media (max-width:760px){
       .cta-box .btn{width:100%;white-space:normal;text-align:center}
+    }
+
+
+    /* Final desktop stability */
+    .site{min-height:100vh;display:flex;flex-direction:column}
+    main{flex:1}
+    footer{margin-top:0}
+    @media (min-width:1181px){
+      .nav{max-width:100%}
+      .brand-logo-desktop{width:220px}
+      .navlinks{gap:12px}
+      .navlinks a{font-size:.86rem}
+      .nav-actions{gap:8px}
+      .btn{padding:12px 18px}
     }
 
     /* Responsive */
@@ -405,16 +416,15 @@
   </style>
 </head>
 <body>
-<input class="lang-radio" type="radio" name="site-language" id="lang-es" checked>
-<input class="lang-radio" type="radio" name="site-language" id="lang-en">
+
 <input class="menu-toggle" type="checkbox" id="menu-toggle">
 
 <div class="site">
 <header class="topbar">
   <div class="container nav">
     <a class="brand" href="#inicio" aria-label="PRINCI General Consulting">
-      <img class="brand-logo brand-logo-desktop" src="logo-princi.png" alt="PRINCI General Consulting — Business Growth Partner">
-      <img class="brand-logo brand-logo-mobile" src="logo-pg.jpg" alt="PG — PRINCI General Consulting">
+      <img class="brand-logo brand-logo-desktop" src="logo-princi.png?v=20260826" alt="PRINCI General Consulting — Business Growth Partner">
+      <img class="brand-logo brand-logo-mobile" src="logo-pg.jpg?v=20260826" alt="PG — PRINCI General Consulting">
     </a>
 
     <nav class="navlinks" aria-label="Navegación principal">
@@ -430,9 +440,9 @@
 
     <div class="nav-actions">
       <div class="lang-switch" aria-label="Selector de idioma">
-        <label class="lang-btn lang-btn-es" for="lang-es" title="Español">ES</label>
+        <button class="lang-btn lang-btn-es" type="button" id="langES" title="Español">ES</button>
         <span class="lang-sep">|</span>
-        <label class="lang-btn lang-btn-en" for="lang-en" title="English">EN</label>
+        <button class="lang-btn lang-btn-en" type="button" id="langEN" title="English">EN</button>
       </div>
       <a class="btn btn-primary" href="https://calendly.com/princigroup" target="_blank" rel="noopener">
         <span data-es>Agenda una reunión</span><span data-en>Book a meeting</span>
@@ -504,7 +514,7 @@
     </div>
 
     <div class="portrait-shell">
-      <img src="tamara-princi.jpg" alt="Fundadora de PRINCI General Consulting" />
+      <img src="tamara-princi.jpg?v=20260826" alt="Fundadora de PRINCI General Consulting" />
       <div class="portrait-note">
         <strong data-es>Más que consultoría.</strong>
         <strong data-en>More than consulting.</strong>
@@ -581,7 +591,7 @@
 
     <div class="team-grid">
       <article class="team-card">
-        <img class="team-photo" src="tamara-princi.jpg" alt="Tamara Pinillos Blanco, Founder & Business Growth Partner">
+        <img class="team-photo" src="tamara-princi.jpg?v=20260826" alt="Tamara Pinillos Blanco, Founder & Business Growth Partner">
         <div>
           <div class="team-role">Founder & Business Growth Partner</div>
           <h3>Tamara Pinillos Blanco</h3>
@@ -595,7 +605,7 @@
       </article>
 
       <article class="team-card">
-        <img class="team-photo" src="laia-endrino-pinillos-web.jpg" alt="Laia Endrino Pinillos, Marketing & Advertising">
+        <img class="team-photo" src="laia-endrino-pinillos-web.jpg?v=20260826" alt="Laia Endrino Pinillos, Marketing & Advertising">
         <div>
           <div class="team-role">Marketing & Advertising</div>
           <h3>Laia Endrino Pinillos</h3>
@@ -800,8 +810,8 @@
         <p data-en>Start with a strategic conversation to understand your situation, your objectives and the next steps.</p>
         <div class="contact-links">
           <a href="mailto:princigroup@gmail.com">princigroup@gmail.com</a>
-          <a href="https://www.linkedin.com/in/princigroup" target="_blank" rel="noopener">LinkedIn personal</a>
-          <a href="https://www.linkedin.com/company/princi-general-consulting/" target="_blank" rel="noopener">LinkedIn empresa</a>
+          <a href="https://www.linkedin.com/in/princigroup" target="_blank" rel="noopener"><span data-es>LinkedIn personal</span><span data-en>Personal LinkedIn</span></a>
+          <a href="https://www.linkedin.com/company/princi-general-consulting/" target="_blank" rel="noopener"><span data-es>LinkedIn empresa</span><span data-en>Company LinkedIn</span></a>
         </div>
       </div>
       <div>
@@ -825,10 +835,10 @@
     </div>
     <div class="footer-links">
       <div class="footer-title" data-es>Navegación</div><div class="footer-title" data-en>Navigation</div>
-      <a href="#nosotros">Nosotros / About</a>
+      <a href="#nosotros"><span data-es>Nosotros</span><span data-en>About</span></a>
       <a href="#metodo">PRINCI Growth™</a>
-      <a href="#servicios">Servicios / Services</a>
-      <a href="#contacto">Contacto / Contact</a>
+      <a href="#servicios"><span data-es>Servicios</span><span data-en>Services</span></a>
+      <a href="#contacto"><span data-es>Contacto</span><span data-en>Contact</span></a>
     </div>
     <div class="footer-links">
       <div class="footer-title" data-es>Conecta</div><div class="footer-title" data-en>Connect</div>
@@ -844,6 +854,27 @@
 
 </div>
 
+
+
+<script>
+(function(){
+  const body = document.body;
+  const es = document.getElementById('langES');
+  const en = document.getElementById('langEN');
+
+  function setLang(lang){
+    const isEN = lang === 'en';
+    body.classList.toggle('lang-en', isEN);
+    document.documentElement.lang = isEN ? 'en' : 'es';
+    if(es) es.setAttribute('aria-pressed', String(!isEN));
+    if(en) en.setAttribute('aria-pressed', String(isEN));
+  }
+
+  if(es) es.addEventListener('click', () => setLang('es'));
+  if(en) en.addEventListener('click', () => setLang('en'));
+  setLang('es');
+})();
+</script>
 
 </body>
 </html>
